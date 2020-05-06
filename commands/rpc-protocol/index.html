@@ -2959,6 +2959,11 @@ The pending balances are calculated from potentially unconfirmed blocks. Account
 <hr />
 <h3 id="accounts_pending">accounts_pending<a class="headerlink" href="#accounts_pending" title="Permanent link">&para;</a></h3>
 <p>Returns a list of block hashes which have not yet been received by these <strong>accounts</strong>  </p>
+<div class="admonition warning">
+<p class="admonition-title">Optional <code>include_only_confirmed</code> recommended</p>
+<p>By default this will return blocks not in active elections but unconfirmed (e.g., block was received but node was restarted, election was dropped, new ledger with reset confirmation height).</p>
+<p><strong>To avoid potential issues related to these situations setting the <code>include_only_confirmed</code> = <code>true</code> is recommended for most use cases.</strong></p>
+</div>
 <p><strong>Request:</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;accounts_pending&quot;</span><span class="p">,</span>
@@ -4298,6 +4303,11 @@ Boolean, false by default. Returns a list of peers IPv6:port with its node proto
 <hr />
 <h3 id="pending">pending<a class="headerlink" href="#pending" title="Permanent link">&para;</a></h3>
 <p>Returns a list of block hashes which have not yet been received by this account.</p>
+<div class="admonition warning">
+<p class="admonition-title">Optional <code>include_only_confirmed</code> recommended</p>
+<p>By default this will return blocks not in active elections but unconfirmed (e.g., block was received but node was restarted, election was dropped, new ledger with reset confirmation height).</p>
+<p><strong>To avoid potential issues related to these situations setting the <code>include_only_confirmed</code> = <code>true</code> is recommended for most use cases.</strong></p>
+</div>
 <p><strong>Request:</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span>
