@@ -679,6 +679,19 @@
     New unconfirmed blocks
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootstrap" title="Bootstrap" class="md-nav__link">
+    Bootstrap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1068,6 +1081,19 @@
   <a href="#new-unconfirmed-blocks" title="New unconfirmed blocks" class="md-nav__link">
     New unconfirmed blocks
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bootstrap" title="Bootstrap" class="md-nav__link">
+    Bootstrap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1502,6 +1528,7 @@ Because account filtering needs block content to function, setting this flag to 
 <li>If work generation fails, the notification is similar to the work cancelled notification, except <code>"reason": "failure"</code></li>
 <li>When work generation is done locally it will show <code>"source": "local"</code></li>
 </ul>
+<hr />
 <h3 id="node-telemetry">Node telemetry<a class="headerlink" href="#node-telemetry" title="Permanent link">&para;</a></h3>
 <p>This subscription is available since <em>v21.0</em></p>
 <h5>Subscribing</h5>
@@ -1576,6 +1603,48 @@ See the <a href="/commands/rpc-protocol/#node_telemetry">node_telemetry</a> RPC 
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<hr />
+<h4 id="bootstrap">Bootstrap<a class="headerlink" href="#bootstrap" title="Permanent link">&para;</a></h4>
+<p>This subscription is available since <em>v21.0</em></p>
+<h5>Subscribing</h5>
+<p>To subscribe to bootstrap attempts start/exit notifications:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;bootstrap&quot;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h5>Filtering options</h5>
+<p>No filters are currently available for the <code>bootstrap</code> topic.</p>
+<h5>Sample Results</h5>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;bootstrap&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1561661740065&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;started&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;C9FF2347C4DF512A7F6B514CC4A0F79A&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;legacy&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;bootstrap&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1561661740565&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;exited&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;C9FF2347C4DF512A7F6B514CC4A0F79A&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;legacy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;total_blocks&quot;</span><span class="p">:</span> <span class="s2">&quot;1000000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;500&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Notes:</p>
+<ul>
+<li>The duration is in seconds</li>
+</ul>
                 
                   
                 
