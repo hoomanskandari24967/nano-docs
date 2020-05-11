@@ -797,6 +797,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-validate_blocks" title="--validate_blocks" class="md-nav__link">
+    --validate_blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#-version" title="--version" class="md-nav__link">
     --version
   </a>
@@ -1543,6 +1550,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-validate_blocks" title="--validate_blocks" class="md-nav__link">
+    --validate_blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#-version" title="--version" class="md-nav__link">
     --version
   </a>
@@ -2012,6 +2026,9 @@ Optional <code>--confirmation_height_clear</code> in version 19.0+</p>
 <p>Clear unchecked blocks</p>
 <h3 id="-vacuum">--vacuum<a class="headerlink" href="#-vacuum" title="Permanent link">&para;</a></h3>
 <p>Compact database. If data_path is missing, the database in data directory is compacted. Optional <code>--unchecked_clear</code>, <code>--clear_send_ids</code>, <code>--online_weight_clear</code>, <code>--peer_clear</code></p>
+<h3 id="-validate_blocks">--validate_blocks<a class="headerlink" href="#-validate_blocks" title="Permanent link">&para;</a></h3>
+<p><em>version 21.0+</em> (<em>version 19.0+</em> as <code>--debug_validate_blocks</code>)<br />
+Validate blocks in the ledger, includes checks for confirmation height. Optional <code>--threads</code> for multithreaded validation in version 21.0+. Multithreaded validation can limit other host operations with high I/O &amp; CPU usage.</p>
 <h3 id="-version">--version<a class="headerlink" href="#-version" title="Permanent link">&para;</a></h3>
 <p>Prints out version</p>
 <h3 id="-vote_dump">--vote_dump<a class="headerlink" href="#-vote_dump" title="Permanent link">&para;</a></h3>
@@ -2130,8 +2147,7 @@ Optionals <code>--difficulty</code> and <code>--multiplier</code> (only the latt
 <p><em>version 20.0+</em><br />
 Prints a stacktrace example, useful to verify that it includes the desired information, such as files, function names and line numbers</p>
 <h3 id="-debug_validate_blocks">--debug_validate_blocks<a class="headerlink" href="#-debug_validate_blocks" title="Permanent link">&para;</a></h3>
-<p><em>version 19.0+</em><br />
-Validate blocks in the ledger, includes checks for confirmation height</p>
+<p>Alias to <a href="#-validate_blocks"><code>--validate_blocks</code></a></p>
 <h3 id="-debug_verify_profile">--debug_verify_profile<a class="headerlink" href="#-debug_verify_profile" title="Permanent link">&para;</a></h3>
 <p>Profile signature verification</p>
 <h3 id="-debug_xorshift_profile">--debug_xorshift_profile<a class="headerlink" href="#-debug_xorshift_profile" title="Permanent link">&para;</a></h3>
