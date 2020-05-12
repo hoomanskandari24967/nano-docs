@@ -1541,7 +1541,7 @@ If on Windows: use <code>nmake</code> instead of <code>make</code>.</p>
 <li><code>NANO_TIMED_LOCKS=50</code> (<em>v20.0+</em> when the number of milliseconds a mutex is held is equal or greater than this output a stacktrace, 0 disables.)</li>
 <li><code>NANO_STACKTRACE_BACKTRACE=ON</code> (<em>v20.0+</em> use a different configuration of Boost backtrace in stacktraces, attempting to display filenames, function names and line numbers. Needs <code>libbacktrace</code> to be installed. Some <a href="https://www.boost.org/doc/libs/develop/doc/html/stacktrace/configuration_and_build.html#stacktrace.configuration_and_build.f3">workarounds</a> may be necessary depending on system and configuration. Use CLI <a href="/commands/command-line-interface#-debug_stacktrace"><code>--debug_stacktrace</code></a> to get an example output.)</li>
 <li><code>CI_BUILD=TRUE</code> (<em>v20.0+</em> if enabled, uses environment variable <code>TRAVIS_TAG</code> (required) to modify the locally reported node version; example <code>TRAVIS_TAG="My Nano Node v20"</code>)</li>
-<li><code>NANO_ROCKSDB=ON</code> (<em>v20.0+</em> NOTE: RocksDB support is still in experimental stages and should not be used in production systems. To build the node with RocksDB <a href="/running-a-node/rocksdb-ledger-backend/">click here</a> for more details)</li>
+<li><code>NANO_ROCKSDB=ON</code> (<em>v20.0+</em> NOTE: RocksDB support is still in experimental stages and should not be used in production systems. To build the node with RocksDB <a href="/running-a-node/rocksdb-ledger-backend/#rocksdb-ledger-backend">click here</a> for more details)</li>
 </ul>
 <p><strong>Build Node</strong></p>
 <ul>
@@ -1752,7 +1752,7 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 <h3 id="environment-variables-to-customize-tests">Environment variables to customize tests<a class="headerlink" href="#environment-variables-to-customize-tests" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>TEST_KEEP_TMPDIRS=1</code> - Setting this to anything will prevent the tests deleting any files it creates, useful for debugging log files. </li>
-<li><code>TEST_USE_ROCKSDB=1</code> - Use the RocksDB ledger backend for the tests instead of LMDB. The tests must be built with <a href="/running-a-node/rocksdb-ledger-backend/">RocksDB</a> support.</li>
+<li><code>TEST_USE_ROCKSDB=1</code> - Use the RocksDB ledger backend for the tests instead of LMDB. The tests must be built with <a href="/running-a-node/rocksdb-ledger-backend/#rocksdb-ledger-backend">RocksDB</a> support.</li>
 <li><code>TEST_BASE_PORT=26000</code> - The base port used in tests, the range of ports used in this case would be 26000 - 26199. This is useful if wanting to run multiple tests at once without port conflicts, the default base port used is 24000. </li>
 </ul>
 <h3 id="sanitizers">Sanitizers<a class="headerlink" href="#sanitizers" title="Permanent link">&para;</a></h3>
