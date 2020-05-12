@@ -654,8 +654,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unix-dependencies" title="Unix Dependencies" class="md-nav__link">
-    Unix Dependencies
+  <a href="#debianubuntu-dependencies" title="Debian/Ubuntu Dependencies" class="md-nav__link">
+    Debian/Ubuntu Dependencies
   </a>
   
 </li>
@@ -675,19 +675,12 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-instructions-unix-centos-arch-linux" title="Build Instructions - Unix, CentOS, Arch Linux" class="md-nav__link">
-    Build Instructions - Unix, CentOS, Arch Linux
+  <a href="#build-instructions-debian-centos-arch-linux" title="Build Instructions - Debian, CentOS, Arch Linux" class="md-nav__link">
+    Build Instructions - Debian, CentOS, Arch Linux
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#static-boost" title="Static Boost" class="md-nav__link">
-    Static Boost
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#node_1" title="Node" class="md-nav__link">
@@ -1192,8 +1185,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unix-dependencies" title="Unix Dependencies" class="md-nav__link">
-    Unix Dependencies
+  <a href="#debianubuntu-dependencies" title="Debian/Ubuntu Dependencies" class="md-nav__link">
+    Debian/Ubuntu Dependencies
   </a>
   
 </li>
@@ -1213,19 +1206,12 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-instructions-unix-centos-arch-linux" title="Build Instructions - Unix, CentOS, Arch Linux" class="md-nav__link">
-    Build Instructions - Unix, CentOS, Arch Linux
+  <a href="#build-instructions-debian-centos-arch-linux" title="Build Instructions - Debian, CentOS, Arch Linux" class="md-nav__link">
+    Build Instructions - Debian, CentOS, Arch Linux
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#static-boost" title="Static Boost" class="md-nav__link">
-    Static Boost
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#node_1" title="Node" class="md-nav__link">
@@ -1569,7 +1555,7 @@ If on Windows: use <code>nmake</code> instead of <code>make</code>.</p>
 <li>To run a node on the beta network, set CMake variable: <code>-DACTIVE_NETWORK=nano_beta_network</code></li>
 </ul>
 <hr />
-<h2 id="unix-dependencies">Unix Dependencies<a class="headerlink" href="#unix-dependencies" title="Permanent link">&para;</a></h2>
+<h2 id="debianubuntu-dependencies">Debian/Ubuntu Dependencies<a class="headerlink" href="#debianubuntu-dependencies" title="Permanent link">&para;</a></h2>
 <p>These instructions are for the following systems:</p>
 <ul>
 <li>Ubuntu 16.04 LTS Server</li>
@@ -1582,7 +1568,7 @@ If on Windows: use <code>nmake</code> instead of <code>make</code>.</p>
 sudo apt-get install git cmake g++ curl wget
 </pre></div>
 
-<p>Follow the <a href="#build-instructions-unix-centos-arch-linux">build instructions</a>.</p>
+<p>Follow the <a href="#build-instructions-debian-centos-arch-linux">build instructions</a>.</p>
 <h2 id="centos-7-dependencies">CentOS 7 Dependencies<a class="headerlink" href="#centos-7-dependencies" title="Permanent link">&para;</a></h2>
 <p><strong>Requirements</strong></p>
 <ul>
@@ -1607,16 +1593,16 @@ make -j<span class="k">$(</span>nproc<span class="k">)</span>
 sudo make install
 <span class="nb">cd</span> ..
 </pre></div></p>
-<p>Follow the <a href="#build-instructions-unix-centos-arch-linux">build instructions</a>.</p>
+<p>Follow the <a href="#build-instructions-debian-centos-arch-linux">build instructions</a>.</p>
 <h2 id="arch-linux-dependencies">Arch Linux Dependencies<a class="headerlink" href="#arch-linux-dependencies" title="Permanent link">&para;</a></h2>
 <p><strong>Install dependencies</strong></p>
 <div class="codehilite"><pre><span></span>pacman -Syu
 pacman -S base-devel git gcc cmake curl wget
 </pre></div>
 
-<p>Follow the <a href="#build-instructions-unix-centos-arch-linux">build instructions</a>.</p>
+<p>Follow the <a href="#build-instructions-debian-centos-arch-linux">build instructions</a>.</p>
 <hr />
-<h2 id="build-instructions-unix-centos-arch-linux">Build Instructions - Unix, CentOS, Arch Linux<a class="headerlink" href="#build-instructions-unix-centos-arch-linux" title="Permanent link">&para;</a></h2>
+<h2 id="build-instructions-debian-centos-arch-linux">Build Instructions - Debian, CentOS, Arch Linux<a class="headerlink" href="#build-instructions-debian-centos-arch-linux" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Unsupported configuration</p>
 <ul>
@@ -1626,19 +1612,12 @@ pacman -S base-devel git gcc cmake curl wget
 <li>To manage a node, use <a href="/commands/rpc-protocol/">RPC commands</a> or the <a href="/commands/command-line-interface">CLI</a>.</li>
 </ul>
 </div>
-<h3 id="static-boost">Static Boost<a class="headerlink" href="#static-boost" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>wget -O boost_1_67_0.tar.gz https://netix.dl.sourceforge.net/project/boost/boost/1.67.0/boost_1_67_0.tar.gz
-tar xzvf boost_1_67_0.tar.gz
-<span class="nb">cd</span> boost_1_67_0
-./bootstrap.sh --with-libraries<span class="o">=</span>filesystem,log,program_options,system,thread
-./b2 --prefix<span class="o">=</span>../<span class="o">[</span>boost<span class="o">]</span> <span class="nv">link</span><span class="o">=</span>static install
-<span class="nb">cd</span> ..
-</pre></div>
-
 <h3 id="node_1">Node<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/nanocurrency/nano-node.git nano_build
 <span class="nb">cd</span> nano_build
-cmake -DBOOST_ROOT<span class="o">=</span>../<span class="o">[</span>boost<span class="o">]</span> -G <span class="s2">&quot;Unix Makefiles&quot;</span>
+<span class="nb">export</span> <span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/../boost_build
+sh util/build_prep/bootstrap_boost.sh -m
+cmake -G <span class="s2">&quot;Unix Makefiles&quot;</span> .
 make nano_node
 cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> ./nano_node --diagnostics
 </pre></div>
@@ -1656,8 +1635,9 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 </div>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/nanocurrency/nano-node.git nano_build
 <span class="nb">cd</span> nano_build
+<span class="nb">export</span> <span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/../boost_build
 sh util/build_prep/bootstrap_boost.sh -m
-cmake -DBOOST_ROOT<span class="o">=</span>../<span class="o">[</span>boost<span class="o">]</span> -G <span class="s2">&quot;Unix Makefiles&quot;</span>
+cmake -G <span class="s2">&quot;Unix Makefiles&quot;</span> .
 make nano_node
 cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> ./nano_node --diagnostics
 </pre></div>
