@@ -1198,6 +1198,7 @@
 <h5>Create pull requests</h5>
 <p>Before:</p>
 <ul>
+<li>Branch out of the <strong>develop</strong> branch. The <strong>master</strong> branch is only updated on new releases.</li>
 <li>Review your code locally. Have you followed the guidelines in this document?</li>
 <li>Run tests. Did you consider adding a test case for your feature?</li>
 <li>Run ASAN and TSAN to detect memory or threading bugs</li>
@@ -1214,12 +1215,12 @@
 <li>Respond to comments and reviews in a timely fashion.</li>
 </ul>
 <h5>Resolve conflicts</h5>
-<p>If time passes between your pull request (PR) submission and the team accepting it, merge conflicts may occur due to activity on master, such as merging other PR's before yours. In order for your PR to be accepted, you must resolve these conflicts.</p>
+<p>If time passes between your pull request (PR) submission and the team accepting it, merge conflicts may occur due to activity on develop, such as merging other PR's before yours. In order for your PR to be accepted, you must resolve these conflicts.</p>
 <p>The preferred process is to rebase your changes, resolve any conflicts, and push your changes again. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <ul>
 <li>Check out your branch</li>
 <li><code>git fetch upstream</code></li>
-<li><code>git rebase upstream/master</code></li>
+<li><code>git rebase upstream/develop</code></li>
 <li>Resolve conflicts in your favorite editor</li>
 <li><code>git add {filename}</code></li>
 <li><code>git rebase --continue</code></li>
