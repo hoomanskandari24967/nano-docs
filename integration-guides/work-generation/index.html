@@ -627,6 +627,74 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#practical-guides" title="Practical guides" class="md-nav__link">
+    Practical guides
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-generated-using-the-node-incl-work-peers" title="Work generated using the node, incl. work peers" class="md-nav__link">
+    Work generated using the node, incl. work peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-generated-without-using-the-node" title="Work generated without using the node" class="md-nav__link">
+    Work generated without using the node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-configuration" title="Node Configuration" class="md-nav__link">
+    Node Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
+    opencl.enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodework_threads" title="node.work_threads" class="md-nav__link">
+    node.work_threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodework_peers" title="node.work_peers" class="md-nav__link">
+    node.work_peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodemax_work_generate_multiplier" title="node.max_work_generate_multiplier" class="md-nav__link">
+    node.max_work_generate_multiplier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#benchmarks" title="Benchmarks" class="md-nav__link">
     Benchmarks
   </a>
@@ -1073,6 +1141,74 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#practical-guides" title="Practical guides" class="md-nav__link">
+    Practical guides
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-generated-using-the-node-incl-work-peers" title="Work generated using the node, incl. work peers" class="md-nav__link">
+    Work generated using the node, incl. work peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-generated-without-using-the-node" title="Work generated without using the node" class="md-nav__link">
+    Work generated without using the node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-configuration" title="Node Configuration" class="md-nav__link">
+    Node Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
+    opencl.enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodework_threads" title="node.work_threads" class="md-nav__link">
+    node.work_threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodework_peers" title="node.work_peers" class="md-nav__link">
+    node.work_peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodemax_work_generate_multiplier" title="node.max_work_generate_multiplier" class="md-nav__link">
+    node.max_work_generate_multiplier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#benchmarks" title="Benchmarks" class="md-nav__link">
     Benchmarks
   </a>
@@ -1161,8 +1297,11 @@
                 
                   <h1>Work Generation</h1>
                 
-                <p>Every block published to the network, whether a send, receive or representative change block, requires a small, valid <a href="/glossary/#proof-of-work-pow">Proof-of-Work</a> to be completed above a minimum difficulty floor (threshold). As of V21 this threshold is different for different block types: send and change blocks require a higher threshold, while receive blocks are lower.</p>
-<p>This work value is not used in concensus, but instead is one of the first pieces of data used to validate blocks on the network and is a key component of maintaining consistent quality of service on the network.</p>
+                <div class="admonition tip">
+<p class="admonition-title">Some sections of this page target node version 21 or higher</p>
+</div>
+<p>Every block published to the network, whether a send, receive or representative change block, requires a small, valid <a href="/glossary/#proof-of-work-pow">Proof-of-Work</a> to be completed above a minimum difficulty floor (threshold). As of V21 this threshold is different for different block types: send and change blocks require a higher threshold, while receive blocks are lower.</p>
+<p>This work value is not used in consensus, but instead is one of the first pieces of data used to validate blocks on the network and is a key component of maintaining consistent quality of service on the network.</p>
 <h2 id="system-considerations">System considerations<a class="headerlink" href="#system-considerations" title="Permanent link">&para;</a></h2>
 <p>The following configuration options should be taken into careful consideration when planning work generation resources for services integrating with Nano. These options should be combined to provide the best separation of resources between node participation on network vs. work generation needs.</p>
 <div class="admonition warning">
@@ -1214,21 +1353,79 @@
 <p>A less preferred alternative to setting up, running and monitoring the Nano Work Server is to use the node itself to generate work. This should only be done with an attached GPU by setting up and enabling OpenCL with <a href="/running-a-node/configuration/#openclenable"><code>opencl.enable</code></a> = <code>true</code> and adusting <code>opencl.device</code> and <code>opencl.platform</code> to match your setup.</p>
 </div>
 <hr />
+<h2 id="practical-guides">Practical guides<a class="headerlink" href="#practical-guides" title="Permanent link">&para;</a></h2>
+<h3 id="work-generated-using-the-node-incl-work-peers">Work generated using the node, incl. work peers<a class="headerlink" href="#work-generated-using-the-node-incl-work-peers" title="Permanent link">&para;</a></h3>
+<div class="mermaid">graph TD
+    A{Block signing&lt;br&gt; location?}
+    A --&gt;|in the node| B[&lt;a href='/commands/rpc-protocol/#block_create'&gt;&lt;b&gt;RPC block_create&lt;/b&gt;&lt;/a&gt;&lt;br&gt;no &lt;i&gt;&amp;quotwork&amp;quot&lt;/i&gt;]
+    A --&gt;|not in the node| C_1(Create and sign &lt;b&gt;block&lt;/b&gt;)
+    B --&gt;block((block))
+    C_1 --&gt;|block| C_2[&lt;a href='/commands/rpc-protocol/#work_generate'&gt;&lt;b&gt;RPC work_generate&lt;/b&gt;&lt;/a&gt;&lt;br&gt;&lt;i&gt;&amp;quotblock&amp;quot: &lt;/i&gt;&lt;b&gt;block&lt;/b&gt;]
+    C_2 --&gt;|work| C_3(Use &lt;b&gt;work&lt;/b&gt; in &lt;b&gt;block&lt;/b&gt;)
+    C_3 --&gt;block
+    block --&gt;D[&lt;a href='/commands/rpc-protocol/#process'&gt;&lt;b&gt;RPC process&lt;/b&gt;&lt;/a&gt;&lt;br&gt;&lt;i&gt;&amp;quotwatch_work&amp;quot: &amp;quottrue&amp;quot&lt;/i&gt;]</div>
+
+<h3 id="work-generated-without-using-the-node">Work generated without using the node<a class="headerlink" href="#work-generated-without-using-the-node" title="Permanent link">&para;</a></h3>
+<div class="mermaid">graph TD
+    M{Access to a node?} --&gt;|yes| N[active_difficulty &lt;a href='/commands/rpc-protocol/#active_difficulty'&gt;&lt;b&gt;RPC&lt;/b&gt;&lt;/a&gt; or &lt;a href='/integration-guides/websockets/#active-difficulty'&gt;&lt;b&gt;WS&lt;/b&gt;&lt;/a&gt;]
+    M --&gt; |no| O_1(&lt;a href='/protocol-design/networking/#node-telemetry'&gt;&lt;b&gt;Telemetry&lt;/b&gt;&lt;/a&gt;)
+    N --&gt;|network_minimum| P_1(Generate work at&lt;br&gt;&lt;b&gt;network_minimum&lt;/b&gt; difficulty)
+    O_1 --&gt;O_2((active&lt;br&gt;difficulty))
+    P_1 --&gt;|work| P_2(Use &lt;b&gt;work&lt;/b&gt; in block)
+    P_2 --&gt;P_3((block))
+    P_3 --&gt;P_4[&lt;a href='/commands/rpc-protocol/#process'&gt;&lt;b&gt;RPC process&lt;/b&gt;&lt;/a&gt;&lt;br&gt;&lt;i&gt;&amp;quotwatch_work&amp;quot: &amp;quotfalse&amp;quot&lt;/i&gt;]
+    P_4 --&gt;P_5(&lt;a href='/integration-guides/block-confirmation-tracking/'&gt;Track block confirmation&lt;/a&gt;)
+    P_5 --&gt;P_6{Block unconfirmed&lt;br&gt;after 5 seconds?}
+    P_6 --&gt;P_7[active_difficulty &lt;a href='/commands/rpc-protocol/#active_difficulty'&gt;&lt;b&gt;RPC&lt;/b&gt;&lt;/a&gt; or &lt;a href='/integration-guides/websockets/#active-difficulty'&gt;&lt;b&gt;WS&lt;/b&gt;&lt;/a&gt;]
+    P_7 --&gt;|network_current| P_8{Block difficulty less&lt;br&gt;than &lt;b&gt;network_current&lt;/b&gt; ?}
+    P_8 --&gt;|yes| P_9(Generate work at&lt;br&gt;&lt;b&gt;network_current&lt;/b&gt; difficulty)
+    P_8 --&gt;|no| P_6
+    P_9 --&gt;|updated_work| P_10(Use &lt;b&gt;updated_work&lt;/b&gt; in &lt;b&gt;block&lt;/b&gt;)
+    P_10 --&gt;P_4</div>
+
+<hr />
+<h2 id="node-configuration">Node Configuration<a class="headerlink" href="#node-configuration" title="Permanent link">&para;</a></h2>
+<p>The following configuration options can be changed in <code>node-config.toml</code>. For more information on the location of this file, and general information on the configuration of the node, see the <a href="/running-a-node/configuration/">Configuration</a> page.</p>
+<h3 id="openclenable">opencl.enable<a class="headerlink" href="#openclenable" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">When GPU acceleration is enabled, the CPU is also used by default</p>
+<p>Make sure to set <code>node.work_threads</code> to <code>0</code> when using the GPU</p>
+</div>
+<p>To enable GPU acceleration for work generation, set this option to <code>true</code>. Other fields may need to be changed if you have multiple OpenCL-enabled platforms and devices.</p>
+<h3 id="nodework_threads">node.work_threads<a class="headerlink" href="#nodework_threads" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Recommended value: <code>node.work_threads = 0</code></p>
+</div>
+<p>Determines the number of local CPU threads to used for work generation. <strong>While enabled by default, it is <a href="#recommended-configurations">recommended</a> to turn off local CPU work generation.</strong></p>
+<p>Set to <code>0</code> to turn off local CPU work generation.</p>
+<h3 id="nodework_peers">node.work_peers<a class="headerlink" href="#nodework_peers" title="Permanent link">&para;</a></h3>
+<p>Used when offloading work generation to another node or service. Format must be ipv6, preceded by <code>::ffff:</code> if ipv4. Hostnames are supported since v21. Calls are made to the address:port designated using the standard RPC format <a href="/commands/rpc-protocol#work_generate">work_generate</a>. Example:</p>
+<div class="codehilite"><pre><span></span>[node]
+work_peers = [
+    &quot;example.work-peer.org:7000&quot;,
+    &quot;::ffff:192.168.1.25:7076&quot;
+]
+</pre></div>
+
+<h3 id="nodemax_work_generate_multiplier">node.max_work_generate_multiplier<a class="headerlink" href="#nodemax_work_generate_multiplier" title="Permanent link">&para;</a></h3>
+<p>Sets a limit on the generation difficulty. Multiplier is based off the <a href="#difficulty-thresholds">base difficulty threshold</a>. If the node is setup as a work peer itself, requests for work higher than this limit are ignored. Default value is <code>64</code>.</p>
+<hr />
 <h2 id="benchmarks">Benchmarks<a class="headerlink" href="#benchmarks" title="Permanent link">&para;</a></h2>
 <h3 id="benchmark-commands">Benchmark commands<a class="headerlink" href="#benchmark-commands" title="Permanent link">&para;</a></h3>
-<p>To benchmark a specific device you want to know the performance for, the node CLI commands or a separate script for the Nano Work Server can be used.</p>
-<p><strong>Using the Nano node</strong></p>
+<p><strong>Node RPC or external work server</strong></p>
 <ol>
-<li>Install and configure the Nano node on the machine</li>
-<li>Run a CLI command:<ul>
-<li>CPU: <code>nano_node --debug_profile_generate</code></li>
-<li>GPU: <code>nano_node --debug_opencl --platform=0 --device=0</code> (updating <code>platform</code> and <code>device</code> as necessary)</li>
+<li>Setup one of the following:<ul>
+<li>A node with RPC enabled and any desired work peer</li>
+<li>A standalone work server</li>
 </ul>
 </li>
+<li>Use the script from <a href="https://github.com/guilhermelawless/blake2b-pow-bench">blake2b-pow-bench</a></li>
 </ol>
-<p>This will trigger continual work generation, so let it run until a sufficient sample size of times are generated (at least 100 instances). Compute the average of these times which is the number of microseconds to generate work.</p>
-<p><strong>Using Nano Work Server</strong></p>
-<p>If using work server, head over to the README at <a href="https://github.com/guilhermelawless/blake2b-pow-bench">https://github.com/guilhermelawless/blake2b-pow-bench</a> for details for benchmark script execution.</p>
+<p><strong>Node local work generation</strong></p>
+<p>Note that these commands do not use the configuration of the node. Prefer using the alternative above for that purpose, such as changing the number of threads for CPU work generation, or using work peers.</p>
+<p><a href="/commands/command-line-interface#-debug_profile_generate">CPU</a> with all available threads: <code>nano_node --debug_profile_generate [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
+<p><a href="/commands/command-line-interface#-debug_opencl">GPU</a> acceleration: <code>nano_node --debug_opencl --platform=0 --device=0 [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
+<p>The command will trigger continual work generation, so let it run until a sufficient sample size of times are generated (at least 100 instances). Compute the average of these times which are the number of microseconds it took to generate each sample.</p>
 <h3 id="example-benchmarks">Example benchmarks<a class="headerlink" href="#example-benchmarks" title="Permanent link">&para;</a></h3>
 <p>Below are work generation benchmarks from a variety of consumer-grade CPUs and GPUs updated in late 2017.</p>
 <table>
@@ -1322,7 +1519,7 @@ blake2b(\text{nonce} || \text{prev_block_hash}) \ge \text{threshold}
 <p><strong>Pre-caching when next block type is unknown</strong></p>
 <p>With V21+ the work difficulty thresholds were split by block type. For many integrations, such as wallet providers, the context of what type of block will be generated next for an account is unknown. The recommendation for these cases is to generate difficulty at the higher threshold of a send/change block to ensure delays are avoided and the best user experience is available when using wallets.</p>
 <p><strong>Utilizing lower work when batching</strong></p>
-<p>For services that process receiving their pending transactions in bulk the lower work threshold of receive blocks can be taken advantage of.  In doing so, the difficulty is 64x lower than a send/change block, but the difficulty will be normalized for proper prioritization if published during heavy network load times.</p>
+<p>For services that process receiving their pending transactions in bulk the lower work threshold of receive blocks can be taken advantage of. In doing so, the difficulty is 64x lower than a send/change block, but the difficulty will be normalized for proper prioritization if published during heavy network load times.</p>
 <h3 id="difficulty-multiplier">Difficulty multiplier<a class="headerlink" href="#difficulty-multiplier" title="Permanent link">&para;</a></h3>
 <p>Relative difficulty, or difficulty multiplier, describes how much more value a PoW has compared to another. In the node this is typically used to compare against the base threshold, often in relation to rework being performed or validated for proper priotizing of transactions. This value is available as part of the <a href="/commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC, but can also be obtained with the following expression:</p>
 <div>

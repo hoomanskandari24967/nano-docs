@@ -475,6 +475,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#work-generation-options" title="Work generation options" class="md-nav__link">
+    Work generation options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#config-nodetoml" title="config-node.toml" class="md-nav__link">
     config-node.toml
   </a>
@@ -492,34 +499,6 @@
           <li class="md-nav__item">
   <a href="#nodevote_minimum" title="node.vote_minimum" class="md-nav__link">
     node.vote_minimum
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodework_peers" title="node.work_peers" class="md-nav__link">
-    node.work_peers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodework_threads" title="node.work_threads" class="md-nav__link">
-    node.work_threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodemax_work_generate_multiplier" title="node.max_work_generate_multiplier" class="md-nav__link">
-    node.max_work_generate_multiplier
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
-    opencl.enable
   </a>
   
 </li>
@@ -1039,6 +1018,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#work-generation-options" title="Work generation options" class="md-nav__link">
+    Work generation options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#config-nodetoml" title="config-node.toml" class="md-nav__link">
     config-node.toml
   </a>
@@ -1056,34 +1042,6 @@
           <li class="md-nav__item">
   <a href="#nodevote_minimum" title="node.vote_minimum" class="md-nav__link">
     node.vote_minimum
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodework_peers" title="node.work_peers" class="md-nav__link">
-    node.work_peers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodework_threads" title="node.work_threads" class="md-nav__link">
-    node.work_threads
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodemax_work_generate_multiplier" title="node.max_work_generate_multiplier" class="md-nav__link">
-    node.max_work_generate_multiplier
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
-    opencl.enable
   </a>
   
 </li>
@@ -1391,38 +1349,14 @@
 enable_voting = true
 </pre></div>
 
+<h3 id="work-generation-options">Work generation options<a class="headerlink" href="#work-generation-options" title="Permanent link">&para;</a></h3>
+<p>These configurations are located in the <a href="/integration-guides/work-generation/#node-configuration">Work Generation Guide</a>.</p>
 <h3 id="config-nodetoml">config-node.toml<a class="headerlink" href="#config-nodetoml" title="Permanent link">&para;</a></h3>
 <h4 id="nodeenable_voting">node.enable_voting<a class="headerlink" href="#nodeenable_voting" title="Permanent link">&para;</a></h4>
 <p>As of V18.0, newly setup nodes have voting disabled by default. In order to participate in network consensus, this value must be updated to enable voting and the node restarted.</p>
 <hr />
 <h4 id="nodevote_minimum">node.vote_minimum<a class="headerlink" href="#nodevote_minimum" title="Permanent link">&para;</a></h4>
 <p>As of V18.0, nodes with weight delegated to them under this value in their config will not vote, regardless of the <code>enable_voting</code> flag setting. In order for a node to vote, this value must be lower than the weight delegated to the representative account setup on the node.</p>
-<hr />
-<h4 id="nodework_peers">node.work_peers<a class="headerlink" href="#nodework_peers" title="Permanent link">&para;</a></h4>
-<p>Used when offloading work generation to another node or service. Format must be ipv6, preceded by <code>::ffff:</code> if ipv4. Hostnames are supported since v21. Calls are made to the address:port designated using the standard RPC format <a href="/commands/rpc-protocol#work_generate">work_generate</a>. Example:</p>
-<div class="codehilite"><pre><span></span>[node]
-work_peers = [
-    &quot;example.work-peer.org:7000&quot;
-]
-</pre></div>
-
-<hr />
-<h4 id="nodework_threads">node.work_threads<a class="headerlink" href="#nodework_threads" title="Permanent link">&para;</a></h4>
-<div class="admonition warning">
-<p class="admonition-title">Alternative work generation setup preferred</p>
-<p>Due to potential performance impacts to nodes participating on the network (voting, staying in sync, etc.), when possible this option should be updated to a value of <code>0</code> to turn off local work generation. Please see the <a href="/integration-guides/work-generation">Work Generation guide</a> for best practices.</p>
-</div>
-<p>Determines the number of local CPU threads to used for work generation. To turn off local CPU work generation set to <code>0</code>. See <a href="#opencl-enable">opencl.enable</a> below for details on setting the node up for GPU-based work generation (preferred).</p>
-<hr />
-<h4 id="nodemax_work_generate_multiplier">node.max_work_generate_multiplier<a class="headerlink" href="#nodemax_work_generate_multiplier" title="Permanent link">&para;</a></h4>
-<p>Sets a limit on the multiplier above the base difficulty threshold that the node will generate. If the node is setup as a work peer itself, no requests for work higher than this limit will be accepted. Default value is <code>64.000000000000000</code>.</p>
-<hr />
-<h4 id="openclenable">opencl.enable<a class="headerlink" href="#openclenable" title="Permanent link">&para;</a></h4>
-<p>To enable GPU acceleration for PoW, set this option to <code>true</code>. Other OpenCL parameters may need to be adjusted depending on the desired setup.</p>
-<div class="admonition tip">
-<p class="admonition-title">Using OpenCL and CPU for work generation</p>
-<p>Since V20.0, if OpenCL is enabled, both the GPU and CPU are used for work generation. The number of CPU threads is set with <code>node.work_threads</code>. To disable CPU work generation, set that value to "0".</p>
-</div>
 <hr />
 <h4 id="nodeipc">node.ipc<a class="headerlink" href="#nodeipc" title="Permanent link">&para;</a></h4>
 <p>IPC is disabled by default. For details about using the IPC setup, see the <a href="/integration-guides/advanced#ipc-integration">IPC Integration Guide</a>.</p>

@@ -1119,6 +1119,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-debug_opencl" title="--debug_opencl" class="md-nav__link">
+    --debug_opencl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-debug_profile_bootstrap" title="--debug_profile_bootstrap" class="md-nav__link">
     --debug_profile_bootstrap
   </a>
@@ -1184,13 +1191,6 @@
           <li class="md-nav__item">
   <a href="#-debug_xorshift_profile" title="--debug_xorshift_profile" class="md-nav__link">
     --debug_xorshift_profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-debug_opencl-platformplatform-devicedevice-threadsthreads" title="--debug_opencl --platform=&lt;platform&gt; --device=&lt;device&gt; --threads=&lt;threads&gt;" class="md-nav__link">
-    --debug_opencl --platform=&lt;platform&gt; --device=&lt;device&gt; --threads=&lt;threads&gt;
   </a>
   
 </li>
@@ -1879,6 +1879,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-debug_opencl" title="--debug_opencl" class="md-nav__link">
+    --debug_opencl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-debug_profile_bootstrap" title="--debug_profile_bootstrap" class="md-nav__link">
     --debug_profile_bootstrap
   </a>
@@ -1944,13 +1951,6 @@
           <li class="md-nav__item">
   <a href="#-debug_xorshift_profile" title="--debug_xorshift_profile" class="md-nav__link">
     --debug_xorshift_profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-debug_opencl-platformplatform-devicedevice-threadsthreads" title="--debug_opencl --platform=&lt;platform&gt; --device=&lt;device&gt; --threads=&lt;threads&gt;" class="md-nav__link">
-    --debug_opencl --platform=&lt;platform&gt; --device=&lt;device&gt; --threads=&lt;threads&gt;
   </a>
   
 </li>
@@ -2147,6 +2147,9 @@ Dump frontiers which have matching unchecked keys</p>
 <p>Output the stacktrace stored after a node crash.</p>
 <h3 id="-debug_generate_crash_report">--debug_generate_crash_report<a class="headerlink" href="#-debug_generate_crash_report" title="Permanent link">&para;</a></h3>
 <p>After a node crash on linux, this command consumes the dump files generated from that crash and produces a "nano_node_crash_report.txt" file. Requires <code>addr2line</code> to be installed on the system. See the <a href="/running-a-node/troubleshooting/#what-to-do-if-the-node-crashes-linux">troubleshooting guide</a> for more information.</p>
+<h3 id="-debug_opencl">--debug_opencl<a class="headerlink" href="#-debug_opencl" title="Permanent link">&para;</a></h3>
+<p>Profile OpenCL work generation for (optional) <code>--device=&lt;device&gt;</code> on <code>--device=&lt;platform&gt;</code> using <code>--threads=&lt;threads&gt;</code> count. To retrieve available platforms &amp; devices run <a href="#-diagnostics">--diagnostics</a>.<br />
+Optionals <code>--difficulty</code> and <code>--multiplier</code> (only the latter is used if both given) in version 21.0+ to set the work generation threshold.</p>
 <h3 id="-debug_profile_bootstrap">--debug_profile_bootstrap<a class="headerlink" href="#-debug_profile_bootstrap" title="Permanent link">&para;</a></h3>
 <p>Profile simulated bootstrap process</p>
 <h3 id="-debug_profile_generate">--debug_profile_generate<a class="headerlink" href="#-debug_profile_generate" title="Permanent link">&para;</a></h3>
@@ -2170,9 +2173,6 @@ Prints a stacktrace example, useful to verify that it includes the desired infor
 <p>Profile signature verification</p>
 <h3 id="-debug_xorshift_profile">--debug_xorshift_profile<a class="headerlink" href="#-debug_xorshift_profile" title="Permanent link">&para;</a></h3>
 <p>[Disabled] Profile xorshift algorithms</p>
-<h3 id="-debug_opencl-platformplatform-devicedevice-threadsthreads">--debug_opencl --platform=<code>&lt;platform&gt;</code> --device=<code>&lt;device&gt;</code> --threads=<code>&lt;threads&gt;</code><a class="headerlink" href="#-debug_opencl-platformplatform-devicedevice-threadsthreads" title="Permanent link">&para;</a></h3>
-<p><em>[Draft]</em> Profile OpenCL work generation for <code>&lt;device&gt;</code> on <code>&lt;platform&gt;</code> using <code>&lt;threads&gt;</code> count. To retrieve available platforms &amp; devices run --diagnostics.<br />
-Optionals <code>--difficulty</code> and <code>--multiplier</code> (only the latter is used if both given) in version 21.0+ to set the work generation threshold.</p>
                 
                   
                 
