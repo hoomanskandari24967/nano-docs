@@ -1028,6 +1028,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#-batch_size-deprecated" title="--batch_size (Deprecated)" class="md-nav__link">
+    --batch_size (Deprecated)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1098,8 +1105,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-debug_mass_activity" title="--debug_mass_activity" class="md-nav__link">
-    --debug_mass_activity
+  <a href="#-debug_mass_activity-deprecated" title="--debug_mass_activity (Deprecated)" class="md-nav__link">
+    --debug_mass_activity (Deprecated)
   </a>
   
 </li>
@@ -1788,6 +1795,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#-batch_size-deprecated" title="--batch_size (Deprecated)" class="md-nav__link">
+    --batch_size (Deprecated)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1858,8 +1872,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-debug_mass_activity" title="--debug_mass_activity" class="md-nav__link">
-    --debug_mass_activity
+  <a href="#-debug_mass_activity-deprecated" title="--debug_mass_activity (Deprecated)" class="md-nav__link">
+    --debug_mass_activity (Deprecated)
   </a>
   
 </li>
@@ -2004,9 +2018,11 @@ Displays a summarized comparison between the hardcoded bootstrap weights and rep
 <li><code>newcomers</code>: large voting weights found in the ledger but not hardcoded, for potential inspection</li>
 </ul>
 <h3 id="-config-keyvalue">--config key=value<a class="headerlink" href="#-config-keyvalue" title="Permanent link">&para;</a></h3>
-<p>Pass node configuration values. This takes precedence over any values in the configuration file. This option can be repeated multiple times.</p>
+<p><em>version 20.0+</em><br />
+Pass node configuration values. This takes precedence over any values in the configuration file. This option can be repeated multiple times.</p>
 <h3 id="-confirmation_height_clear">--confirmation_height_clear<a class="headerlink" href="#-confirmation_height_clear" title="Permanent link">&para;</a></h3>
-<p><em>version 19.0+</em> Sets the confirmation heights of all accounts to 0. Optional <code>--account</code> to only reset a single account. Do not use while the node is running.</p>
+<p><em>version 19.0+</em><br />
+Sets the confirmation heights of all accounts to 0. Optional <code>--account</code> to only reset a single account. Do not use while the node is running.</p>
 <h3 id="-daemon">--daemon<a class="headerlink" href="#-daemon" title="Permanent link">&para;</a></h3>
 <p>Start node daemon. Since version 19.0, network and path will be output, similar to:
 <div class="codehilite"><pre><span></span>./nano_node --daemon --network test
@@ -2018,7 +2034,8 @@ Path: /home/USER/NanoTest
 <h3 id="-diagnostics">--diagnostics<a class="headerlink" href="#-diagnostics" title="Permanent link">&para;</a></h3>
 <p>Run internal diagnostics and validate existing config file (or create default config file if it doesn't exist)</p>
 <h3 id="-generate_config-noderpc">--generate_config node|rpc<a class="headerlink" href="#-generate_config-noderpc" title="Permanent link">&para;</a></h3>
-<p>Write configuration to stdout, populated with commented-out defaults suitable for this system. Pass the configuration type, <code>node</code> or <code>rpc</code>.
+<p><em>version 20.0+</em><br />
+Write configuration to stdout, populated with commented-out defaults suitable for this system. Pass the configuration type, <code>node</code> or <code>rpc</code>.
 If <code>--use_defaults</code> is passed, the generated config will not have values commented-out. This is not recommended except for testing and debugging.</p>
 <p>The output can be piped to a file, using the locations defined in <a href="/running-a-node/configuration#configuration-file-locations">configuration</a>.</p>
 <h3 id="-help">--help<a class="headerlink" href="#-help" title="Permanent link">&para;</a></h3>
@@ -2028,13 +2045,17 @@ If <code>--use_defaults</code> is passed, the generated config will not have val
 <h3 id="-key_expand-keykey">--key_expand --key=<code>&lt;key&gt;</code><a class="headerlink" href="#-key_expand-keykey" title="Permanent link">&para;</a></h3>
 <p>Derive public key and account number from <code>&lt;key&gt;</code></p>
 <h3 id="-network">--network<a class="headerlink" href="#-network" title="Permanent link">&para;</a></h3>
-<p>Allows selection of a different network at runtime. Values <code>live</code>, <code>beta</code> and <code>test</code> supported.</p>
+<p><em>version 19.0+</em><br />
+Allows selection of a different network at runtime. Values <code>live</code>, <code>beta</code> and <code>test</code> supported.</p>
 <h3 id="-online_weight_clear">--online_weight_clear<a class="headerlink" href="#-online_weight_clear" title="Permanent link">&para;</a></h3>
-<p>Clear record history for long term online weight trending</p>
+<p><em>version 18.0+</em><br />
+Clear record history for long term online weight trending</p>
 <h3 id="-peer_clear">--peer_clear<a class="headerlink" href="#-peer_clear" title="Permanent link">&para;</a></h3>
-<p>Clear cached peers</p>
+<p><em>version 18.0+</em><br />
+Clear cached peers</p>
 <h3 id="-rebuild_database">--rebuild_database<a class="headerlink" href="#-rebuild_database" title="Permanent link">&para;</a></h3>
-<p>Rebuild LMDB database with <code>--vacuum</code> for best compaction. Requires approximately <code>data.ldb size * 2</code> free space on disk.</p>
+<p><em>version 21.0+</em><br />
+Rebuild LMDB database with <code>--vacuum</code> for best compaction. Requires approximately <code>data.ldb size * 2</code> free space on disk.</p>
 <h3 id="-snapshot">--snapshot<a class="headerlink" href="#-snapshot" title="Permanent link">&para;</a></h3>
 <p>Compact database and create snapshot, functions similar to vacuum but does not replace the existing database. Optional <code>--unchecked_clear</code>, <code>--clear_send_ids</code>, <code>--online_weight_clear</code>, <code>--peer_clear</code>.
 Optional <code>--confirmation_height_clear</code> in version 19.0+.</p>
@@ -2099,7 +2120,7 @@ Vote processor queue size before dropping votes, default 144k</p>
 <h3 id="-disable_bootstrap_listener">--disable_bootstrap_listener<a class="headerlink" href="#-disable_bootstrap_listener" title="Permanent link">&para;</a></h3>
 <p>Turn off listener on the bootstrap network so incoming TCP (bootstrap) connections are rejected. <strong>Note:</strong> this does not impact TCP traffic for the live network.</p>
 <h3 id="-disable_tcp_realtime">--disable_tcp_realtime<a class="headerlink" href="#-disable_tcp_realtime" title="Permanent link">&para;</a></h3>
-<p><em>version 19.0+</em>
+<p><em>version 19.0+</em><br />
 Turn off use of TCP live network (TCP for bootstrap will remain available)</p>
 <h3 id="-disable_udp-deprecated">--disable_udp (Deprecated)<a class="headerlink" href="#-disable_udp-deprecated" title="Permanent link">&para;</a></h3>
 <p><em>version 21.0+</em><br />
@@ -2121,6 +2142,9 @@ Turn on use of the UDP live network.</p>
 Allow multiple connections to the same peer in bootstrap attempts</p>
 <h3 id="-fast_bootstrap">--fast_bootstrap<a class="headerlink" href="#-fast_bootstrap" title="Permanent link">&para;</a></h3>
 <p>Increase bootstrap processor limits to allow more blocks before hitting full state and verify/write more per database call. Also disable deletion of processed unchecked blocks</p>
+<h3 id="-batch_size-deprecated">--batch_size (Deprecated)<a class="headerlink" href="#-batch_size-deprecated" title="Permanent link">&para;</a></h3>
+<p><em>version 18.0+</em><br />
+Increase sideband upgrade batch size (default 512). Deprecated in <em>v21</em> and will be removed in <em>v22</em> as it will not support upgrades from v18 nodes and earlier.</p>
 <h2 id="debug-commands">Debug commands<a class="headerlink" href="#debug-commands" title="Permanent link">&para;</a></h2>
 <h3 id="-debug_account_count">--debug_account_count<a class="headerlink" href="#-debug_account_count" title="Permanent link">&para;</a></h3>
 <p>Display the number of accounts</p>
@@ -2141,12 +2165,14 @@ Dump frontiers which have matching unchecked keys</p>
 <p>List online weights table and current online_weights value</p>
 <h3 id="-debug_dump_representatives">--debug_dump_representatives<a class="headerlink" href="#-debug_dump_representatives" title="Permanent link">&para;</a></h3>
 <p>List representatives and weights</p>
-<h3 id="-debug_mass_activity">--debug_mass_activity<a class="headerlink" href="#-debug_mass_activity" title="Permanent link">&para;</a></h3>
-<p>Generates fake debug activity</p>
+<h3 id="-debug_mass_activity-deprecated">--debug_mass_activity (Deprecated)<a class="headerlink" href="#-debug_mass_activity-deprecated" title="Permanent link">&para;</a></h3>
+<p>Generates fake debug activity. Deprecated in <em>v21+</em>, can use <code>slow_test --gtest_filter=system.generate_mass_activity</code> instead.</p>
 <h3 id="-debug_output_last_backtrace_dump">--debug_output_last_backtrace_dump<a class="headerlink" href="#-debug_output_last_backtrace_dump" title="Permanent link">&para;</a></h3>
-<p>Output the stacktrace stored after a node crash.</p>
+<p><em>version 19.0+</em><br />
+Output the stacktrace stored after a node crash.</p>
 <h3 id="-debug_generate_crash_report">--debug_generate_crash_report<a class="headerlink" href="#-debug_generate_crash_report" title="Permanent link">&para;</a></h3>
-<p>After a node crash on linux, this command consumes the dump files generated from that crash and produces a "nano_node_crash_report.txt" file. Requires <code>addr2line</code> to be installed on the system. See the <a href="/running-a-node/troubleshooting/#what-to-do-if-the-node-crashes-linux">troubleshooting guide</a> for more information.</p>
+<p><em>version 21.0+</em>
+After a node crash on linux, this command consumes the dump files generated from that crash and produces a "nano_node_crash_report.txt" file. Requires <code>addr2line</code> to be installed on the system. See the <a href="/running-a-node/troubleshooting/#what-to-do-if-the-node-crashes-linux">troubleshooting guide</a> for more information.</p>
 <h3 id="-debug_opencl">--debug_opencl<a class="headerlink" href="#-debug_opencl" title="Permanent link">&para;</a></h3>
 <p>Profile OpenCL work generation for (optional) <code>--device=&lt;device&gt;</code> on <code>--device=&lt;platform&gt;</code> using <code>--threads=&lt;threads&gt;</code> count. To retrieve available platforms &amp; devices run <a href="#-diagnostics">--diagnostics</a>.<br />
 Optionals <code>--difficulty</code> and <code>--multiplier</code> (only the latter is used if both given) in version 21.0+ to set the work generation threshold.</p>
