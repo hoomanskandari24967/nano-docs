@@ -1149,7 +1149,14 @@
 <p class="admonition-title">Always backup your ledgers file</p>
 <p>Whenever you are attempting to change the ledger, it is highly recommended you create backups of the existing <code>data.ldb</code> file to ensure you have a rollback point if issues are encountered.</p>
 </div>
-<p>To avoid bootstrapping times, a <a href="#ledger-file">ledger file</a> (<code>data.ldb</code>) can be downloaded off-network and added to the data file used by the node. This process is sometimes referred to as a "fast sync". The Nano Foundation provides a daily ledger file download in the #ledger channel of our <a href="https://chat.nano.org">Discord server</a>. This is posted by <code>SergSW</code> and contains checksums for validation.</p>
+<p>To avoid bootstrapping times, a <a href="#ledger-file">ledger file</a> (<code>data.ldb</code>) can be downloaded off-network and added to the data file used by the node. This process is sometimes referred to as a "fast sync". The Nano Foundation provides a daily ledger file download in the <code>#ledger</code> channel of our <a href="https://chat.nano.org">Discord server</a>. This is posted by <code>SergSW</code> and contains checksums for validation.
+Alternatively, one of <a href="https://mynano.ninja/api">My Nano Ninja</a> APIs redirects the current ledger file preserved at <a href="https://yandex.com/">Yandex</a>:
+<div class="codehilite"><pre><span></span>wget -O ledger.7z https://mynano.ninja/api/ledger/download -q --show-progress
+</pre></div></p>
+<p>Verify the checksum of the above downloaded ledger file:
+<div class="codehilite"><pre><span></span><span class="nb">printf</span> <span class="s2">&quot;%s ledger.7z&quot;</span> <span class="sb">`</span>wget -q -O - https://mynano.ninja/api/ledger/checksum/sha256<span class="sb">`</span> <span class="p">|</span> sha256sum --check
+</pre></div></p>
+<p>Be patient and wait for the message <code>ledger.7z: OK</code>.</p>
 <p>Before using this method there are a few considerations to ensure it is done safely:</p>
 <h3 id="data-source">Data source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h3>
 <p>Make sure you trust the source providing the data to you. If you are unfamiliar with the individual or organization providing the ledger, consider other options for the data or fallback to the default of <a href="#bootstrapping">bootstrapping</a> from the network.</p>
