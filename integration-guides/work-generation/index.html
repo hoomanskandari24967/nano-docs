@@ -662,8 +662,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
-    opencl.enable
+  <a href="#nodeopenclenable" title="node.opencl.enable" class="md-nav__link">
+    node.opencl.enable
   </a>
   
 </li>
@@ -1176,8 +1176,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#openclenable" title="opencl.enable" class="md-nav__link">
-    opencl.enable
+  <a href="#nodeopenclenable" title="node.opencl.enable" class="md-nav__link">
+    node.opencl.enable
   </a>
   
 </li>
@@ -1315,10 +1315,10 @@
 <h3 id="software-for-work-generation">Software for work generation<a class="headerlink" href="#software-for-work-generation" title="Permanent link">&para;</a></h3>
 <p>Although the node can be configured to generate work directly, there are plans to separate work generation from the node into its own application and process. To help prepare for this future architecturs the preferred setup today is to use the <a href="https://github.com/nanocurrency/nano-work-server">Nano Work Server</a> for work generation.</p>
 <h3 id="number-of-work-peers">Number of work peers<a class="headerlink" href="#number-of-work-peers" title="Permanent link">&para;</a></h3>
-<p>To provide a more robust and redundant work generation setup, multiple <a href="/running-a-node/configuration/#nodework_peers">work peers</a> can be used. Any node configured with multiple peers will make requests serially from the list of work peers until a successful response is received.</p>
+<p>To provide a more robust and redundant work generation setup, multiple <a href="#nodework_peers">work peers</a> can be used. Any node configured with multiple peers will make requests serially from the list of work peers until a successful response is received.</p>
 <div class="admonition tip">
 <p class="admonition-title">Disable local CPU work generation</p>
-<p>Since using the same CPU resources the node relies on for work generation can cause performance issues, local CPU work generation should be turned off by setting <a href="/running-a-node/configuration/#nodework_threads"><code>node.work_threads</code></a> = <code>0</code> when using work peers.</p>
+<p>Since using the same CPU resources the node relies on for work generation can cause performance issues, local CPU work generation should be turned off by setting <a href="#nodework_threads"><code>node.work_threads</code></a> = <code>0</code> when using work peers.</p>
 </div>
 <h2 id="recommended-configurations">Recommended configurations<a class="headerlink" href="#recommended-configurations" title="Permanent link">&para;</a></h2>
 <p>Below are common, recommended configurations for planning work generation needs. Based on the considerations outlined above, the following general rules apply when planning resources:</p>
@@ -1334,11 +1334,11 @@
 <li>Install the <a href="https://github.com/nanocurrency/nano-work-server/blob/master/README.md#installation">Nano Work Server</a></li>
 <li>Setup a service to start and monitor the work server process using the GPU option <code>--gpu &lt;PLATFORM:DEVICE&gt;</code> and run <code>nano-work-server --help</code> for additional options and details</li>
 <li>Configure the machine running the node to allow traffic over TCP from the work generation machine's IP address</li>
-<li>Add the work machine IP address as a <a href="/running-a-node/configuration/#nodework_peers">work peer</a> in the node's <code>config-node.toml</code> file</li>
+<li>Add the work machine IP address as a <a href="#nodework_peers">work peer</a> in the node's <code>config-node.toml</code> file</li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">CPU for lower generation levels</p>
-<p>For services with heavier RPC usage but less work generation needs excluding the GPU in the above example and relying on the CPU resources of the separate machine is also an option. This can be done by setting <a href="/running-a-node/configuration/#nodework_threads"><code>node.work_threads</code></a> to the appropriate thread count for your needs.</p>
+<p>For services with heavier RPC usage but less work generation needs excluding the GPU in the above example and relying on the CPU resources of the separate machine is also an option. This can be done by setting <a href="#nodework_threads"><code>node.work_threads</code></a> to the appropriate thread count for your needs.</p>
 <p>Make sure to benchmark the machine performance to plan for any potential spikes, as CPU generation is slower.</p>
 </div>
 <h3 id="light-rpc-regular-work-generation">Light RPC, regular work generation<a class="headerlink" href="#light-rpc-regular-work-generation" title="Permanent link">&para;</a></h3>
@@ -1346,11 +1346,11 @@
 <ol>
 <li>Install the <a href="https://github.com/nanocurrency/nano-work-server/blob/master/README.md#installation">Nano Work Server</a> on the same machine as the node</li>
 <li>Setup a service to start and monitor the work server process with options for using the GPU - <code>--gpu &lt;PLATFORM:DEVICE:THREADS&gt;</code> is required, run <code>nano-work-server --help</code> for additional options and details</li>
-<li>Configure the node to prevent local CPU work generation by setting <a href="/running-a-node/configuration/#nodework_threads"><code>node.work_threads</code></a> = <code>0</code></li>
+<li>Configure the node to prevent local CPU work generation by setting <a href="#nodework_threads"><code>node.work_threads</code></a> = <code>0</code></li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Node work generation option</p>
-<p>A less preferred alternative to setting up, running and monitoring the Nano Work Server is to use the node itself to generate work. This should only be done with an attached GPU by setting up and enabling OpenCL with <a href="/running-a-node/configuration/#openclenable"><code>opencl.enable</code></a> = <code>true</code> and adusting <code>opencl.device</code> and <code>opencl.platform</code> to match your setup.</p>
+<p>A less preferred alternative to setting up, running and monitoring the Nano Work Server is to use the node itself to generate work. This should only be done with an attached GPU by setting up and enabling OpenCL with <a href="#nodeopenclenable"><code>node.opencl.enable</code></a> = <code>true</code> and adusting <code>node.opencl.device</code> and <code>node.opencl.platform</code> to match your setup.</p>
 </div>
 <hr />
 <h2 id="practical-guides">Practical guides<a class="headerlink" href="#practical-guides" title="Permanent link">&para;</a></h2>
@@ -1386,7 +1386,7 @@
 <hr />
 <h2 id="node-configuration">Node Configuration<a class="headerlink" href="#node-configuration" title="Permanent link">&para;</a></h2>
 <p>The following configuration options can be changed in <code>node-config.toml</code>. For more information on the location of this file, and general information on the configuration of the node, see the <a href="/running-a-node/configuration/">Configuration</a> page.</p>
-<h3 id="openclenable">opencl.enable<a class="headerlink" href="#openclenable" title="Permanent link">&para;</a></h3>
+<h3 id="nodeopenclenable">node.opencl.enable<a class="headerlink" href="#nodeopenclenable" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">When GPU acceleration is enabled, the CPU is also used by default</p>
 <p>Make sure to set <code>node.work_threads</code> to <code>0</code> when using the GPU</p>
@@ -1506,7 +1506,7 @@ blake2b(\text{nonce} || \text{prev_block_hash}) \ge \text{threshold}
 <p>For services aiming to ensure the highest priority on their transactions, the confirmation of published blocks should be monitored by their integration and work levels compared against active difficulty in a similar fashion to the development wallet mentioned above. If work is left at base difficulty there could be delays in the transactions being processed during heavy network usage times.</p>
 <div class="admonition tip">
 <p class="admonition-title">Configure max work generate multiplier</p>
-<p>Due to the possibility of network work levels increasing beyond the capabilities of certain work generation setups, the config option <a href="/running-a-node/configuration/#nodemax_work_generate_multiplier"><code>node.max_work_generate_multiplier</code></a> can be used to limit how high a work value will be requested at. All setups, whether using the developer wallet or an external integration, should implement an appropriate limit which defaults to 64x in V20.</p>
+<p>Due to the possibility of network work levels increasing beyond the capabilities of certain work generation setups, the config option <a href="#nodemax_work_generate_multiplier"><code>node.max_work_generate_multiplier</code></a> can be used to limit how high a work value will be requested at. All setups, whether using the developer wallet or an external integration, should implement an appropriate limit which defaults to 64x in V20.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Upcoming threshold changes and variations by block type</p>
