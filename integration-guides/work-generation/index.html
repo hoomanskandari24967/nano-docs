@@ -1300,7 +1300,7 @@
                 <div class="admonition tip">
 <p class="admonition-title">Some sections of this page target node version 21 or higher</p>
 </div>
-<p>Every block published to the network, whether a send, receive or representative change block, requires a small, valid <a href="/glossary/#proof-of-work-pow">Proof-of-Work</a> to be completed above a minimum difficulty floor (threshold). As of V21 this threshold is different for different block types: send and change blocks require a higher threshold, while receive blocks are lower.</p>
+<p>Every block published to the network, whether a send, receive or representative change block, requires a small, valid <a href="../../glossary/#proof-of-work-pow">Proof-of-Work</a> to be completed above a minimum difficulty floor (threshold). As of V21 this threshold is different for different block types: send and change blocks require a higher threshold, while receive blocks are lower.</p>
 <p>This work value is not used in consensus, but instead is one of the first pieces of data used to validate blocks on the network and is a key component of maintaining consistent quality of service on the network.</p>
 <h2 id="system-considerations">System considerations<a class="headerlink" href="#system-considerations" title="Permanent link">&para;</a></h2>
 <p>The following configuration options should be taken into careful consideration when planning work generation resources for services integrating with Nano. These options should be combined to provide the best separation of resources between node participation on network vs. work generation needs.</p>
@@ -1385,7 +1385,7 @@
 
 <hr />
 <h2 id="node-configuration">Node Configuration<a class="headerlink" href="#node-configuration" title="Permanent link">&para;</a></h2>
-<p>The following configuration options can be changed in <code>node-config.toml</code>. For more information on the location of this file, and general information on the configuration of the node, see the <a href="/running-a-node/configuration/">Configuration</a> page.</p>
+<p>The following configuration options can be changed in <code>node-config.toml</code>. For more information on the location of this file, and general information on the configuration of the node, see the <a href="../../running-a-node/configuration/">Configuration</a> page.</p>
 <h3 id="nodeopenclenable">node.opencl.enable<a class="headerlink" href="#nodeopenclenable" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">When GPU acceleration is enabled, the CPU is also used by default</p>
@@ -1399,7 +1399,7 @@
 <p>Determines the number of local CPU threads to used for work generation. <strong>While enabled by default, it is <a href="#recommended-configurations">recommended</a> to turn off local CPU work generation.</strong></p>
 <p>Set to <code>0</code> to turn off local CPU work generation.</p>
 <h3 id="nodework_peers">node.work_peers<a class="headerlink" href="#nodework_peers" title="Permanent link">&para;</a></h3>
-<p>Used when offloading work generation to another node or service. Format must be ipv6, preceded by <code>::ffff:</code> if ipv4. Hostnames are supported since v21. Calls are made to the address:port designated using the standard RPC format <a href="/commands/rpc-protocol#work_generate">work_generate</a>. Example:</p>
+<p>Used when offloading work generation to another node or service. Format must be ipv6, preceded by <code>::ffff:</code> if ipv4. Hostnames are supported since v21. Calls are made to the address:port designated using the standard RPC format <a href="../../commands/rpc-protocol/#work_generate">work_generate</a>. Example:</p>
 <div class="codehilite"><pre><span></span>[node]
 work_peers = [
     &quot;example.work-peer.org:7000&quot;,
@@ -1423,8 +1423,8 @@ work_peers = [
 </ol>
 <p><strong>Node local work generation</strong></p>
 <p>Note that these commands do not use the configuration of the node. Prefer using the alternative above for that purpose, such as changing the number of threads for CPU work generation, or using work peers.</p>
-<p><a href="/commands/command-line-interface#-debug_profile_generate">CPU</a> with all available threads: <code>nano_node --debug_profile_generate [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
-<p><a href="/commands/command-line-interface#-debug_opencl">GPU</a> acceleration: <code>nano_node --debug_opencl --platform=0 --device=0 [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
+<p><a href="../../commands/command-line-interface/#-debug_profile_generate">CPU</a> with all available threads: <code>nano_node --debug_profile_generate [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
+<p><a href="../../commands/command-line-interface/#-debug_opencl">GPU</a> acceleration: <code>nano_node --debug_opencl --platform=0 --device=0 [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
 <p>The command will trigger continual work generation, so let it run until a sufficient sample size of times are generated (at least 100 instances). Compute the average of these times which are the number of microseconds it took to generate each sample.</p>
 <h3 id="example-benchmarks">Example benchmarks<a class="headerlink" href="#example-benchmarks" title="Permanent link">&para;</a></h3>
 <p>Below are work generation benchmarks from a variety of consumer-grade CPUs and GPUs updated in late 2017.</p>
@@ -1499,7 +1499,7 @@ blake2b(\text{nonce} || \text{prev_block_hash}) \ge \text{threshold}
 </script>
 </div>
 <h3 id="difficulty-thresholds">Difficulty thresholds<a class="headerlink" href="#difficulty-thresholds" title="Permanent link">&para;</a></h3>
-<p>The mainnet's base difficulty threshold is currently <code>0xffffffc000000000</code> for all blocks. For a block to be valid, its work field must satisfy the above work equations using this value for threshold. Nodes also prioritize the order in which they confirm transactions based on how far above this threshold the work value is. This only happens in case of saturation. Due to prioritization, it may be desirable to generate work further above the threshold to guarantee faster processing by the network. To assist integrations with managing these work difficulty levels, nodes monitor the trend of difficulty seen on unconfirmed blocks, and expose that value via the <a href="/commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC.</p>
+<p>The mainnet's base difficulty threshold is currently <code>0xffffffc000000000</code> for all blocks. For a block to be valid, its work field must satisfy the above work equations using this value for threshold. Nodes also prioritize the order in which they confirm transactions based on how far above this threshold the work value is. This only happens in case of saturation. Due to prioritization, it may be desirable to generate work further above the threshold to guarantee faster processing by the network. To assist integrations with managing these work difficulty levels, nodes monitor the trend of difficulty seen on unconfirmed blocks, and expose that value via the <a href="../../commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC.</p>
 <p><strong>Development node wallet behavior</strong></p>
 <p>The developer wallet included with the node is configured to pre-cache work at the base threshold and monitor any blocks it publishes to the network for confirmation. If they are not confirmed within 5 seconds, the difficulty on that block will be compared against the active difficulty seen on the network. If the block has a lower work value than the network, then new work generation is requested at the higher level.</p>
 <p><strong>Difficulty management for external integrations</strong></p>
@@ -1514,14 +1514,14 @@ blake2b(\text{nonce} || \text{prev_block_hash}) \ge \text{threshold}
 </div>
 <h3 id="pre-caching">Pre-caching<a class="headerlink" href="#pre-caching" title="Permanent link">&para;</a></h3>
 <p>Work for an account can be pre-cached and saved for immediate use on an account as long as it was based on the current frontier block at the time of use. Although this customization must be made externally to the node, it can help level out potential spikes in work generation, especially useful with wallet implementations.</p>
-<p>To accomplish this, after a block is published for an account (whatever type of block), note the <em><strong>hash</strong></em> of that block and use it in a RPC <a href="https://docs.nano.org/commands/rpc-protocol/#work_generate">work_generate</a> call. Note that you may require setting <code>“use_peers”: “true”</code>.</p>
+<p>To accomplish this, after a block is published for an account (whatever type of block), note the <em><strong>hash</strong></em> of that block and use it in a RPC <a href="../../commands/rpc-protocol/#work_generate">work_generate</a> call. Note that you may require setting <code>“use_peers”: “true”</code>.</p>
 <p>Upon receiving a response, store its value in your database for later use for that account. Note that after a new block is published for the account, that value will no longer be a valid PoW.</p>
 <p><strong>Pre-caching when next block type is unknown</strong></p>
 <p>With V21+ the work difficulty thresholds were split by block type. For many integrations, such as wallet providers, the context of what type of block will be generated next for an account is unknown. The recommendation for these cases is to generate difficulty at the higher threshold of a send/change block to ensure delays are avoided and the best user experience is available when using wallets.</p>
 <p><strong>Utilizing lower work when batching</strong></p>
 <p>For services that process receiving their pending transactions in bulk the lower work threshold of receive blocks can be taken advantage of. In doing so, the difficulty is 64x lower than a send/change block, but the difficulty will be normalized for proper prioritization if published during heavy network load times.</p>
 <h3 id="difficulty-multiplier">Difficulty multiplier<a class="headerlink" href="#difficulty-multiplier" title="Permanent link">&para;</a></h3>
-<p>Relative difficulty, or difficulty multiplier, describes how much more value a PoW has compared to another. In the node this is typically used to compare against the base threshold, often in relation to rework being performed or validated for proper priotizing of transactions. This value is available as part of the <a href="/commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC, but can also be obtained with the following expression:</p>
+<p>Relative difficulty, or difficulty multiplier, describes how much more value a PoW has compared to another. In the node this is typically used to compare against the base threshold, often in relation to rework being performed or validated for proper priotizing of transactions. This value is available as part of the <a href="../../commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC, but can also be obtained with the following expression:</p>
 <div>
 <div class="MathJax_Preview">
 \frac{(2^{64} - \text{base_difficulty})}{(2^{64} - \text{work_difficulty})}
