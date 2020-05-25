@@ -1479,7 +1479,7 @@ work_peers = [
 <h3 id="work-equation">Work equation<a class="headerlink" href="#work-equation" title="Permanent link">&para;</a></h3>
 <p>The <code>"work"</code> field in transactions contains a 64-bit <a href="https://en.wikipedia.org/wiki/Cryptographic_nonce">nonce</a> found using the <a href="https://blake2.net/">blake2b hash function</a>.  The nonce satisfies the following equations depending on block height:</p>
 <p><strong>Block Height 1</strong></p>
-<p>The first block on an account-chain doesn't have a previous (head) block, so the account public key is used:</p>
+<p>The first block on an account-chain doesn't have a previous (head) block, so the account public key is used (<code>||</code> means concatenation):</p>
 <div>
 <div class="MathJax_Preview">
 blake2b(\text{nonce} || \text{public_key}) \ge \text{threshold}
