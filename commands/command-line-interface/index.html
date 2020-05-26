@@ -1008,6 +1008,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-disable_block_processor_unchecked_deletion" title="--disable_block_processor_unchecked_deletion" class="md-nav__link">
+    --disable_block_processor_unchecked_deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-enable_udp" title="--enable_udp" class="md-nav__link">
     --enable_udp
   </a>
@@ -1782,6 +1789,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-disable_block_processor_unchecked_deletion" title="--disable_block_processor_unchecked_deletion" class="md-nav__link">
+    --disable_block_processor_unchecked_deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-enable_udp" title="--enable_udp" class="md-nav__link">
     --enable_udp
   </a>
@@ -2148,6 +2162,9 @@ Turn off use of UDP live network</p>
 <h3 id="-disable_providing_telemetry_metrics">--disable_providing_telemetry_metrics<a class="headerlink" href="#-disable_providing_telemetry_metrics" title="Permanent link">&para;</a></h3>
 <p><em>version 21.0+</em><br />
 Do not provide any telemetry data to nodes requesting it. Responses are still made to requests, but they will have an empty payload.</p>
+<h3 id="-disable_block_processor_unchecked_deletion">--disable_block_processor_unchecked_deletion<a class="headerlink" href="#-disable_block_processor_unchecked_deletion" title="Permanent link">&para;</a></h3>
+<p><em>version 21.0+</em><br />
+Disable deletion of unchecked blocks after processing.</p>
 <h3 id="-enable_udp">--enable_udp<a class="headerlink" href="#-enable_udp" title="Permanent link">&para;</a></h3>
 <p><em>version 21.0+</em><br />
 Turn on use of the UDP live network.</p>
@@ -2155,7 +2172,7 @@ Turn on use of the UDP live network.</p>
 <p><em>version 21.0+</em><br />
 Allow multiple connections to the same peer in bootstrap attempts</p>
 <h3 id="-fast_bootstrap">--fast_bootstrap<a class="headerlink" href="#-fast_bootstrap" title="Permanent link">&para;</a></h3>
-<p>Increase bootstrap processor limits to allow more blocks before hitting full state and verify/write more per database call. Also disable deletion of processed unchecked blocks</p>
+<p>Increase bootstrap processor limits to allow more blocks before hitting full state and verify/write more per database call. Also disable deletion of processed unchecked blocks.</p>
 <h3 id="-batch_size-deprecated">--batch_size (Deprecated)<a class="headerlink" href="#-batch_size-deprecated" title="Permanent link">&para;</a></h3>
 <p><em>version 18.0+</em><br />
 Increase sideband upgrade batch size (default 512). Deprecated in <em>v21</em> and will be removed in <em>v22</em> as it will not support upgrades from v18 nodes and earlier.</p>
