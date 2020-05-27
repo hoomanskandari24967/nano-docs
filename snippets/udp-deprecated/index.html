@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://docs.nano.org/snippets/beta-network-details-simple/">
+        <link rel="canonical" href="https://docs.nano.org/snippets/udp-deprecated/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Beta network details simple - Documentation</title>
+        <title>Udp deprecated - Documentation</title>
       
     
     
@@ -97,7 +97,7 @@
   <!-- Open Graph data -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="" />
-  <meta property="og:url" content="https://docs.nano.org/snippets/beta-network-details-simple/" />
+  <meta property="og:url" content="https://docs.nano.org/snippets/udp-deprecated/" />
   <meta property="og:image" content="https://docs.nano.org/images/nano-docs-open-graph.png" />
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Nano Docs" />
@@ -159,7 +159,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Beta network details simple
+              Udp deprecated
             </span>
           
         </div>
@@ -839,21 +839,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/snippets/beta-network-details-simple.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/snippets/udp-deprecated.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Beta network details simple</h1>
+                  <h1>Udp deprecated</h1>
                 
-                <div class="admonition info">
-<p class="admonition-title">Beta Network Ports Overview</p>
-<ul>
-<li><strong>54000 UDP:</strong> For <a href="/glossary#live-network">live network</a> activity (fallback since V19.0)  </li>
-<li><strong>54000 TCP:</strong> For <a href="/glossary#live-network">live network</a> activity (since V19.0) and <a href="/glossary#bootstrap-network">bootstrap network</a> activity</li>
-<li><strong>55000 TCP:</strong> For communication with RPC server. Anyone with access to this port can control your node's RPC.</li>
-<li><strong>57000 TCP:</strong> For communication with <a href="/integration-guides/websockets">websocket server</a>. Depending on configuration, data throughput can be very high.</li>
-</ul>
-</div>
-<div class="admonition warning">
+                <div class="admonition warning">
 <p class="admonition-title">UDP disabled by default, deprecated</p>
 <p>As of V21 peering and communicating via UDP has been disabled by default and is deprecated. The ability to use UDP will be removed from the node in a future release yet to be determined.</p>
 </div>
