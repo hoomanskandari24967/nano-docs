@@ -378,8 +378,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/node-setup/" title="Node Setup" class="md-nav__link">
-      Node Setup
+    <a href="../../running-a-node/security/" title="Security" class="md-nav__link">
+      Security
     </a>
   </li>
 
@@ -390,8 +390,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/security/" title="Security" class="md-nav__link">
-      Security
+    <a href="../../running-a-node/node-setup/" title="Node Setup" class="md-nav__link">
+      Node Setup
     </a>
   </li>
 
@@ -414,18 +414,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/beta-network/" title="Beta Network" class="md-nav__link">
-      Beta Network
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../running-a-node/configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
@@ -438,8 +426,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/troubleshooting/" title="Troubleshooting" class="md-nav__link">
-      Troubleshooting
+    <a href="../../running-a-node/ledger-management/" title="Ledger Management" class="md-nav__link">
+      Ledger Management
     </a>
   </li>
 
@@ -450,8 +438,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/ledger-management/" title="Ledger Management" class="md-nav__link">
-      Ledger Management
+    <a href="../../running-a-node/voting-as-a-representative/" title="Voting as a Representative" class="md-nav__link">
+      Voting as a Representative
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../running-a-node/beta-network/" title="Beta Network" class="md-nav__link">
+      Beta Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../running-a-node/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -1139,7 +1151,23 @@
 <li>Python: <a href="https://github.com/guilhermelawless/nano-websocket-sample-py">https://github.com/guilhermelawless/nano-websocket-sample-py</a></li>
 </ul>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>For details on configuring websockets within a node, see the <a href="/running-a-node/configuration#nodewebsocket">websocket section of Running a Node Configuration</a>.</p>
+<p>These configuration options are set in the <a href="../../running-a-node/configuration/#configuration-file-locations"><code>config-node.toml</code> file</a>.</p>
+<div class="codehilite"><pre><span></span>[node.websocket]
+
+# WebSocket server bind address.
+# type:string,ip
+address = &quot;::1&quot;
+
+# Enable or disable WebSocket server.
+# type:bool
+enable = true
+
+# WebSocket server listening port.
+# type:uint16
+port = 7078
+</pre></div>
+
+<p>With the above configuration, localhost clients should connect to <code>ws://[::1]:7078</code>. If using with Docker, see <a href="../../running-a-node/docker-management/#managing-the-container">Managing the Container</a> for details on port and address settings.</p>
 <h2 id="acknowledgement">Acknowledgement<a class="headerlink" href="#acknowledgement" title="Permanent link">&para;</a></h2>
 <p>All WebSocket actions can optionally request an acknowledgement. The following is an example for the <em>subscribe</em> action.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>

@@ -376,8 +376,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/node-setup/" title="Node Setup" class="md-nav__link">
-      Node Setup
+    <a href="../../running-a-node/security/" title="Security" class="md-nav__link">
+      Security
     </a>
   </li>
 
@@ -388,8 +388,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/security/" title="Security" class="md-nav__link">
-      Security
+    <a href="../../running-a-node/node-setup/" title="Node Setup" class="md-nav__link">
+      Node Setup
     </a>
   </li>
 
@@ -412,18 +412,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/beta-network/" title="Beta Network" class="md-nav__link">
-      Beta Network
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../running-a-node/configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
@@ -436,8 +424,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/troubleshooting/" title="Troubleshooting" class="md-nav__link">
-      Troubleshooting
+    <a href="../../running-a-node/ledger-management/" title="Ledger Management" class="md-nav__link">
+      Ledger Management
     </a>
   </li>
 
@@ -448,8 +436,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/ledger-management/" title="Ledger Management" class="md-nav__link">
-      Ledger Management
+    <a href="../../running-a-node/voting-as-a-representative/" title="Voting as a Representative" class="md-nav__link">
+      Voting as a Representative
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../running-a-node/beta-network/" title="Beta Network" class="md-nav__link">
+      Beta Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../running-a-node/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -880,25 +892,25 @@
 <td>7075</td>
 <td>UDP</td>
 <td>Enabled</td>
-<td><ul><li>Primary node activity port</li><li>Port configurable in <code>config-node.toml:node/peering_port</code></li><li>Binds to all adapters; unicast</li><li>Contents: Raw nano protocol datagrams</li><li>All standard ledger activity goes through this port</li><li>If blocked the node will not function</li></ul></td>
+<td><ul><li>Primary node activity port</li><li>Port configurable in <code>config-node.toml</code>, option <code>node.peering_port</code></li><li>Binds to all adapters; unicast</li><li>Contents: Raw nano protocol datagrams</li><li>All standard ledger activity goes through this port</li><li>If blocked the node will not function</li></ul></td>
 </tr>
 <tr>
 <td>7075</td>
 <td>TCP</td>
 <td>Enabled</td>
-<td><ul><li>Node bootstrapping server</li><li>Share port configuration in <code>config-node.toml:node/peering_port</code></li><li>Binds to all adapters; unicast</li><li>Contents: Raw nano protocol stream</li><li>Transmits the ledger to new nodes in bulk</li><li>If blocked other nodes will not be able retrieve the ledger from this node</li></ul></td>
+<td><ul><li>Node bootstrapping server</li><li>Share port configuration in <code>config-node.toml</code>, option <code>node.peering_port</code></li><li>Binds to all adapters; unicast</li><li>Contents: Raw nano protocol stream</li><li>Transmits the ledger to new nodes in bulk</li><li>If blocked other nodes will not be able retrieve the ledger from this node</li></ul></td>
 </tr>
 <tr>
 <td>7076</td>
 <td>TCP</td>
 <td>Disabled</td>
-<td><ul><li>RPC server</li><li>Port configurable in <code>config-rpc.toml:rpc/port</code></li><li>Enable in <code>config-node.toml:rpc/enable</code> or by starting <code>nano_rpc</code> manually</li><li> Binds to localhost by default for security reasons, configurable in <code>config-rpc.toml:rpc/address</code>; unicast</li><li>Contents: Unencrypted HTTP requests containing JSON object bodies</li><li>Allows the node to be queried or controlled through HTTP requests</li><li>If blocked the node will not be able to be queried or controlled by HTTP</li><li><strong>WARNING: Exposing this port externally while setting <code>enable_control</code> option to <code>true</code> in configs could expose your wallet, allow the node to be stopped remotely and open your node up to other dangerous activity.</strong> See the <a href="/running-a-node/security">Node Security page</a> for more details.</li></ul></td>
+<td><ul><li>RPC server</li><li>Port configurable in <code>config-rpc.toml</code>, option <code>rpc.port</code></li><li>Enable in <code>config-node.toml</code>, option <code>rpc.enable</code> or by starting <code>nano_rpc</code> manually</li><li> Binds to localhost by default for security reasons, configurable in <code>config-rpc.toml</code>, option <code>rpc.address</code>; unicast</li><li>Contents: Unencrypted HTTP requests containing JSON object bodies</li><li>Allows the node to be queried or controlled through HTTP requests</li><li>If blocked the node will not be able to be queried or controlled by HTTP</li><li><strong>WARNING: Exposing this port externally while setting <code>enable_control</code> option to <code>true</code> in configs could expose your wallet, allow the node to be stopped remotely and open your node up to other dangerous activity.</strong> See the <a href="/running-a-node/security">Node Security page</a> for more details.</li></ul></td>
 </tr>
 <tr>
 <td>7078</td>
 <td>TCP</td>
 <td>Disabled</td>
-<td><ul><li>Websocket server</li><li>Port configurable in <code>config-node.toml:node.websocket/port</code></li><li>Enable in <code>config-node.toml:node.websocket/enable</code></li><li>Binds to localhost by default due to data throughput potentially being very high; producer-subscriber broadcast</li><li>Contents: Standard websocket frames containing JSON-encoded objects</li><li>See <a href="/integration-guides/websockets">WebSocket Support</a> for details on configuration</li></ul></td>
+<td><ul><li>Websocket server</li><li>Port configurable in <code>config-node.toml</code>, option <code>node.websocket.port</code></li><li>Enable in <code>config-node.toml</code>, option <code>node.websocket.enable</code></li><li>Binds to localhost by default due to data throughput potentially being very high; producer-subscriber broadcast</li><li>Contents: Standard websocket frames containing JSON-encoded objects</li><li>See <a href="/integration-guides/websockets">WebSocket Support</a> for details on configuration</li></ul></td>
 </tr>
 </tbody>
 </table>
