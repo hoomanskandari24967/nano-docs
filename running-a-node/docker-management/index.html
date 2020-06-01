@@ -1277,7 +1277,7 @@
 <p>For other commands, review the <a href="/commands/rpc-protocol">RPC Protocol</a> details.</p>
 <hr />
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
-<p>If you get <code>Error starting userland proxy: port is not a proto:IP:port: 'tcp:[:'.</code> or want to expose IPv4 port, use <code>-p 127.0.0.1:7076:7076</code>.</p>
+<p>If you get <code>Error starting userland proxy: port is not a proto:IP:port: 'tcp:[:'.</code> or want to expose IPv4 port, use <code>-p 127.0.0.1:7076:7076</code>. Likewise, if you get <code>curl: (7) Couldn't connect to server</code> when interacting with the node, replace <code>[::1]:7076</code> with <code>127.0.0.1:7076</code>.</p>
 <p>If you get <code>create ~: volume name is too short, names should be at least two alphanumeric characters.</code> replace the <code>~</code> with the full pathname such as <code>/Users/someuser</code>.</p>
                 
                   
