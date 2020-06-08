@@ -605,8 +605,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nano-folder" title="Nano Folder" class="md-nav__link">
-    Nano Folder
+  <a href="#nano-directory" title="Nano Directory" class="md-nav__link">
+    Nano Directory
   </a>
   
     <nav class="md-nav">
@@ -1136,8 +1136,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nano-folder" title="Nano Folder" class="md-nav__link">
-    Nano Folder
+  <a href="#nano-directory" title="Nano Directory" class="md-nav__link">
+    Nano Directory
   </a>
   
     <nav class="md-nav">
@@ -1437,9 +1437,9 @@ The beta node can be also be installed from other sources including <a href="/ru
 sudo yum install nanocurrency-beta
 </pre></div></p>
 <p>This installs <code>nano_node-beta</code> to bin.</p>
-<h2 id="nano-folder">Nano Folder<a class="headerlink" href="#nano-folder" title="Permanent link">&para;</a></h2>
+<h2 id="nano-directory">Nano Directory<a class="headerlink" href="#nano-directory" title="Permanent link">&para;</a></h2>
 <h3 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h3>
-<p>The Nano folder contains: wallets file (<code>wallets.ldb</code>), <a href="/running-a-node/troubleshooting/#log-files">log files</a>, optional config files, ledger file (data.ldb) and related lock files.</p>
+<p>The Nano directory contains: wallets file (<code>wallets.ldb</code>), <a href="/running-a-node/troubleshooting/#log-files">log files</a>, optional config files, ledger file (data.ldb) and related lock files.</p>
 <div class="admonition warning">
 <p class="admonition-title">Protect wallet and backup files</p>
 <p>The built-in node wallet is for use in development and testing only. Those using it should take care in protecting access to the wallets.ldb file and backup files, whether encrypted or not, for added security.</p>
@@ -1467,11 +1467,11 @@ sudo yum install nanocurrency-beta
 </tr>
 </tbody>
 </table>
-<details class="tip"><summary>Moving folder locations</summary><p>Some users desire to change the blockchain download location. A solution is available for the no gui nano_node (see <a href="https://github.com/nanocurrency/nano-node/issues/79">https://github.com/nanocurrency/nano-node/issues/79</a>), but no concrete solution is available for the GUI client. However, a workaround can be acheived via the use of symbolic links. Below is a short tutorial for Windows builds:</p>
+<details class="tip"><summary>Moving directory locations</summary><p>Some users desire to change the blockchain download location. A solution is available for the no gui nano_node (see <a href="https://github.com/nanocurrency/nano-node/issues/79">https://github.com/nanocurrency/nano-node/issues/79</a>), but no concrete solution is available for the GUI client. However, a workaround can be acheived via the use of symbolic links. Below is a short tutorial for Windows builds:</p>
 <ol>
-<li>Rename/delete the Nano folder in your <code>appdata</code> Local folder (if you haven't run the wallet yet, skip this step). This is necessary because the command to create a symbolic link in windows will fail if the the input directory already exists.</li>
-<li>Decide on where you want to store the blockchain and create a symbolic link. The command is (in an administrative command-prompt): <code>mklink /d "C:\Users\&lt;user&gt;\AppData\Local\Nano\" "E:\Some\Other\Directory"</code>. This command creates a symbolic link for a directory (<code>/d</code>) that 'redirects' all requests for files/directories in the <code>Local\Nano</code> folder to the <code>Other\Directory</code>. This means that a file created in the input directory will actually be in the output directory (on the other disk).</li>
-<li>Verify it works. Create a file in your Nano folder in your appdata, and you should see it appear in the directory you linked it to (and vice-versa). If you have old wallets or a partially-downloaded blockchain, copy them back into the local directory. Start the wallet.</li>
+<li>Rename/delete the Nano directory in your <code>appdata</code> Local directory (if you haven't run the wallet yet, skip this step). This is necessary because the command to create a symbolic link in windows will fail if the the input directory already exists.</li>
+<li>Decide on where you want to store the blockchain and create a symbolic link. The command is (in an administrative command-prompt): <code>mklink /d "C:\Users\&lt;user&gt;\AppData\Local\Nano\" "E:\Some\Other\Directory"</code>. This command creates a symbolic link for a directory (<code>/d</code>) that 'redirects' all requests for files/directories in the <code>Local\Nano</code> directory to the <code>Other\Directory</code>. This means that a file created in the input directory will actually be in the output directory (on the other disk).</li>
+<li>Verify it works. Create a file in your Nano directory in your appdata, and you should see it appear in the directory you linked it to (and vice-versa). If you have old wallets or a partially-downloaded blockchain, copy them back into the local directory. Start the wallet.</li>
 </ol>
 </details>
 <hr />
@@ -1682,12 +1682,12 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/nanocurrency/nano-node
 <span class="nb">cd</span> nano-node
 </pre></div></p>
-<p><strong>Create a <code>build</code> folder inside nano-node (makes for easier cleaning of build)</strong></p>
+<p><strong>Create a <code>build</code> directory inside nano-node (makes for easier cleaning of build)</strong></p>
 <p>Using git_bash:
 <div class="codehilite"><pre><span></span>mkdir build
 <span class="nb">cd</span> build
 </pre></div>
-* <strong>Note:</strong> all subsequent commands should be run within this "build" folder.</p>
+* <strong>Note:</strong> all subsequent commands should be run within this "build" directory.</p>
 <p><strong>Get redistributables</strong> </p>
 <p>Using Powershell:
 <div class="codehilite"><pre><span></span>Invoke-WebRequest -Uri https://aka.ms/vs/15/release/vc_redist.x64.exe -OutFile .<span class="se">\v</span>c_redist.x64.exe

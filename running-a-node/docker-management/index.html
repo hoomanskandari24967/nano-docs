@@ -429,8 +429,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nano-folder" title="Nano Folder" class="md-nav__link">
-    Nano Folder
+  <a href="#nano-directory" title="Nano Directory" class="md-nav__link">
+    Nano Directory
   </a>
   
 </li>
@@ -975,8 +975,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nano-folder" title="Nano Folder" class="md-nav__link">
-    Nano Folder
+  <a href="#nano-directory" title="Nano Directory" class="md-nav__link">
+    Nano Directory
   </a>
   
 </li>
@@ -1093,13 +1093,13 @@
 <li>V19 and lower: Due to the startup script built into the Docker containers, <a href="/commands/command-line-interface/#launch-options">Launch Options</a> for the <code>nano_node</code> service run inside the container cannot be easily used. These options are available as of V20.</li>
 </ul>
 </div>
-<h3 id="nano-folder">Nano Folder<a class="headerlink" href="#nano-folder" title="Permanent link">&para;</a></h3>
-<p>The Nano folder contains: wallets file (<code>wallets.ldb</code>), <a href="/running-a-node/troubleshooting/#log-files">log files</a>, optional config files, ledger file (data.ldb) and related lock files.</p>
+<h3 id="nano-directory">Nano Directory<a class="headerlink" href="#nano-directory" title="Permanent link">&para;</a></h3>
+<p>The Nano directory contains: wallets file (<code>wallets.ldb</code>), <a href="/running-a-node/troubleshooting/#log-files">log files</a>, optional config files, ledger file (data.ldb) and related lock files.</p>
 <div class="admonition warning">
 <p class="admonition-title">Protect wallet and backup files</p>
 <p>The built-in node wallet is for use in development and testing only. Those using it should take care in protecting access to the wallets.ldb file and backup files, whether encrypted or not, for added security.</p>
 </div>
-<p>For Docker setups, the <code>${NANO_HOST_FOLDER}</code> indicated in the steps below will be the location of these files on your host machine.</p>
+<p>For Docker setups, the <code>${NANO_HOST_DIR}</code> indicated in the steps below will be the location of these files on your host machine.</p>
 <h3 id="managing-the-container">Managing the Container<a class="headerlink" href="#managing-the-container" title="Permanent link">&para;</a></h3>
 <h4 id="starting">Starting<a class="headerlink" href="#starting" title="Permanent link">&para;</a></h4>
 <p>The following command will start the node container. Either set the specified environment variables (i.e. <code>NANO_NAME=nano_node</code>) or substitute in explicit values to the <code>docker run</code> command.</p>
@@ -1112,7 +1112,7 @@
 <p><code>${NANO_TAG}</code> - The version of docker image you will be running. For consumers, <code>latest</code> is acceptable, but for enterprise use, a manually set tag to the latest version number is recommended.</p>
 </li>
 <li>
-<p><code>${NANO_HOST_FOLDER}</code> - Location on the host computer where the ledger, configuration files, and logs will be stored. The Docker container will directly store files such as <a href="/running-a-node/configuration">config-node.toml</a> and <code>data.ldb</code> into this directory.</p>
+<p><code>${NANO_HOST_DIR}</code> - Location on the host computer where the ledger, configuration files, and logs will be stored. The Docker container will directly store files such as <a href="/running-a-node/configuration">config-node.toml</a> and <code>data.ldb</code> into this directory.</p>
 </li>
 </ul>
 <hr />
@@ -1121,7 +1121,7 @@
   -p <span class="m">7075</span>:7075 <span class="se">\</span>
   -p <span class="o">[</span>::1<span class="o">]</span>:7076:7076 <span class="se">\</span>
   -p <span class="o">[</span>::1<span class="o">]</span>:7078:7078 <span class="se">\</span>
-  -v <span class="si">${</span><span class="nv">NANO_HOST_FOLDER</span><span class="si">}</span>:/root <span class="se">\</span>
+  -v <span class="si">${</span><span class="nv">NANO_HOST_DIR</span><span class="si">}</span>:/root <span class="se">\</span>
   --name <span class="si">${</span><span class="nv">NANO_NAME</span><span class="si">}</span> <span class="se">\</span>
   nanocurrency/nano:<span class="si">${</span><span class="nv">NANO_TAG</span><span class="si">}</span>
 </pre></div>
@@ -1147,7 +1147,7 @@
 <td>Maps the bootstrapping TCP port</td>
 </tr>
 <tr>
-<td><code>-v ${NANO_HOST_FOLDER}:/root</code></td>
+<td><code>-v ${NANO_HOST_DIR}:/root</code></td>
 <td>Maps the host's Nano directory to the guest <code>/root</code> directory</td>
 </tr>
 <tr>
@@ -1180,7 +1180,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you are running multiple nano_node Docker containers, <strong>DO NOT</strong> share the same <code>${NANO_HOST_FOLDER}</code>, each nano_node requires its own independent files.</p>
+<p>If you are running multiple nano_node Docker containers, <strong>DO NOT</strong> share the same <code>${NANO_HOST_DIR}</code>, each nano_node requires its own independent files.</p>
 </div>
 <hr />
 <h4 id="stopping">Stopping<a class="headerlink" href="#stopping" title="Permanent link">&para;</a></h4>
@@ -1228,7 +1228,7 @@
 <p class="admonition-title">Warning</p>
 <p>Modifications made to configuration files while the Docker container is running have no effect until the container is restarted.</p>
 </div>
-<p>You may now edit the <a href="/running-a-node/configuration">configuration files</a> located in <code>${NANO_HOST_FOLDER}</code> using your preferred text editor.</p>
+<p>You may now edit the <a href="/running-a-node/configuration">configuration files</a> located in <code>${NANO_HOST_DIR}</code> using your preferred text editor.</p>
 <p>Once modifications are complete, <a href="#starting">start up the docker container again</a> using the same command.</p>
 <div class="admonition tip">
 <p class="admonition-title">Enable Voting</p>
