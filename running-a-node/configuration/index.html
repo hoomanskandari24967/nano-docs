@@ -505,6 +505,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#logginglog_rpc" title="logging.log_rpc" class="md-nav__link">
+    logging.log_rpc
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -927,6 +934,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../releases/current-release-notes/" title="Current Release Notes" class="md-nav__link">
+      Current Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/previous-release-notes/" title="Previous Release Notes" class="md-nav__link">
+      Previous Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../releases/network-upgrades/" title="Network Upgrades" class="md-nav__link">
       Network Upgrades
     </a>
@@ -1055,6 +1086,13 @@
           <li class="md-nav__item">
   <a href="#enable_control" title="enable_control" class="md-nav__link">
     enable_control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_rpc" title="logging.log_rpc" class="md-nav__link">
+    logging.log_rpc
   </a>
   
 </li>
@@ -1381,6 +1419,16 @@ enable_control = false
 <p>Due to the sensitive or dangerous nature of these calls, <strong>caution should be used when considering setting <code>enable_control</code> to <code>true</code></strong> in your config file. It is highly recommended to <strong>only enable this when RPC ports are listening exclusively to local or loopback IP addresses</strong> or other measure are put in place outside the node to limit RPC access to dangerous calls. For more details see the <a href="../security/">Node Security page</a>.</p>
 </div>
 <p>More advanced options for controlling the process the RPC server runs under can be found in the <a href="../../integration-guides/advanced/#running-nano-as-a-service">Running Nano as a service guide</a>.</p>
+<h4 id="logginglog_rpc">logging.log_rpc<a class="headerlink" href="#logginglog_rpc" title="Permanent link">&para;</a></h4>
+<p>This configuration option is set in the <a href="./#configuration-file-locations"><code>config-rpc.toml</code></a> file.</p>
+<p>By default, all RPC calls and the time spent handling each one are <a href="../troubleshooting/#log-files">logged</a>. This can be optionally turned off by switching option <code>logging.log_rpc</code> to <code>false</code></p>
+<div class="codehilite"><pre><span></span>[logging]
+
+# Whether to log RPC calls.
+# type:bool
+log_rpc = true
+</pre></div>
+
 <h3 id="ipc">IPC<a class="headerlink" href="#ipc" title="Permanent link">&para;</a></h3>
 <p>See the <a href="../../integration-guides/ipc-integration/#configuration">IPC Integration guide</a>.</p>
 <h3 id="voting">Voting<a class="headerlink" href="#voting" title="Permanent link">&para;</a></h3>

@@ -1019,6 +1019,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../releases/current-release-notes/" title="Current Release Notes" class="md-nav__link">
+      Current Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/previous-release-notes/" title="Previous Release Notes" class="md-nav__link">
+      Previous Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../releases/network-upgrades/" title="Network Upgrades" class="md-nav__link">
       Network Upgrades
     </a>
@@ -1439,50 +1463,88 @@ work_peers = [
 <p><a href="../../commands/command-line-interface/#-debug_opencl">GPU</a> acceleration: <code>nano_node --debug_opencl --platform=0 --device=0 [--difficulty fffffff800000000] [--multiplier 1.0]</code></p>
 <p>The command will trigger continual work generation, so let it run until a sufficient sample size of times are generated (at least 100 instances). Compute the average of these times which are the number of microseconds it took to generate each sample.</p>
 <h3 id="example-benchmarks">Example benchmarks<a class="headerlink" href="#example-benchmarks" title="Permanent link">&para;</a></h3>
-<p>Below are work generation benchmarks from a variety of consumer-grade CPUs and GPUs updated in late 2017.</p>
+<p>Below are work generation benchmarks from a variety of consumer-grade CPUs and GPUs. All values are presented in <strong># work/second generated</strong>. See the <a href="#difficulty-thresholds">difficulty thresholds section</a> below for details about values required for different epoch versions and block types.</p>
 <table>
 <thead>
 <tr>
-<th>Device</th>
-<th>Epoch v1<br /># PoW/sec</th>
+<th><strong>Device</strong></th>
+<th><strong>Epoch v1</strong><br />All Blocks</th>
+<th><strong>Epoch v2</strong><br />Send/Change Blocks</th>
+<th><strong>Epoch v2</strong><br />Receive Blocks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Nvidia Tesla V100 (AWS)</td>
 <td>6.4</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Nvidia Tesla P100 (Google,Cloud)</td>
 <td>4.9</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Nvidia Tesla K80 (Google,Cloud)</td>
 <td>1.64</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>AMD RX 470 OC</td>
 <td>1.59</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Nvidia GTX 1060 3GB</td>
 <td>1.25</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Intel Core i7 4790K AVX2</td>
 <td>0.33</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Intel Core i7 4790K,WebAssembly (Firefox)</td>
 <td>0.14</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>Google Cloud 4 vCores 0.14-0.16</td>
+<td>Google Cloud 4 vCores</td>
 <td>0.14-0.16</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>ARM64 server 4 cores (Scaleway)</td>
 <td>0.05-0.07</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nvidia GTX 1080</td>
+<td>2.63</td>
+<td>0.37</td>
+<td>21.29</td>
+</tr>
+<tr>
+<td>Nvidia RTX 2080 Ti</td>
+<td>4.01</td>
+<td>0.51</td>
+<td>31.5</td>
+</tr>
+<tr>
+<td>AMD R9-3900X (12C/24T@3.97GHz AVX2)</td>
+<td>1.97</td>
+<td>0.26</td>
+<td>15.6</td>
 </tr>
 </tbody>
 </table>
@@ -1511,7 +1573,36 @@ blake2b(\text{nonce} || \text{prev_block_hash}) \ge \text{threshold}
 </script>
 </div>
 <h3 id="difficulty-thresholds">Difficulty thresholds<a class="headerlink" href="#difficulty-thresholds" title="Permanent link">&para;</a></h3>
-<p>The mainnet's base difficulty threshold is currently <code>0xffffffc000000000</code> for all blocks. For a block to be valid, its work field must satisfy the above work equations using this value for threshold. Nodes also prioritize the order in which they confirm transactions based on how far above this threshold the work value is. This only happens in case of saturation. Due to prioritization, it may be desirable to generate work further above the threshold to guarantee faster processing by the network. To assist integrations with managing these work difficulty levels, nodes monitor the trend of difficulty seen on unconfirmed blocks, and expose that value via the <a href="../../commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC.</p>
+<p>The mainnet's base difficulty threshold is currently <code>ffffffc000000000</code> for all epoch v1 blocks. For a block to be valid, its work field must satisfy the above work equations using this value for threshold. Nodes also prioritize the order in which they confirm transactions based on how far above this threshold the work value is. This only happens in case of saturation.</p>
+<p>Due to prioritization, it may be desirable to generate work further above the threshold to guarantee faster processing by the network. To assist integrations with managing these work difficulty levels, nodes monitor the trend of difficulty seen on unconfirmed blocks, and expose that value via the <a href="../../commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC.</p>
+<p>After the next <a href="../../releases/network-upgrades/#increased-work-difficulty">network upgrade to increase difficulty</a>, which will occur after the <a href="../../releases/current-release-notes/">V21.0 release</a> and subsequent distribution of epoch v2 blocks, there will be two difficulty thresholds:</p>
+<table>
+<thead>
+<tr>
+<th>Epoch version</th>
+<th>Block Type</th>
+<th>Difficulty Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>All</td>
+<td><code>ffffffc000000000</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Send or change</td>
+<td><code>fffffff800000000</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Receive</td>
+<td><code>fffffe0000000000</code></td>
+</tr>
+</tbody>
+</table>
+<p>Although preparations can be done ahead of the upgrade, please find related considerations in the <a href="../../releases/network-upgrades/#increased-work-difficulty">network upgrade to increase difficulty</a> section.</p>
 <p><strong>Development node wallet behavior</strong></p>
 <p>The developer wallet included with the node is configured to pre-cache work at the base threshold and monitor any blocks it publishes to the network for confirmation. If they are not confirmed within 5 seconds, the difficulty on that block will be compared against the active difficulty seen on the network. If the block has a lower work value than the network, then new work generation is requested at the higher level.</p>
 <p><strong>Difficulty management for external integrations</strong></p>

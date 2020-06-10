@@ -784,6 +784,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../current-release-notes/" title="Current Release Notes" class="md-nav__link">
+      Current Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../previous-release-notes/" title="Previous Release Notes" class="md-nav__link">
+      Previous Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -815,6 +839,53 @@
         <li class="md-nav__item">
   <a href="#upcoming-upgrades" title="Upcoming upgrades" class="md-nav__link">
     Upcoming upgrades
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#increased-work-difficulty" title="Increased work difficulty" class="md-nav__link">
+    Increased work difficulty
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transition-details" title="Transition details" class="md-nav__link">
+    Transition details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-preparations" title="Recommended preparations" class="md-nav__link">
+    Recommended preparations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-explanation" title="Transition Explanation" class="md-nav__link">
+    Transition Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-upgrades" title="Future upgrades" class="md-nav__link">
+    Future upgrades
   </a>
   
     <nav class="md-nav">
@@ -988,6 +1059,53 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#increased-work-difficulty" title="Increased work difficulty" class="md-nav__link">
+    Increased work difficulty
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transition-details" title="Transition details" class="md-nav__link">
+    Transition details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-preparations" title="Recommended preparations" class="md-nav__link">
+    Recommended preparations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-explanation" title="Transition Explanation" class="md-nav__link">
+    Transition Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-upgrades" title="Future upgrades" class="md-nav__link">
+    Future upgrades
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#new-pow-algorithm" title="New PoW algorithm" class="md-nav__link">
     New PoW algorithm
   </a>
@@ -1095,8 +1213,90 @@
                 
                 <h1 id="network-upgrades">Network Upgrades<a class="headerlink" href="#network-upgrades" title="Permanent link">&para;</a></h1>
 <p>For details on why and how network upgrades happen, along with explanations of the various types, please see the <a href="#upgrades-overview">Upgrades overview</a> and <a href="#upgrade-methods">Upgrade methods</a> sections further down.</p>
+<div class="admonition info">
+<p><div style="display:flex;">
+    <div style="padding-right: 10px;">
+        <a href="http://eepurl.com/gZucL1" target="_blank" rel="noopener"><h3 style="margin-top: 0;">Join our Technical Update Mailing List</h3></a>
+        <div>Follow this link to sign up for email updates on the latest protocol/node releases and other technical details. This will include network upgrades such as the upcoming epoch distribution:
+            <a href="http://eepurl.com/gZucL1" class="button" target="_blank" rel="noopener"><a href="http://eepurl.com/gZucL1">http://eepurl.com/gZucL1</a></a>
+        </div>
+    </div>
+    <div>
+        <div style="background-color: #DCE9F9; padding: 10px 10px 0 10px;">
+            <a href="http://eepurl.com/gZucL1" target="_blank" rel="noopener"><img alt="Join Technical Updates Mailing List" src="../../images/mailing-list.svg" title="Mailing list" style="width:100%; min-width: 120px;"></a>
+        </div>
+    </div>
+</div></p>
+</div>
 <hr />
 <h2 id="upcoming-upgrades">Upcoming upgrades<a class="headerlink" href="#upcoming-upgrades" title="Permanent link">&para;</a></h2>
+<h3 id="increased-work-difficulty">Increased work difficulty<a class="headerlink" href="#increased-work-difficulty" title="Permanent link">&para;</a></h3>
+<p>To help ensure Quality of Service on the network by increasing the difficulty required for send and change blocks to be considered valid by the network (8x compared to current). To help offset the difficulty increase and add incentive to receive blocks so ledger pruning can be done more broadly in the future, the difficulty for receive blocks will simultaneously be reduced (&#8539; compared to current).</p>
+<h4 id="transition-details">Transition details<a class="headerlink" href="#transition-details" title="Permanent link">&para;</a></h4>
+<p>This upgrade is sometimes referenced as the epoch v2 upgrade and the relate events to complete are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TBD</td>
+<td>Node release</td>
+<td>Nano node V21.0 released which includes changes necessary for supporting new difficulty validation and generation</td>
+</tr>
+<tr>
+<td>TBD</td>
+<td><span class="no-break">v2 epoch blocks distribution start</span></td>
+<td>Distribution of v2 epoch blocks to all accounts to mark in the ledger the point at which the new work difficulty levels will be required. The start of this distribution process will occur once key services and over 90% of voting weight on the network has upraded.</td>
+</tr>
+<tr>
+<td>TBD</td>
+<td><span class="no-break">v2 epoch blocks distribution end</span></td>
+<td>Distribution of epoch blocks ends after all accounts are upgraded.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Nodes de-peered with epoch blocks</p>
+<p>Due to the nature of the work difficulty changes, any nodes not updated to V21.0 at the time of epoch block distribution will be de-peered from the network.</p>
+</div>
+<h4 id="recommended-preparations">Recommended preparations<a class="headerlink" href="#recommended-preparations" title="Permanent link">&para;</a></h4>
+<p>In order to best prepare for the transition to new thresholds, the following items should be considered:</p>
+<p><strong>Work generation guide</strong><br />
+The new <a href="../../integration-guides/work-generation/">Work Generation guide</a> was written to help users and integrations leverage their work generation at all times.</p>
+<p><strong>Work validation</strong><br />
+The <a href="../../commands/rpc-protocol/#work_validate"><code>work_validate</code></a> RPC has multiple changes to the response, one which will break most existing integrations when upgrading to V21, two others that will become useful after upgrade:</p>
+<ul>
+<li>If <code>difficulty</code> parameter is not explicitly passed in the request, the existing <code>valid</code> field will not be returned (<strong>breaking</strong>)</li>
+<li><code>valid_all</code> is a new return field, <code>true</code> if the work is valid at the current default difficulty (will go up after epoch upgrade)</li>
+<li><code>valid_receive</code> is a new return field, <code>true</code> if the work is valid at the lower epoch_2 receive difficulty (only useful after the epoch upgrade is finished)</li>
+<li><strong>If possible, it is best to avoid using this RPC until the epoch upgrade is completed</strong></li>
+</ul>
+<p><strong>External work generation</strong><br />
+<a href="https://github.com/nanocurrency/nano-work-server">nano-work-server</a> has been updated to use the higher threshold by default when not given an explicit <code>difficulty</code>. The <code>work_validate</code> response has the same breaking changes as above.</p>
+<ul>
+<li>Prefer directly using the server as a <a href="../../integration-guides/work-generation/#nodework_peers">work peer</a> as outlined in the <a href="../../integration-guides/work-generation/#work-generated-using-the-node-incl-work-peers">guide</a>. The node always requests the appropriate difficulty threshold when using RPC <a href="../../commands/rpc-protocol/#block_create">block_create</a>, or <a href="../../commands/rpc-protocol/#work_generate">work_generate</a> with the optional <code>block</code>.</li>
+<li>In cases where requesting directly from a node is not possible, avoid using the lower threshold for receive blocks until the epoch upgrade is fully complete.</li>
+</ul>
+<p><strong>Work generation performance</strong><br />
+Testing out work generation capabilities on a machine is recommended. Details for how to accomplish this can be found in the <a href="../../integration-guides/work-generation/#benchmarks">Benchmark section of the Work Generation guide</a>.</p>
+<p><strong>Other integration considerations</strong><br />
+Although it is already recommended as best practice, any integrations not already calling for the frontier block when constructing a transaction should do so. If hashes are being internally tracked and frontier is not requested, the integration could unintentionally cause a fork on the account with distribution of epoch blocks.</p>
+<p>See <a href="../../integration-guides/key-management/#send-transaction">Step 1: Get Account Info</a> for the <a href="../../commands/rpc-protocol/#account_info"><code>account_info</code></a> RPC recommendation when creating transactions.</p>
+<details class="info"><summary>Post-distribution active difficulty changes</summary><p><strong>The following changes will only be valid after the epoch v2 distribution is complete or the accounts you are dealing with have been upgraded.</strong></p>
+<p>To programatically retrieve the current difficulty for any integrations doing work generation outside the node, the <code>network_minimum</code> field in <a href="../../commands/rpc-protocol/#active_difficulty"><code>active_difficulty</code></a> RPC and <a href="../../integration-guides/websockets/#active-difficulty">WebSocket topic</a> will see a change from <code>ffffffc000000000</code> (pre-epoch v2 difficulty) to <code>fffffff800000000</code> (8x higher epoch v2 difficulty), an indication the epoch upgrade has begun.</p>
+<p>Once this occurs, send and change blocks should use this newly returned, higher threshold, and receive blocks can optionally use <code>fffffe0000000000</code> as the lower threshold going forward.</p>
+</details>
+<h4 id="transition-explanation">Transition Explanation<a class="headerlink" href="#transition-explanation" title="Permanent link">&para;</a></h4>
+<p>When changing the work difficulty requirements it is necessary to mark a point in each account where the difficulty requirements change so bootstrapping and other behaviors can accurately validate historical blocks. For this reason the epoch blocks are being distributed to act as the marker in the ledger.</p>
+<p>Once epoch block distribution is started the ability to validate the new work difficulty levels is required. Since node versions before V21.0 do not have the ability to do this, they will be immediately de-peered from the network and cannot participate with the current network until upgraded.</p>
+<p>To mitigate the impacts of this approach the Nano Foundation will be communicating regularly about progress and monitoring closely the activity on the network. Once acceptable conditions exist to finalize the transition, the distribution will begin. The current plan is to start once over 90% of voting weight has been upgraded, along with all the key services on the network.</p>
+<hr />
+<h2 id="future-upgrades">Future upgrades<a class="headerlink" href="#future-upgrades" title="Permanent link">&para;</a></h2>
 <h3 id="new-pow-algorithm">New PoW algorithm<a class="headerlink" href="#new-pow-algorithm" title="Permanent link">&para;</a></h3>
 <p><strong>Purpose</strong></p>
 <p>To help ensure Quality of Service on the network by providing the ability to generate and validate PoW using a new algorithm. This algorithm will be more memory-hard causing the resources required for generating transactions to shift accordingly.</p>
@@ -1177,19 +1377,19 @@
 </tr>
 <tr>
 <td>2018-10-25</td>
-<td><span class="no-break">Epoch blocks start</span></td>
-<td>Distribution of epoch blocks begins.</td>
+<td><span class="no-break">Epoch v1 block</span> <span class="no-break">distribution start</span></td>
+<td>Distribution of epoch v1 blocks begins.</td>
 </tr>
 <tr>
 <td>2019-05-24</td>
-<td>Epoch blocks end</td>
-<td>Distribution of epoch blocks is finished. All accounts, opened and unopened, are now capped and can no longer attempt inserting legacy style blocks.</td>
+<td>Epoch v1 block distribution end</td>
+<td>Distribution of epoch v1 blocks is finished. All accounts, opened and unopened, are now capped and can no longer attempt inserting legacy style blocks.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="vote-by-hash">Vote-by-Hash<a class="headerlink" href="#vote-by-hash" title="Permanent link">&para;</a></h3>
 <p><strong>Purpose</strong></p>
-<p>The upgrade to include the <a href="/glossary/#active-transaction">vote-by-hash</a> feature was based on a hardcoded timestamp in the node. After this time nodes began voting using this new feature.</p>
+<p>The upgrade to include the <a href="../../glossary/#vote-by-hash">vote-by-hash</a> feature was based on a hardcoded timestamp in the node. After this time nodes began voting using this new feature.</p>
 <p><strong>Transition Details</strong></p>
 <table>
 <thead>
@@ -1301,6 +1501,28 @@
 </tr>
 </tbody>
 </table>
+<p>The following are the epoch versions and the related accounts which are used to distribute them to the network. For certain protocol implementations these epoch signers need to be included to efficiently determine whether incoming blocks are epoch blocks.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Epoch signer account</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>xrb_3t6k35gi95xu6tergt6p69ck76ogmitsa8mnijtpxm9fkcm736xtoncuohr3</code></td>
+<td>Genesis account</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>nano_3qb6o6i1tkzr6jwr5s7eehfxwg9x6eemitdinbpi7u8bjjwsgqfj4wzser3x</code></td>
+<td>Undistributed as of June 2020, see <a href="#increased-work-difficulty">Increased work difficulty</a> details above</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -1325,8 +1547,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../node-releases/"
-              title="Node Releases"
+          <a href="../previous-release-notes/"
+              title="Previous Release Notes"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1339,7 +1561,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Node Releases
+                Previous Release Notes
               </span>
             </div>
           </a>

@@ -477,13 +477,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#differences-from-the-main-network" title="Differences from the main network" class="md-nav__link">
-    Differences from the main network
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#node-release-testing" title="Node release testing" class="md-nav__link">
     Node release testing
   </a>
@@ -539,6 +532,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#differences-from-the-main-network" title="Differences from the main network" class="md-nav__link">
+    Differences from the main network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testing-builds" title="Testing Builds" class="md-nav__link">
     Testing Builds
   </a>
@@ -547,15 +547,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#release-candidate-builds" title="Release Candidate Builds" class="md-nav__link">
-    Release Candidate Builds
+  <a href="#latest-beta-builds" title="Latest Beta Builds" class="md-nav__link">
+    Latest Beta Builds
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#development-builds" title="Development Builds" class="md-nav__link">
-    Development Builds
+  <a href="#beta-fund-distribution" title="Beta fund distribution" class="md-nav__link">
+    Beta fund distribution
   </a>
   
 </li>
@@ -913,6 +913,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../releases/current-release-notes/" title="Current Release Notes" class="md-nav__link">
+      Current Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/previous-release-notes/" title="Previous Release Notes" class="md-nav__link">
+      Previous Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../releases/network-upgrades/" title="Network Upgrades" class="md-nav__link">
       Network Upgrades
     </a>
@@ -981,13 +1005,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#differences-from-the-main-network" title="Differences from the main network" class="md-nav__link">
-    Differences from the main network
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#node-release-testing" title="Node release testing" class="md-nav__link">
     Node release testing
   </a>
@@ -1043,6 +1060,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#differences-from-the-main-network" title="Differences from the main network" class="md-nav__link">
+    Differences from the main network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#testing-builds" title="Testing Builds" class="md-nav__link">
     Testing Builds
   </a>
@@ -1051,15 +1075,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#release-candidate-builds" title="Release Candidate Builds" class="md-nav__link">
-    Release Candidate Builds
+  <a href="#latest-beta-builds" title="Latest Beta Builds" class="md-nav__link">
+    Latest Beta Builds
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#development-builds" title="Development Builds" class="md-nav__link">
-    Development Builds
+  <a href="#beta-fund-distribution" title="Beta fund distribution" class="md-nav__link">
+    Beta fund distribution
   </a>
   
 </li>
@@ -1108,27 +1132,8 @@
 <li>Contributing to a network testing various behaviors and patterns with the protocol</li>
 </ul>
 <p><a href="#running-a-beta-node">Running a beta node</a> is a great way to join in and help the network grow stronger.</p>
-<h2 id="differences-from-the-main-network">Differences from the main network<a class="headerlink" href="#differences-from-the-main-network" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Main Network</th>
-<th>Beta Network</th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/integration-guides/the-basics/#proof-of-work">Proof of Work</a> Difficulty Threshold</td>
-<td><code>0xffffffc000000000</code></td>
-<td><code>0xfffff00000000000</code></td>
-<td>64 times lower on the beta network</td>
-</tr>
-</tbody>
-</table>
 <h2 id="node-release-testing">Node release testing<a class="headerlink" href="#node-release-testing" title="Permanent link">&para;</a></h2>
-<p>The beta network is also used to coordinate the testing of Nano node releases. The Nano Foundation maintains a few beta nodes on the network and various community members also setup nodes to help provide an environment more similar to the main network. Ahead of each release builds are published as Release Candidates (RC). Starting with RC1 and incrementing with each published build (RC2, RC3, etc.), these are intended for use on the beta network to help identify issues not discovered earlier in the development process.</p>
+<p>The beta network is also used to coordinate the testing of Nano node releases. The Nano Foundation maintains a few beta nodes on the network and various community members also setup nodes to help provide an environment more similar to the main network. During each development cycle Development Builds (DB) are prepared and shared in the Discord Beta Testing section of channels where early testing is coordinated. Once features are stabilized and included, release builds are published as Release Candidates (RC). Starting with RC1 and incrementing with each published build if needed (RC2, RC3, etc.). Final release of a version typically follows quickly once the RC is observed to be stable.</p>
 <p>We invite anyone interested in contributing to Nano to consider participating on the beta network. Not only is it beneficial to the ecosystem, it is also a great way to learn more about setting up and managing a node.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1178,10 +1183,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Directory names for extracting builds downloaded from GitHub or <a href="https://beta.nano.org/">https://beta.nano.org/</a> will be updated with RC versions for V19 and later.</p>
-</div>
 <hr />
 <h3 id="pulling-the-docker-image">Pulling the Docker image<a class="headerlink" href="#pulling-the-docker-image" title="Permanent link">&para;</a></h3>
 <p><a href="https://hub.docker.com/r/nanocurrency/nano-beta"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/nanocurrency/nano.svg" /></a></p>
@@ -1189,7 +1190,7 @@
 <div class="codehilite"><pre><span></span>docker pull nanocurrency/nano-beta
 </pre></div></p>
 <p>Pulls a specific version of the Nano node:
-<div class="codehilite"><pre><span></span>docker pull nanocurrency/nano-beta:V19.0RC1
+<div class="codehilite"><pre><span></span>docker pull nanocurrency/nano-beta:V21.0RC1
 </pre></div></p>
 <p>Pulls the latest release which includes any release candidate versions:
 <div class="codehilite"><pre><span></span>docker pull nanocurrency/nano-beta:latest-including-rc
@@ -1228,24 +1229,88 @@
 <tbody>
 <tr>
 <td><a href="https://beta.nano.org/">https://beta.nano.org/</a></td>
-<td>Official beta site and faucet</td>
+<td>Nano Foundation beta site and faucet</td>
 </tr>
 <tr>
 <td><a href="https://beta.nanocrawler.cc/">https://beta.nanocrawler.cc/</a></td>
 <td>Beta Explorer</td>
 </tr>
 <tr>
+<td><a href="https://beta.nanoticker.info/">https://beta.nanoticker.info/</a></td>
+<td>Beta node details and stats</td>
+</tr>
+<tr>
 <td><a href="https://b.repnode.org/">https://b.repnode.org/</a></td>
-<td>Beta nodes and Stats</td>
+<td>Beta node details and stats</td>
 </tr>
 </tbody>
 </table>
+<h2 id="differences-from-the-main-network">Differences from the main network<a class="headerlink" href="#differences-from-the-main-network" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Main Network</th>
+<th>Beta Network</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Epoch 1 difficulty threshold</td>
+<td><code>ffffffc000000000</code></td>
+<td><code>fffff00000000000</code></td>
+<td>64 times lower on the beta network</td>
+</tr>
+<tr>
+<td>Epoch 2 send/change threshold</td>
+<td><code>fffffff800000000</code></td>
+<td><code>fffff00000000000</code></td>
+<td>2 times higher than epoch 1</td>
+</tr>
+<tr>
+<td>Epoch 2 receive threshold</td>
+<td><code>fffffe0000000000</code></td>
+<td><code>ffffe00000000000</code></td>
+<td>2 times lower than epoch 1</td>
+</tr>
+</tbody>
+</table>
+<p><span id="release-candidate-builds"></span>
+<span id="development-builds"></span></p>
 <h2 id="testing-builds">Testing Builds<a class="headerlink" href="#testing-builds" title="Permanent link">&para;</a></h2>
-<h3 id="release-candidate-builds">Release Candidate Builds<a class="headerlink" href="#release-candidate-builds" title="Permanent link">&para;</a></h3>
-<p>During Release Candidate periods the latest build on the <a href="https://github.com/nanocurrency/nano-node/releases">GitHub repository Releases page</a> will be tagged with an <code>RC</code> number. Various binaries are available below the changelog there for download (Windows, Linux, macOS, etc.). If building on your own, use the <a href="https://github.com/nanocurrency/nano-node/tags">latest tags</a> containing <code>RC</code>.</p>
+<p>In addition to the Docker details above, the latest binary builds of the node for the beta network are shared in the #beta_announcements channel on our <a href="https://chat.nano.org">Discord server</a> and updated below for easy reference. These assets are also available on the <a href="https://github.com/nanocurrency/nano-node/releases">GitHub repository Releases page</a> under <code>RC#</code> and <code>DB#</code> tags, which can also be used to manually build if necessary.</p>
 <p>Additional details for services who wish to test their integrations on the beta network for proper migration between releases can be found in the <a href="/releases/node-releases/#release-notes">Release Notes area</a>.</p>
-<h3 id="development-builds">Development Builds<a class="headerlink" href="#development-builds" title="Permanent link">&para;</a></h3>
-<p>Links for beta testing builds are shared in the #beta_announcements channel on our <a href="https://chat.nano.org">Discord server</a>. Docker tags are also available on <a href="https://hub.docker.com/r/nanocurrency/nano-beta/tags">https://hub.docker.com/r/nanocurrency/nano-beta/tags</a>.</p>
+<h3 id="latest-beta-builds">Latest Beta Builds<a class="headerlink" href="#latest-beta-builds" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Version</th>
+<th>Download link/command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux</td>
+<td>V21.0RC1</td>
+<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Linux.tar.bz2">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Linux.tar.bz2</a></td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>V21.0RC1</td>
+<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Darwin.dmg">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Darwin.dmg</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>V21.0RC1</td>
+<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-win64.exe">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-win64.exe</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="beta-fund-distribution">Beta fund distribution<a class="headerlink" href="#beta-fund-distribution" title="Permanent link">&para;</a></h3>
+<p>The funds used for testing transactions on the beta network are generated from a new genesis block and distributed in bulk to various testers running nodes on the network. Given the large number of transactions done during testing the ledger can grow quite large and will be restarted from scratch between releases and/or as needed. As a result, previously distributed beta Nano are no longer useful and need to be redistributed again.</p>
+<p>For small amounts suitable for most basic integration, you can get beta Nano from the beta faucet here: <a href="https://beta.nano.org/faucet/">https://beta.nano.org/faucet/</a>. If you plan to consistently run a node on beta and want to participate in consensus as a Representative, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
 <h3 id="ongoing-test-cases">Ongoing Test Cases<a class="headerlink" href="#ongoing-test-cases" title="Permanent link">&para;</a></h3>
 <p>A spreadsheet of some test cases is maintained separately and available for sharing with community members who are involved on the beta network.  If you are interested in helping with these test cases, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
                 

@@ -784,6 +784,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../releases/current-release-notes/" title="Current Release Notes" class="md-nav__link">
+      Current Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releases/previous-release-notes/" title="Previous Release Notes" class="md-nav__link">
+      Previous Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../releases/network-upgrades/" title="Network Upgrades" class="md-nav__link">
       Network Upgrades
     </a>
@@ -1547,7 +1571,7 @@
 <h4 id="legacy-blocks">legacy blocks<a class="headerlink" href="#legacy-blocks" title="Permanent link">&para;</a></h4>
 <p>Blocks on an account chain before the first v1 block (which is often the v1 epoch block but can be other types). The first v1 block and all subsequent blocks are stateful blocks.</p>
 <h4 id="live-network">live network<a class="headerlink" href="#live-network" title="Permanent link">&para;</a></h4>
-<p>A sub-network established between peers via User Datagram Protocol (UDP) for communicating newly published blocks, votes and other non-bootstrap related traffic. This is available within all Nano networks (main, beta and test networks).</p>
+<p>A sub-network established between peers via Transmission Control Protocol (TCP) for communicating newly published blocks, votes and other non-bootstrap related traffic. This is available within all Nano networks (main, beta and test networks). In versions prior to V19, this was done via User Datagram Protocol (UDP). UDP was retained as a fallback for peer connection for versions 19 and 20. As of V21, use of UDP is deprecated.</p>
 <h4 id="online-voting-weight">online voting weight<a class="headerlink" href="#online-voting-weight" title="Permanent link">&para;</a></h4>
 <p>Also called online stake, it is a trended value. The node samples online representative weights every 5 minutes across a rolling 2 week period. The online voting weight value is the median of those samples.</p>
 <h4 id="peers">peers<a class="headerlink" href="#peers" title="Permanent link">&para;</a></h4>

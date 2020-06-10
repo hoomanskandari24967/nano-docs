@@ -156,6 +156,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.nano.org/releases/current-release-notes/</loc>
+     <lastmod>2020-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.nano.org/releases/previous-release-notes/</loc>
+     <lastmod>2020-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.nano.org/releases/network-upgrades/</loc>
      <lastmod>2020-06-10</lastmod>
      <changefreq>daily</changefreq>
