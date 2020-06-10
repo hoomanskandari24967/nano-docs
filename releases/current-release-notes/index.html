@@ -1242,15 +1242,6 @@
 </li>
 </ul>
 </details>
-<details class="warning"><summary>Known Issue V19+: macOS 'Too many open files'</summary><ul>
-<li>
-<p><strong>Issue:</strong> The following error can be seen when attempting to run a full node on macOS using the built-in Qt wallet or other GUI-based wallets: "Exception while running wallet: open: Too many open files". This is due to macOS having a very low default file descriptor limit and V19.0 uses more of them after the move to TCP.</p>
-</li>
-<li>
-<p><strong>Solution:</strong> For now a workaround is needed to increase the limit. The method depends on the specific macOS version, but some people had success with the recipe in <a href="https://superuser.com/a/1171028">https://superuser.com/a/1171028</a>.</p>
-</li>
-</ul>
-</details>
 <div class="admonition info">
 <p class="admonition-title">Nano Forum available</p>
 <p>The Nano Forum is available at <a href="https://forum.nano.org/">https://forum.nano.org/</a> as a resource to ask questions and get support when participating on the network. The <a href="https://forum.nano.org/c/node-and-rep">Node and Representative Management category</a> is a great place to ask node upgrade related questions. </p>
