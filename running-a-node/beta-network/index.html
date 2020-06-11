@@ -561,6 +561,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#beta-ledger-file" title="Beta ledger file" class="md-nav__link">
+    Beta ledger file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ongoing-test-cases" title="Ongoing Test Cases" class="md-nav__link">
     Ongoing Test Cases
   </a>
@@ -1089,6 +1096,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#beta-ledger-file" title="Beta ledger file" class="md-nav__link">
+    Beta ledger file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ongoing-test-cases" title="Ongoing Test Cases" class="md-nav__link">
     Ongoing Test Cases
   </a>
@@ -1316,6 +1330,12 @@
 <h3 id="beta-fund-distribution">Beta fund distribution<a class="headerlink" href="#beta-fund-distribution" title="Permanent link">&para;</a></h3>
 <p>The funds used for testing transactions on the beta network are generated from a new genesis block and distributed in bulk to various testers running nodes on the network. Given the large number of transactions done during testing the ledger can grow quite large and will be restarted from scratch between releases and/or as needed. As a result, previously distributed beta Nano are no longer useful and need to be redistributed again.</p>
 <p>For small amounts suitable for most basic integration, you can get beta Nano from the beta faucet here: <a href="https://beta.nano.org/faucet/">https://beta.nano.org/faucet/</a>. If you plan to consistently run a node on beta and want to participate in consensus as a Representative, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
+<h3 id="beta-ledger-file">Beta ledger file<a class="headerlink" href="#beta-ledger-file" title="Permanent link">&para;</a></h3>
+<p>To help get beta nodes in sync more quickly it is recommended that an updated ledger file is downloaded and placed into the data directory. Often referred to as a "fast sync", more details around this approach can be found in the <a href="../ledger-management/#downloaded-ledger-files">Ledger Management guide</a>. Since the beta network contains no value, validating the blocks, voting weights and confirmation heights isn't necessary.</p>
+<p>The following command will download and unzip a recent ledger snapshot. Any existing ledger files should be backed up elswhere as this will override them. From within the <a href="#directory-locations">data directory</a> run:</p>
+<div class="codehilite"><pre><span></span>curl -O https://s3.us-east-2.amazonaws.com/beta-snapshot.nano.org/data.tar.gz; tar -xzvf data.tar.gz; rm -fr data.tar.gz
+</pre></div>
+
 <h3 id="ongoing-test-cases">Ongoing Test Cases<a class="headerlink" href="#ongoing-test-cases" title="Permanent link">&para;</a></h3>
 <p>A spreadsheet of some test cases is maintained separately and available for sharing with community members who are involved on the beta network.  If you are interested in helping with these test cases, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
                 
