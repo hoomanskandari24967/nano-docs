@@ -1607,13 +1607,13 @@
 <h4 id="voting-weight">voting weight<a class="headerlink" href="#voting-weight" title="Permanent link">&para;</a></h4>
 <p>The amount of weight delegated to a <a href="#representative">Representative</a>.</p>
 <h4 id="wallet">wallet<a class="headerlink" href="#wallet" title="Permanent link">&para;</a></h4>
-<p>A wallet is an organizational object in a nano_node that holds a single seed from which multiple accounts are deterministically derived via a <code>uint32</code> index starting at 0. Private keys are derived from the seed and index as follows:</p>
+<p>A wallet is an organizational object in a nano_node that holds a single seed from which multiple accounts are deterministically derived via a 32-bit unsigned integer index starting at 0. Private keys are derived from the seed and index as follows: (<code>||</code> means concatenation; <code>blake2b</code> is a <a href="/signing-hashing-and-key-derivation/#hashing-algorithm-blake2">highly optimized cryptographic hash function</a>)</p>
 <div>
 <div class="MathJax_Preview">
-k_{private} = blake2b(seed || index)
+k_{private} = blake2b(\text{seed} || \text{index})
 </div>
 <script type="math/tex; mode=display">
-k_{private} = blake2b(seed || index)
+k_{private} = blake2b(\text{seed} || \text{index})
 </script>
 </div>
 <h4 id="wallet_id">WALLET_ID<a class="headerlink" href="#wallet_id" title="Permanent link">&para;</a></h4>
