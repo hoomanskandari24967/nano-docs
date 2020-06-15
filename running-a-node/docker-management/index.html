@@ -1298,6 +1298,10 @@
 <div class="codehilite"><pre><span></span>curl -d <span class="s1">&#39;{ &quot;action&quot; : &quot;block_count&quot; }&#39;</span> <span class="o">[</span>::1<span class="o">]</span>:7076
 </pre></div>
 
+<p>In addition, you can make use of command-line JSON utilities such as <a href="https://stedolan.github.io/jq/">jq</a> to parse and manipulate the structured data retrieved from <code>curl</code>. For example the account information associated with certain block:</p>
+<div class="codehilite"><pre><span></span>curl -s -d <span class="s1">&#39;{ &quot;action&quot;: &quot;blocks_info&quot;, &quot;hashes&quot;: [&quot;87434F8041869A01C8F6F263B87972D7BA443A72E0A97D7A3FD0CCC2358FD6F9&quot;], &quot;json_block&quot;: &quot;true&quot; }&#39;</span> <span class="o">[</span>::1<span class="o">]</span>:7076 <span class="p">|</span> jq <span class="s2">&quot;.blocks[].block_account&quot;</span>
+</pre></div>
+
 <p>For other commands, review the <a href="/commands/rpc-protocol">RPC Protocol</a> details.</p>
 <hr />
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
