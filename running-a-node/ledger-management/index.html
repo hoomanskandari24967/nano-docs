@@ -1264,16 +1264,25 @@ Alternatively, one of <a href="https://mynano.ninja/api">My Nano Ninja</a> APIs 
 <ol>
 <li>Create a directory <code>/home/&lt;user&gt;/Nano_Update</code> on Machine B.</li>
 <li>Stop the node on Machine A.</li>
-<li>Copy the <code>data.ldb</code> <a href="#ledger-management">file</a> from Machine A to <code>/home/&lt;user&gt;/Nano_Update/data.ldb</code> on Machine B.</li>
-<li>Start the node again on Machine A.</li>
-<li>Download the <a href="/releases/node-releases/#current-release">latest node version</a>. For the purposes of this guide, using a binary is easier.</li>
-<li>Run the following command (varies based on your operating system): <code>./nano_node --debug_block_count --data_path /home/&lt;user&gt;/Nano_Update --config node.logging.log_to_cerr=true</code></li>
+<li>If enough free space (at least <a href="#ledger-file"><code>data.ldb</code></a> size) is available on Machine A:<ul>
+<li>Make a local copy of <a href="#ledger-file"><code>data.ldb</code></a> in any directory.</li>
+<li>Start the node again on Machine A, resuming operation.</li>
+<li>Move the local copy of the ledger from Machine A to <code>/home/&lt;user&gt;/Nano_Update/data.ldb</code> on Machine B.</li>
+<li>Skip the next step.</li>
+</ul>
+</li>
+<li>If there is not enough free space on Machine A:<ul>
+<li>Copy <a href="#ledger-file"><code>data.ldb</code></a> from Machine A to <code>/home/&lt;user&gt;/Nano_Update/data.ldb</code> on Machine B.</li>
+<li>Start the node again on Machine A, resuming operation.</li>
+</ul>
+</li>
+<li>Download the <a href="/releases/node-releases/#current-release">latest node version</a> to Machine B. For the purposes of this guide, using a binary is easier.</li>
+<li>Run the following command on Machine B (varies based on your operating system): <code>./nano_node --debug_block_count --data_path /home/&lt;user&gt;/Nano_Update --config node.logging.log_to_cerr=true</code></li>
 <li>The message <em>"Upgrade in progress..."</em> will be displayed if a ledger upgrade is required. Wait until the command finishes and <strong>do not stop the upgrade preemptively</strong>.</li>
 <li>Copy <code>/home/&lt;user&gt;/Nano_Update/data.ldb</code> from Machine B to a temporary location on Machine A. <strong>do not overwrite data.ldb on Machine A while the node is running</strong>.</li>
-<li>Stop and <strong>upgrade</strong> to the latest node version on Machine A as you would do normally.</li>
-<li>Stop the node on Machine A in case upgrading restarted it.</li>
+<li><strong>Stop</strong> the node on Machine A.</li>
 <li>Replace <code>/home/&lt;user&gt;/Nano/data.ldb</code> with the transferred file.</li>
-<li>Restart the node.</li>
+<li><strong>Upgrade</strong> to the latest node version on Machine A as you would do normally.</li>
 </ol>
 <p>In the event that you are unable to upgrade the ledger on another machine but would still like to minimize downtime, consider <a href="#downloaded-ledger-files">obtaining the ledger from another source</a> as a last resource.</p>
 <hr />
