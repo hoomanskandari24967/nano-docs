@@ -1237,6 +1237,8 @@
 </li>
 </ul>
 </details>
+<details class="warning"><summary>Known Issue Linux V21: 'unable to find libboost'</summary><p>If you are on Linux and unable to get V21.0 to start, <code>unable to find libboost...</code> <a href="https://github.com/nanocurrency/nano-node/releases/download/V21.0/nano-node-V21.0.1-Linux.tar.bz2">https://github.com/nanocurrency/nano-node/releases/download/V21.0/nano-node-V21.0.1-Linux.tar.bz2</a> has been added to the release artifacts with the correct lib rpath. Please use this if you do not wish to move the lib folder into the bin folder after extraction.</p>
+</details>
 <div class="admonition info">
 <p class="admonition-title">Nano Forum available</p>
 <p>The Nano Forum is available at <a href="https://forum.nano.org/">https://forum.nano.org/</a> as a resource to ask questions and get support when participating on the network. The <a href="https://forum.nano.org/c/node-and-rep">Node and Representative Management category</a> is a great place to ask node upgrade related questions. </p>
@@ -1363,28 +1365,39 @@
 <tr>
 <th>OS</th>
 <th>Download link/command</th>
+<th>Verification</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Linux</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2</a></td>
+<td>Universal Linux</td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2.sha256">SHA256 Checksum</a></td>
+</tr>
+<tr>
+<td>Debian</td>
+<td><a href="http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb">http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>macOS</td>
 <td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg</a></td>
+<td><a href="https://s3.us-east-2.amazonaws.com/repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
-<td>Windows</td>
+<td>Windows (exe)</td>
 <td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe.sha256">SHA256 Checksum</a></td>
+</tr>
+<tr>
+<td>Windows (zip)</td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Docker</td>
 <td><code>docker pull nanocurrency/nano:V21.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
-</tr>
-<tr>
-<td>RHEL/CentOS rpm</td>
-<td><code>sudo yum-config-manager --add-repo https://repo.nano.org/nanocurrency.repo</code><br /><code>sudo yum install nanocurrency</code><br />This installs <code>nano_node</code> to bin.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
