@@ -1513,8 +1513,8 @@ sudo yum install nanocurrency-beta
 <p class="admonition-title">Requirements</p>
 <p><strong>Required Source</strong></p>
 <ul>
-<li><a href="http://www.boost.org/users/history/version_1_67_0.html">Boost 1.67</a> extracted to [boost.src] (OR <code>sh nano-node/util/build_prep/bootstrap_boost.sh -m</code>)</li>
-<li>(wallet) <a href="https://www.qt.io/download-open-source">Qt 5.x open source edition</a> extracted to [qt.src]</li>
+<li><a href="http://www.boost.org/users/history/version_1_69_0.html">Boost 1.69+</a> extracted to [boost.src] (OR <code>sh nano-node/util/build_prep/bootstrap_boost.sh -m</code>)</li>
+<li>(wallet) <a href="https://www1.qt.io/download-open-source/">Qt 5.x open source edition</a> extracted to [qt.src]</li>
 <li>Nano node source in [nano-node.src]</li>
 </ul>
 <p><strong>Required build tools</strong></p>
@@ -1690,8 +1690,8 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 </div>
 <h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://sourceforge.net/projects/boost/files/boost-binaries">Boost 1.67+ for your build env</a></li>
-<li><a href="https://www.qt.io/download-open-source">Qt 5.9.5+ 64-bit (open source version) appropriate for your build env</a></li>
+<li><a href="https://sourceforge.net/projects/boost/files/boost-binaries">Boost 1.69+ for your build env</a></li>
+<li><a href="https://www.qt.io/download">Qt 5.9.5+ 64-bit (open source version) appropriate for your build env</a></li>
 <li><a href="https://git-scm.com/download/win">Git for Windows</a> <strong>git_bash</strong></li>
 <li><a href="https://cmake.org/download/">CMake</a></li>
 <li><a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017&amp;wt.mc_id=o~msft~vscom~older-downloads">Visual Studio 2017 Community</a> (or higher edition, if you have a valid license. eg. Professional or Enterprise)<ul>
@@ -1723,7 +1723,7 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 <li>Replace <strong>%NETWORK%</strong> with one of the following: <code>nano_beta_network</code>, <code>nano_live_network</code>, <code>nano_test_network</code></li>
 <li>Ensure the Qt, Boost, and Windows SDK paths match your installation.</li>
 </ul>
-<div class="codehilite"><pre><span></span>cmake -DNANO_GUI<span class="o">=</span>ON -DCMAKE_BUILD_TYPE<span class="o">=</span>%CONFIGURATION% -DACTIVE_NETWORK<span class="o">=</span>%NETWORK% -DQt5_DIR<span class="o">=</span><span class="s2">&quot;C:\Qt\5.9.5\msvc2017_64\lib\cmake\Qt5&quot;</span> -DNANO_SIMD_OPTIMIZATIONS<span class="o">=</span>TRUE -DBoost_COMPILER<span class="o">=</span><span class="s2">&quot;-vc141&quot;</span> -DBOOST_ROOT<span class="o">=</span><span class="s2">&quot;C:/local/boost_1_67_0&quot;</span> -DBOOST_LIBRARYDIR<span class="o">=</span><span class="s2">&quot;C:/local/boost_1_67_0/lib64-msvc-14.1&quot;</span> -G <span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span> -DIPHLPAPI_LIBRARY<span class="o">=</span><span class="s2">&quot;C:/Program Files (x86)/Windows Kits/10/Lib/10.0.17763.0/um/x64/iphlpapi.lib&quot;</span> -DWINSOCK2_LIBRARY<span class="o">=</span><span class="s2">&quot;C:/Program Files (x86)/Windows Kits/10/Lib/10.0.17763.0/um/x64/WS2_32.lib&quot;</span> ..<span class="se">\.</span>
+<div class="codehilite"><pre><span></span>cmake -DNANO_GUI<span class="o">=</span>ON -DCMAKE_BUILD_TYPE<span class="o">=</span>%CONFIGURATION% -DACTIVE_NETWORK<span class="o">=</span>%NETWORK% -DQt5_DIR<span class="o">=</span><span class="s2">&quot;C:\Qt\5.9.5\msvc2017_64\lib\cmake\Qt5&quot;</span> -DNANO_SIMD_OPTIMIZATIONS<span class="o">=</span>TRUE -DBoost_COMPILER<span class="o">=</span><span class="s2">&quot;-vc141&quot;</span> -DBOOST_ROOT<span class="o">=</span><span class="s2">&quot;C:/local/boost_1_69_0&quot;</span> -DBOOST_LIBRARYDIR<span class="o">=</span><span class="s2">&quot;C:/local/boost_1_69_0/lib64-msvc-14.1&quot;</span> -G <span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span> -DIPHLPAPI_LIBRARY<span class="o">=</span><span class="s2">&quot;C:/Program Files (x86)/Windows Kits/10/Lib/10.0.17763.0/um/x64/iphlpapi.lib&quot;</span> -DWINSOCK2_LIBRARY<span class="o">=</span><span class="s2">&quot;C:/Program Files (x86)/Windows Kits/10/Lib/10.0.17763.0/um/x64/WS2_32.lib&quot;</span> ..<span class="se">\.</span>
 </pre></div>
 
 <h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
