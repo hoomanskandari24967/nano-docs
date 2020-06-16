@@ -1206,11 +1206,6 @@
                 
                 
                 <h1 id="current-release-notes-v210">Current Release Notes: V21.0<a class="headerlink" href="#current-release-notes-v210" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">V21.0 is in Release Candidate phase</p>
-<p>Although the current active version of the Nano node is V20.0, this page was updated with V21.0 details to provide early access to the upcoming changes before final release. Visit the <a href="../previous-release-notes/">Previous Release Notes page</a> for V20.0 and earlier Release Notes.</p>
-<p>The details here are nearly final, but subject to change prior to the final release.</p>
-</div>
 <table>
 <thead>
 <tr>
@@ -1227,9 +1222,9 @@
 <td>21.0</td>
 <td>18</td>
 <td>18</td>
-<td>TBD</td>
+<td>2020-06-16</td>
 <td><a href="/releases/current-release-notes">V21.0</a></td>
-<td><a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a></td>
+<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V20.0...V21.0">Changelog</a></td>
 </tr>
 </tbody>
 </table>
@@ -1264,7 +1259,7 @@
 <h2 id="upgrade-notices">Upgrade Notices<a class="headerlink" href="#upgrade-notices" title="Permanent link">&para;</a></h2>
 <p>The following key upgrade details should be reviewed by all node operators to determine how they will impact plans for upgrading:</p>
 <h3 id="database-upgrades">Database upgrades<a class="headerlink" href="#database-upgrades" title="Permanent link">&para;</a></h3>
-<p>An in-place database upgrade will occur with this release to accomodate epoch-related flags. Machines will need at least 20-30GB free disk space to accommodate the upgrade. During the upgrade process, which may take multiple hours to complete depending on the machine specs, the node will not participate on the network or respond to RPC calls.</p>
+<p>An in-place database upgrade will occur with this release to accomodate epoch-related flags. Machines will need at least 30GB free disk space to accommodate the upgrade. During the upgrade process, which may take multiple hours to complete depending on the machine specs, the node will not participate on the network or respond to RPC calls.</p>
 <p>As a result, <strong>the recommended approach is to upgrade the ledger in a separate environment before replacing on production</strong>. For detailed steps on this approach and other options, see the <a href="/running-a-node/ledger-management/#updating-the-node">Updating the node section</a> of the Ledger Management page.</p>
 <h3 id="minor-rpc-breaking-changes">Minor RPC breaking changes<a class="headerlink" href="#minor-rpc-breaking-changes" title="Permanent link">&para;</a></h3>
 <p>Although breaking changes were kept to a minimum in this release, there are two RPC calls with such changes: <code>work_validate</code> and <code>bootstrap_status</code>. For integrations using them, carefully review the additional details on these changes included in the <a href="#rpc-updates">RPC Updates</a> section below.</p>
@@ -1367,30 +1362,29 @@
 <thead>
 <tr>
 <th>OS</th>
-<th>Version</th>
 <th>Download link/command</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Linux</td>
-<td>V21.0RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Linux.tar.bz2">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Linux.tar.bz2</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2</a></td>
 </tr>
 <tr>
 <td>macOS</td>
-<td>V21.0RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Darwin.dmg">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-Darwin.dmg</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg</a></td>
 </tr>
 <tr>
 <td>Windows</td>
-<td>V21.0RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-win64.exe">https://repo.nano.org/beta/binaries/nano-node-V21.0RC1-win64.exe</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe</a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td>V21.0RC1</td>
-<td><code>docker pull nanocurrency/nano-beta:V21.0RC1</code> or <code>docker pull nanocurrency/nano-beta:latest</code><br />See <a href="../../running-a-node/beta-network/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
+<td><code>docker pull nanocurrency/nano:V21.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
+</tr>
+<tr>
+<td>RHEL/CentOS rpm</td>
+<td><code>sudo yum-config-manager --add-repo https://repo.nano.org/nanocurrency.repo</code><br /><code>sudo yum install nanocurrency</code><br />This installs <code>nano_node</code> to bin.</td>
 </tr>
 </tbody>
 </table>

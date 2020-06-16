@@ -1016,12 +1016,12 @@
 </thead>
 <tbody>
 <tr>
-<td>20.0</td>
-<td>17</td>
-<td>15</td>
-<td>2019-11-12</td>
-<td><a href="/releases/previous-release-notes/#v200">V20.0</a></td>
-<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V20.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/10">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V19.0...V20.0">Changelog</a></td>
+<td>21.0</td>
+<td>18</td>
+<td>18</td>
+<td>2020-06-16</td>
+<td><a href="/releases/current-release-notes">V21.0</a></td>
+<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V20.0...V21.0">Changelog</a></td>
 </tr>
 </tbody>
 </table>
@@ -1031,15 +1031,6 @@
 </li>
 <li>
 <p><strong>Solution:</strong> For now a workaround is needed to increase the limit. The method depends on the specific macOS version, but some people had success with the recipe in <a href="https://superuser.com/a/1171028">https://superuser.com/a/1171028</a>.</p>
-</li>
-</ul>
-</details>
-<details class="warning"><summary>Known Issue V20: Peers stake reporting inaccurate (Windows only)</summary><ul>
-<li>
-<p><strong>Issue:</strong> For Windows builds only, when calling <a href="/commands/rpc-protocol/#confirmation_quorum">confirmation_quorum RPC</a> the <code>peers_stake_total</code> amount returned may be inaccurate, returning a range from the correct full peer stake amount down to 0.</p>
-</li>
-<li>
-<p><strong>Solution:</strong> A solution to the issue has been found and as this is a reporting issue only, the fix will be included in the next released version. For those manually building the node, patching the <a href="https://github.com/nanocurrency/nano-node/pull/2405">fix pull request</a> onto the <a href="https://github.com/nanocurrency/nano-node/tree/V20.0">V20.0 tag</a> can resolve the issue now. Or alternatively, building on the V20.0 tag with <code>RelWithDebInfo</code> option, see <a href="/integration-guides/build-options/#setup">Build Instructions for Windows</a>.</p>
 </li>
 </ul>
 </details>
@@ -1054,19 +1045,19 @@
 <tbody>
 <tr>
 <td>Linux</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V20.0-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V20.0-Linux.tar.bz2</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0-Linux.tar.bz2</a></td>
 </tr>
 <tr>
 <td>macOS</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V20.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V20.0-Darwin.dmg</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg</a></td>
 </tr>
 <tr>
 <td>Windows</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V20.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V20.0-win64.exe</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe</a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td><code>docker pull nanocurrency/nano:V20.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
+<td><code>docker pull nanocurrency/nano:V21.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
 </tr>
 <tr>
 <td>RHEL/CentOS rpm</td>
@@ -1077,9 +1068,38 @@
 <hr />
 <h2 id="next-planned-release">Next Planned Release<a class="headerlink" href="#next-planned-release" title="Permanent link">&para;</a></h2>
 <p>The following release is currently under development. Details about potential features to be included can be found on the <a href="/releases/upcoming-features">Upcoming Features page</a>.</p>
-<div class="admonition tip">
-<p class="admonition-title">V21.0 is in Release Candidate phase</p>
-<p>The Release Candidate build is available for V21.0 and a draft of the Release Notes can be found on the <a href="/releases/current-release-notes">Current Release Notes page</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Protocol</th>
+<th>Database</th>
+<th>Release Date</th>
+<th>Release Notes</th>
+<th>GitHub Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22.0</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>Release - <a href="https://github.com/nanocurrency/nano-node/milestone/19">Milestone</a> - Changelog</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Setup for testing on beta network</p>
+<p>If you are looking to test the latest version of the node ahead of release, check out the <a href="/running-a-node/beta-network/">Beta Network</a> page for more details about how to get setup. Testing specific features, integrations and anything else is highly encouraged during all stages of node development.</p>
+</div>
+<hr />
+<h2 id="active-releases">Active Releases<a class="headerlink" href="#active-releases" title="Permanent link">&para;</a></h2>
+<p>The following releases can still actively participate on the network by peering with other nodes of the same versions. Any nodes running versions earlier than these will no longer peer with the latest and fall out of sync with the network.</p>
+<div class="admonition warning">
+<p class="admonition-title">V19 and V20 will be depeered with epoch v2 distribution</p>
+<p>Although V19 and V20 are currently listed as active releases, once <a href="../network-upgrades/#increased-work-difficulty">epoch v2 distribution</a> begins, all V21 nodes will begin depeering them and the only active version will be V21. All nodes will need to upgrade to V21 to continue participating on the network.</p>
 </div>
 <table>
 <thead>
@@ -1097,9 +1117,9 @@
 <td>21.0</td>
 <td>18</td>
 <td>18</td>
-<td>TBD</td>
+<td>2020-06-16</td>
 <td><a href="/releases/current-release-notes">V21.0</a></td>
-<td><a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a></td>
+<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V20.0...V21.0">Changelog</a></td>
 </tr>
 </tbody>
 </table>
@@ -1112,13 +1132,7 @@
 </li>
 </ul>
 </details>
-<div class="admonition info">
-<p class="admonition-title">Setup for testing on beta network</p>
-<p>If you are looking to test the latest version of the node ahead of release, check out the <a href="/running-a-node/beta-network/">Beta Network</a> page for more details about how to get setup. Testing specific features, integrations and anything else is highly encouraged during all stages of node development.</p>
-</div>
 <hr />
-<h2 id="active-releases">Active Releases<a class="headerlink" href="#active-releases" title="Permanent link">&para;</a></h2>
-<p>The following releases can still actively participate on the network by peering with other nodes of the same versions. Any nodes running versions earlier than these will no longer peer with the latest and fall out of sync with the network.</p>
 <table>
 <thead>
 <tr>
@@ -1192,7 +1206,9 @@
 </ul>
 </details>
 <hr />
-<table>
+<h2 id="inactive-releases">Inactive Releases<a class="headerlink" href="#inactive-releases" title="Permanent link">&para;</a></h2>
+<p>The following versions are no longer peered with by nodes running the active versions above and will not work properly communicate if run on the network. The details below are for historical purposes only.</p>
+<details class="info"><summary>Inactive Releases</summary><table>
 <thead>
 <tr>
 <th>Node</th>
@@ -1212,23 +1228,6 @@
 <td></td>
 <td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V18.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/7">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V17.1...V18.0">Changelog</a></td>
 </tr>
-</tbody>
-</table>
-<hr />
-<h2 id="inactive-releases">Inactive Releases<a class="headerlink" href="#inactive-releases" title="Permanent link">&para;</a></h2>
-<p>The following versions are no longer peered with by nodes running the active versions above and will not work properly communicate if run on the network. The details below are for historical purposes only.</p>
-<details class="info"><summary>Inactive Releases</summary><table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Protocol</th>
-<th>Database</th>
-<th>Release Date</th>
-<th>Release Notes</th>
-<th>GitHub Links</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td>17.1</td>
 <td>15</td>
