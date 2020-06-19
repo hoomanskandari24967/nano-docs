@@ -1244,7 +1244,7 @@
 </thead>
 <tbody>
 <tr>
-<td>TBD</td>
+<td><span class="no-break">2020-06-16</span></td>
 <td>Node release</td>
 <td>Nano node V21.0 released which includes changes necessary for supporting new difficulty validation and generation</td>
 </tr>
@@ -1277,10 +1277,10 @@ The <a href="../../commands/rpc-protocol/#work_validate"><code>work_validate</co
 <li><strong>If possible, it is best to avoid using this RPC until the epoch upgrade is completed</strong></li>
 </ul>
 <p><strong>External work generation</strong><br />
-<a href="https://github.com/nanocurrency/nano-work-server">nano-work-server</a> has been updated to use the higher threshold by default when not given an explicit <code>difficulty</code>. The <code>work_validate</code> response has the same breaking changes as above.</p>
+<a href="https://github.com/nanocurrency/nano-work-server">nano-work-server</a> has been updated to use the higher threshold (<code>fffffff800000000</code>) by default when not given an explicit <code>difficulty</code>. The <code>work_validate</code> response has the same breaking changes as above.</p>
 <ul>
 <li>Prefer directly using the server as a <a href="../../integration-guides/work-generation/#nodework_peers">work peer</a> as outlined in the <a href="../../integration-guides/work-generation/#work-generated-using-the-node-incl-work-peers">guide</a>. The node always requests the appropriate difficulty threshold when using RPC <a href="../../commands/rpc-protocol/#block_create">block_create</a>, or <a href="../../commands/rpc-protocol/#work_generate">work_generate</a> with the optional <code>block</code>.</li>
-<li>In cases where requesting directly from a node is not possible, avoid using the lower threshold for receive blocks until the epoch upgrade is fully complete.</li>
+<li>In cases where requesting directly from a node is not possible, avoid using the lower threshold for receive blocks (<code>fffffe0000000000</code>) until the epoch upgrade is fully complete.</li>
 </ul>
 <p><strong>Work generation performance</strong><br />
 Testing out work generation capabilities on a machine is recommended. Details for how to accomplish this can be found in the <a href="../../integration-guides/work-generation/#benchmarks">Benchmark section of the Work Generation guide</a>.</p>
