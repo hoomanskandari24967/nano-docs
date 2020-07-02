@@ -1231,7 +1231,7 @@ LEGACY_RPC_RESPONSE ::= be32(length) JSON response
 While somewhat less convenient, the envelope approach is desirable for very large requests, because the node doesn't need to copy the message into an envelope.</p>
 <hr />
 <h3 id="flatbuffers-mapping">Flatbuffers mapping<a class="headerlink" href="#flatbuffers-mapping" title="Permanent link">&para;</a></h3>
-<p>Here's the corresponding message definitions for the AccountWeight request and response types:</p>
+<p>Here's the corresponding <a href="https://github.com/nanocurrency/nano-node/blob/master/api/flatbuffers/nanoapi.fbs">message definitions</a> for the AccountWeight request and response types:</p>
 <div class="codehilite"><pre><span></span>/** Returns the voting weight for the given account */
 table AccountWeight {
     /** A nano_ address */
