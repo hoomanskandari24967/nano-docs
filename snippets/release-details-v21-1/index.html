@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://docs.nano.org/snippets/only-official-builds-supported/">
+        <link rel="canonical" href="https://docs.nano.org/snippets/release-details-v21-1/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Only official builds supported - Documentation</title>
+        <title>Release details v21 1 - Documentation</title>
       
     
     
@@ -97,7 +97,7 @@
   <!-- Open Graph data -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="" />
-  <meta property="og:url" content="https://docs.nano.org/snippets/only-official-builds-supported/" />
+  <meta property="og:url" content="https://docs.nano.org/snippets/release-details-v21-1/" />
   <meta property="og:image" content="https://docs.nano.org/images/nano-docs-open-graph.png" />
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Nano Docs" />
@@ -159,7 +159,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Only official builds supported
+              Release details v21 1
             </span>
           
         </div>
@@ -863,19 +863,42 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/snippets/only-official-builds-supported.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/snippets/release-details-v21-1.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Only official builds supported</h1>
+                  <h1>Release details v21 1</h1>
                 
-                <div class="admonition warning">
-<p class="admonition-title">Only Official Builds Supported</p>
-<ul>
-<li>The fastest and most recommended method of installation is through <a href="/running-a-node/node-setup">Docker management</a></li>
-<li>Only <a href="/integration-guides/build-options#official-release-builds">official release builds</a> are recommended and supported for use on the main network</li>
-<li>Builds created from git should be done using the available release tags (<code>V21.1</code> etc.)</li>
+                <table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Protocol</th>
+<th>Database</th>
+<th>Release Date</th>
+<th>Release Notes</th>
+<th>GitHub Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21.1</td>
+<td>18</td>
+<td>18</td>
+<td>2020-07-14</td>
+<td><a href="/releases/current-release-notes">V21.1</a></td>
+<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.1">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/21">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/4631c10c0eb67b0c62328a7ed8cef5f3169633f9...V21.1">Changelog</a></td>
+</tr>
+</tbody>
+</table>
+<details class="warning"><summary>Known Issue V19+: macOS 'Too many open files'</summary><ul>
+<li>
+<p><strong>Issue:</strong> The following error can be seen when attempting to run a full node on macOS using the built-in Qt wallet or other GUI-based wallets: "Exception while running wallet: open: Too many open files". This is due to macOS having a very low default file descriptor limit and V19.0 uses more of them after the move to TCP.</p>
+</li>
+<li>
+<p><strong>Solution:</strong> For now a workaround is needed to increase the limit. The method depends on the specific macOS version, but some people had success with the recipe in <a href="https://superuser.com/a/1171028">https://superuser.com/a/1171028</a>.</p>
+</li>
 </ul>
-</div>
+</details>
                 
                   
                 

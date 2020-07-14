@@ -140,7 +140,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#current-release-notes-v210" tabindex="1" class="md-skip">
+      <a href="#current-release-notes-v21" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1205,7 +1205,11 @@
                   <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/releases/current-release-notes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="current-release-notes-v210">Current Release Notes: V21.0<a class="headerlink" href="#current-release-notes-v210" title="Permanent link">&para;</a></h1>
+                <h1 id="current-release-notes-v21">Current Release Notes: V21+<a class="headerlink" href="#current-release-notes-v21" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">V21.1 Patch Release Available</p>
+<p>Following the release of V21.0, some issues were detected and resolved with the release of the V21.1 patch, some of which affect the node's ability to communicate with the network. Upgrading to V21.1 is <strong>highly recommended</strong>.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1219,12 +1223,12 @@
 </thead>
 <tbody>
 <tr>
-<td>21.0</td>
+<td>21.1</td>
 <td>18</td>
 <td>18</td>
-<td>2020-06-16</td>
-<td><a href="/releases/current-release-notes">V21.0</a></td>
-<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.0">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/18">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/V20.0...V21.0">Changelog</a></td>
+<td>2020-07-14</td>
+<td><a href="/releases/current-release-notes">V21.1</a></td>
+<td><a href="https://github.com/nanocurrency/nano-node/releases/tag/V21.1">Release</a> - <a href="https://github.com/nanocurrency/nano-node/milestone/21">Milestone</a> - <a href="https://github.com/nanocurrency/nano-node/compare/4631c10c0eb67b0c62328a7ed8cef5f3169633f9...V21.1">Changelog</a></td>
 </tr>
 </tbody>
 </table>
@@ -1236,8 +1240,6 @@
 <p><strong>Solution:</strong> For now a workaround is needed to increase the limit. The method depends on the specific macOS version, but some people had success with the recipe in <a href="https://superuser.com/a/1171028">https://superuser.com/a/1171028</a>.</p>
 </li>
 </ul>
-</details>
-<details class="warning"><summary>Known Issue Linux V21: 'unable to find libboost'</summary><p>If you are on Linux and unable to get V21.0 to start, <code>unable to find libboost...</code> <a href="https://github.com/nanocurrency/nano-node/releases/download/V21.0/nano-node-V21.0.1-Linux.tar.bz2">https://github.com/nanocurrency/nano-node/releases/download/V21.0/nano-node-V21.0.1-Linux.tar.bz2</a> has been added to the release artifacts with the correct lib rpath. Please use this if you do not wish to move the lib folder into the bin folder after extraction.</p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Nano Forum available</p>
@@ -1268,10 +1270,10 @@
 <h3 id="upcoming-v2-epoch-upgrade">Upcoming v2 epoch upgrade<a class="headerlink" href="#upcoming-v2-epoch-upgrade" title="Permanent link">&para;</a></h3>
 <p>As outlined in the <a href="https://medium.com/nanocurrency/development-update-v21-pow-difficulty-increases-362b5d052c8e">February Development Update: V21 PoW Difficulty Increases</a>, an epoch block distribution must be done to complete the upgrade to the new work difficulty thresholds. <strong>All integrations generating work are encouraged to review the details on the <a href="/releases/network-upgrades#increased-work-difficulty">Network Upgrades page under the Upcoming upgrades section</a> ahead of the epoch V2 distribution.</strong></p>
 <div class="admonition danger">
-<p class="admonition-title">Only node V21.0 will be active after epoch distribution</p>
-<p>Nodes upgrading to V21.0 will remain peered with nodes V19.0 and V20.0 on the network until the epoch v2 block distribution begins. <strong>After the first epoch v2 block is distributed, all nodes not running V21.0 will no longer be able to participate on the network.</strong> This distribution will occur once 90% of voting weight and key services on the network have upgraded. Communications around the progress towards this goal will be sent following the release.</p>
+<p class="admonition-title">Only nodes V21.0+ will be active after epoch distribution</p>
+<p>Nodes upgrading to V21.0+ will remain peered with nodes V19.0 and V20.0 on the network until the epoch v2 block distribution begins. <strong>After the first epoch v2 block is distributed, all nodes not running V21.0+ will no longer be able to participate on the network.</strong> This distribution will occur once 90% of voting weight and key services on the network have upgraded. Communications around the progress towards this goal will be sent following the release.</p>
 <p>More details about this network upgrade can be found on the <a href="/releases/network-upgrades#increased-work-difficulty">Network Upgrades page under the Upcoming upgrades section</a></p>
-<p><strong>All network participants are encouraged to upgrade to V21.0 as soon as possible to avoid disruption.</strong></p>
+<p><strong>All network participants are encouraged to upgrade to V21.1 as soon as possible to avoid disruption.</strong></p>
 </div>
 <h3 id="udp-disabled-by-default">UDP disabled by default<a class="headerlink" href="#udp-disabled-by-default" title="Permanent link">&para;</a></h3>
 <p>With all active peers capable of communicating via TCP, the UDP connections will be disabled by default in this version. To avoid disruptions, all nodes should allow traffic on 7075 TCP (see <a href="/running-a-node/node-setup/#network-ports">Network Ports</a> details) and once upgraded, the <a href="/commands/rpc-protocol/#peers"><code>peers</code></a> RPC call should return at least dozens of peers and the <a href="/commands/rpc-protocol/#confirmation_quorum"><code>confirmation_quorum</code></a> RPC call should have a <code>peers_stake_total</code> value in the high tens of millions of Nano.</p>
@@ -1371,32 +1373,32 @@
 <tbody>
 <tr>
 <td>Universal Linux</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Debian</td>
-<td><a href="http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb">http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb.sha256">SHA256 Checksum</a></td>
+<td><a href="http://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb">http://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>macOS</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg</a></td>
-<td><a href="https://s3.us-east-2.amazonaws.com/repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg</a></td>
+<td><a href="https://s3.us-east-2.amazonaws.com/repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Windows (exe)</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Windows (zip)</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip">https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td><code>docker pull nanocurrency/nano:V21.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
+<td><code>docker pull nanocurrency/nano:V21.1</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
 <td></td>
 </tr>
 </tbody>

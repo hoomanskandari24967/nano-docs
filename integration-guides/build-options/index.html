@@ -1395,7 +1395,7 @@
 <ul>
 <li>The fastest and most recommended method of installation is through <a href="/running-a-node/node-setup">Docker management</a></li>
 <li>Only <a href="/integration-guides/build-options#official-release-builds">official release builds</a> are recommended and supported for use on the main network</li>
-<li>Builds created from git should be done using the <code>master</code> branch or available release tags</li>
+<li>Builds created from git should be done using the available release tags (<code>V21.1</code> etc.)</li>
 </ul>
 </div>
 <h2 id="official-release-builds">Official release builds<a class="headerlink" href="#official-release-builds" title="Permanent link">&para;</a></h2>
@@ -1411,32 +1411,32 @@
 <tbody>
 <tr>
 <td>Universal Linux</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.tar.bz2.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2">https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.tar.bz2.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Debian</td>
-<td><a href="http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb">http://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0.1-Linux.deb.sha256">SHA256 Checksum</a></td>
+<td><a href="http://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb">http://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Linux.deb.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>macOS</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg</a></td>
-<td><a href="https://s3.us-east-2.amazonaws.com/repo.nano.org/live/binaries/nano-node-V21.0-Darwin.dmg.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg">https://repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg</a></td>
+<td><a href="https://s3.us-east-2.amazonaws.com/repo.nano.org/live/binaries/nano-node-V21.1-Darwin.dmg.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Windows (exe)</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.exe.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe">https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.exe.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Windows (zip)</td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip">https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip</a></td>
-<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.0-win64.zip.sha256">SHA256 Checksum</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip">https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip</a></td>
+<td><a href="https://repo.nano.org/live/binaries/nano-node-V21.1-win64.zip.sha256">SHA256 Checksum</a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td><code>docker pull nanocurrency/nano:V21.0</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
+<td><code>docker pull nanocurrency/nano:V21.1</code> or <code>docker pull nanocurrency/nano:latest</code><br />See <a href="/running-a-node/node-setup/#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
 <td></td>
 </tr>
 </tbody>
@@ -1656,7 +1656,7 @@ pacman -S base-devel git gcc cmake curl wget
 </ul>
 </div>
 <h3 id="node_1">Node<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>git clone --branch master --recursive https://github.com/nanocurrency/nano-node.git nano_build
+<div class="codehilite"><pre><span></span>git clone --branch V21.1 --recursive https://github.com/nanocurrency/nano-node.git nano_build
 <span class="nb">cd</span> nano_build
 <span class="nb">export</span> <span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/../boost_build
 sh util/build_prep/bootstrap_boost.sh -m
@@ -1676,7 +1676,7 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 <li>To manage a node, use <a href="/commands/rpc-protocol/">RPC commands</a> or the <a href="/commands/command-line-interface">CLI</a>.</li>
 </ul>
 </div>
-<div class="codehilite"><pre><span></span>git clone --branch master --recursive https://github.com/nanocurrency/nano-node.git nano_build
+<div class="codehilite"><pre><span></span>git clone --branch V21.1 --recursive https://github.com/nanocurrency/nano-node.git nano_build
 <span class="nb">cd</span> nano_build
 <span class="nb">export</span> <span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/../boost_build
 sh util/build_prep/bootstrap_boost.sh -m
@@ -1710,9 +1710,8 @@ cp nano_node ../nano_node <span class="o">&amp;&amp;</span> <span class="nb">cd<
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
 <p><strong>Download Source</strong></p>
 <p>Using git_bash:
-<div class="codehilite"><pre><span></span>git clone --branch master --recursive https://github.com/nanocurrency/nano-node
+<div class="codehilite"><pre><span></span>git clone --branch V21.1 --recursive https://github.com/nanocurrency/nano-node
 <span class="nb">cd</span> nano-node
-git checkout master
 </pre></div></p>
 <p><strong>Create a <code>build</code> directory inside nano-node (makes for easier cleaning of build)</strong></p>
 <p>Using git_bash:
