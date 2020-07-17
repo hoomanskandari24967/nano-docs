@@ -1219,6 +1219,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-debug_rpc" class="md-nav__link">
+    --debug_rpc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-debug_stacktrace" class="md-nav__link">
     --debug_stacktrace
   </a>
@@ -2043,6 +2050,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-debug_rpc" class="md-nav__link">
+    --debug_rpc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-debug_stacktrace" class="md-nav__link">
     --debug_stacktrace
   </a>
@@ -2296,7 +2310,7 @@ Dump frontiers which have matching unchecked keys</p>
 <h3 id="-debug_dump_representatives">--debug_dump_representatives<a class="headerlink" href="#-debug_dump_representatives" title="Permanent link">&para;</a></h3>
 <p>List representatives and weights</p>
 <h3 id="-debug_generate_crash_report">--debug_generate_crash_report<a class="headerlink" href="#-debug_generate_crash_report" title="Permanent link">&para;</a></h3>
-<p><em>version 21.0+</em>
+<p><em>version 21.0+</em><br />
 After a node crash on linux, this command consumes the dump files generated from that crash and produces a "nano_node_crash_report.txt" file. Requires <code>addr2line</code> to be installed on the system. See the <a href="/running-a-node/troubleshooting/#what-to-do-if-the-node-crashes-linux">troubleshooting guide</a> for more information.</p>
 <h3 id="-debug_opencl">--debug_opencl<a class="headerlink" href="#-debug_opencl" title="Permanent link">&para;</a></h3>
 <p>Profile OpenCL work generation for (optional) <code>--device=&lt;device&gt;</code> on <code>--device=&lt;platform&gt;</code> using <code>--threads=&lt;threads&gt;</code> count. To retrieve available platforms &amp; devices run <a href="#-diagnostics">--diagnostics</a>. </p>
@@ -2319,8 +2333,12 @@ Optionals <code>--difficulty</code> and <code>--multiplier</code> (only the latt
 <h3 id="-debug_profile_votes">--debug_profile_votes<a class="headerlink" href="#-debug_profile_votes" title="Permanent link">&para;</a></h3>
 <p>Profile vote verification</p>
 <h3 id="-debug_profile_frontiers_confirmation">--debug_profile_frontiers_confirmation<a class="headerlink" href="#-debug_profile_frontiers_confirmation" title="Permanent link">&para;</a></h3>
-<p><em>version 21.0+</em>
+<p><em>version 21.0+</em><br />
 Profile frontiers confirmation speed</p>
+<h3 id="-debug_rpc">--debug_rpc<a class="headerlink" href="#-debug_rpc" title="Permanent link">&para;</a></h3>
+<p><em>version 18.0+</em><br />
+Allows running RPC commands without enabling the RPC server. Not recommended for daily usage.<br />
+Example: <code>echo '{"action": "block_count"}' | nano_node --debug_rpc</code></p>
 <h3 id="-debug_stacktrace">--debug_stacktrace<a class="headerlink" href="#-debug_stacktrace" title="Permanent link">&para;</a></h3>
 <p><em>version 20.0+</em><br />
 Prints a stacktrace example, useful to verify that it includes the desired information, such as files, function names and line numbers</p>
@@ -2527,7 +2545,7 @@ Turn off use of UDP live network</p>
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.one": "1 matching document", "search.result.none": "No matching documents", "clipboard.copied": "Copied to clipboard", "search.result.placeholder": "Type to start searching", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "search.result.none": "No matching documents", "search.result.other": "# matching documents", "search.result.one": "1 matching document", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.config.lang": "en", "search.result.placeholder": "Type to start searching", "clipboard.copy": "Copy to clipboard"}</script>
       
       <script>
         app = initialize({
