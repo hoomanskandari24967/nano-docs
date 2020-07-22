@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://docs.nano.org/protocol-design/network-attacks/">
+        <link rel="canonical" href="https://docs.nano.org/running-a-node/advanced-monitoring/">
       
       
       <link rel="shortcut icon" href="../../images/favicon.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Network Attacks - Nano Docs</title>
+        <title>Advanced Monitoring - Nano Docs</title>
       
     
     
@@ -73,7 +73,7 @@
   <!-- Open Graph data -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="" />
-  <meta property="og:url" content="https://docs.nano.org/protocol-design/network-attacks/" />
+  <meta property="og:url" content="https://docs.nano.org/running-a-node/advanced-monitoring/" />
   <meta property="og:image" content="https://docs.nano.org/images/nano-docs-open-graph.png" />
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Nano Docs" />
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#network-attacks" class="md-skip">
+        <a href="#advanced-monitoring" class="md-skip">
           Skip to content
         </a>
       
@@ -151,7 +151,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Network Attacks
+              Advanced Monitoring
             
           </span>
         </div>
@@ -356,10 +356,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Running a Node
@@ -383,7 +385,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/overview/" title="Overview" class="md-nav__link">
+    <a href="../overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -395,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/security/" title="Security" class="md-nav__link">
+    <a href="../security/" title="Security" class="md-nav__link">
       Security
     </a>
   </li>
@@ -407,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/node-setup/" title="Node Setup" class="md-nav__link">
+    <a href="../node-setup/" title="Node Setup" class="md-nav__link">
       Node Setup
     </a>
   </li>
@@ -419,7 +421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/docker-management/" title="Docker Management" class="md-nav__link">
+    <a href="../docker-management/" title="Docker Management" class="md-nav__link">
       Docker Management
     </a>
   </li>
@@ -431,7 +433,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/configuration/" title="Configuration" class="md-nav__link">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
   </li>
@@ -443,7 +445,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/ledger-management/" title="Ledger Management" class="md-nav__link">
+    <a href="../ledger-management/" title="Ledger Management" class="md-nav__link">
       Ledger Management
     </a>
   </li>
@@ -455,7 +457,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/voting-as-a-representative/" title="Voting as a Representative" class="md-nav__link">
+    <a href="../voting-as-a-representative/" title="Voting as a Representative" class="md-nav__link">
       Voting as a Representative
     </a>
   </li>
@@ -465,11 +467,108 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../running-a-node/advanced-monitoring/" title="Advanced Monitoring" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Advanced Monitoring
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Advanced Monitoring" class="md-nav__link md-nav__link--active">
       Advanced Monitoring
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-architecture" class="md-nav__link">
+    Recommended architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-setup-and-configure-nano-node" class="md-nav__link">
+    Step 1: Setup and configure Nano node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-prometheus-push-gateway" class="md-nav__link">
+    Step 2: Install Prometheus push gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-install-and-run-the-nano-node-exporter" class="md-nav__link">
+    Step 3: Install and run the Nano node exporter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-view-your-metrics" class="md-nav__link">
+    Step 4: View your metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-install-grafana" class="md-nav__link">
+    Step 5: Install Grafana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-other-push-gateways" class="md-nav__link">
+    Connecting to other push gateways
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -479,7 +578,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/beta-network/" title="Beta Network" class="md-nav__link">
+    <a href="../beta-network/" title="Beta Network" class="md-nav__link">
       Beta Network
     </a>
   </li>
@@ -491,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
       Troubleshooting
     </a>
   </li>
@@ -503,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../running-a-node/beyond-the-node/" title="Beyond the Node" class="md-nav__link">
+    <a href="../beyond-the-node/" title="Beyond the Node" class="md-nav__link">
       Beyond the Node
     </a>
   </li>
@@ -698,12 +797,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Protocol Design
@@ -727,7 +824,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../overview/" title="Overview" class="md-nav__link">
+    <a href="../../protocol-design/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -739,7 +836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../distribution-and-units/" title="Distribution and Units" class="md-nav__link">
+    <a href="../../protocol-design/distribution-and-units/" title="Distribution and Units" class="md-nav__link">
       Distribution and Units
     </a>
   </li>
@@ -751,7 +848,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../networking/" title="Networking" class="md-nav__link">
+    <a href="../../protocol-design/networking/" title="Networking" class="md-nav__link">
       Networking
     </a>
   </li>
@@ -761,88 +858,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Network Attacks
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Network Attacks" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../protocol-design/network-attacks/" title="Network Attacks" class="md-nav__link">
       Network Attacks
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#block-gap-synchronization" class="md-nav__link">
-    Block gap synchronization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transaction-flooding" class="md-nav__link">
-    Transaction flooding
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sybil-attack-to-change-ledger-entries" class="md-nav__link">
-    Sybil attack to change ledger entries
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#penny-spend-attack" class="md-nav__link">
-    Penny-spend attack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#50-attack" class="md-nav__link">
-    &gt;50% attack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bootstrap-poisoning" class="md-nav__link">
-    Bootstrap poisoning
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -852,7 +872,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../signing-hashing-and-key-derivation/" title="Signing, Hashing and Key Derivation" class="md-nav__link">
+    <a href="../../protocol-design/signing-hashing-and-key-derivation/" title="Signing, Hashing and Key Derivation" class="md-nav__link">
       Signing, Hashing and Key Derivation
     </a>
   </li>
@@ -1015,43 +1035,63 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#block-gap-synchronization" class="md-nav__link">
-    Block gap synchronization
+  <a href="#recommended-architecture" class="md-nav__link">
+    Recommended architecture
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transaction-flooding" class="md-nav__link">
-    Transaction flooding
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-setup-and-configure-nano-node" class="md-nav__link">
+    Step 1: Setup and configure Nano node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-prometheus-push-gateway" class="md-nav__link">
+    Step 2: Install Prometheus push gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-install-and-run-the-nano-node-exporter" class="md-nav__link">
+    Step 3: Install and run the Nano node exporter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-view-your-metrics" class="md-nav__link">
+    Step 4: View your metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-install-grafana" class="md-nav__link">
+    Step 5: Install Grafana
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sybil-attack-to-change-ledger-entries" class="md-nav__link">
-    Sybil attack to change ledger entries
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#penny-spend-attack" class="md-nav__link">
-    Penny-spend attack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#50-attack" class="md-nav__link">
-    &gt;50% attack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bootstrap-poisoning" class="md-nav__link">
-    Bootstrap poisoning
+  <a href="#connecting-to-other-push-gateways" class="md-nav__link">
+    Connecting to other push gateways
   </a>
   
 </li>
@@ -1068,7 +1108,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/protocol-design/network-attacks.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nanocurrency/nano-docs/edit/master/docs/running-a-node/advanced-monitoring.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1076,170 +1116,59 @@
                   
                 
                 
-                <h1 id="network-attacks">Network Attacks<a class="headerlink" href="#network-attacks" title="Permanent link">&para;</a></h1>
-<p>Nano has a number of mechanisms built in to protect from a range of possible attacks on the system.  Here we go over all attacks there could be on the system and what safeguards are in place.  </p>
-<h2 id="block-gap-synchronization">Block gap synchronization<a class="headerlink" href="#block-gap-synchronization" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>Low risk</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>Network amplify, denial of service</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>Each block has a link to its previous block.  If a new block arrives where we can't find the previous block, this leaves the node deciding whether it's out of sync or if someone is sending junk data.  If a node is out of sync, synchronizing involves a TCP connection to a node that offers bootstrapping which is much more traffic than sending a single UDP packet containing a block; this is a network amplification attack.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>For blocks with no previous link, nodes will wait until a certain threshold of votes have been observed before initiating a connection to a bootstrap node to synchronize.  If a block doesn't receive enough votes it can be assumed to be junk data.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="transaction-flooding">Transaction flooding<a class="headerlink" href="#transaction-flooding" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>Moderate</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>High I/O</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>Transaction flooding is simply sending as many valid transactions as possible in order to saturate the network.  Usually an attacker will send transactions to other accounts they control so it can be continued indefinitely.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>Each block has a small amount of work associated with it, around 5 seconds to generate and 1 microsecond to validate.  This work difference causes an attacker to dedicate a large amount to sustain an attack while wasting a small amount of resources by everyone else.  Nodes that are not full historical nodes are able to prune old transactions from their chain, this clamps the storage usage from this type of attack for almost all users.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sybil-attack-to-change-ledger-entries">Sybil attack to change ledger entries<a class="headerlink" href="#sybil-attack-to-change-ledger-entries" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>None</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>Completely destructive</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>A Sybil attack is a person creating a lot of nodes on the network, possibly thousands on a single machine, in order to get a disproportionate vote on networks where each node gets an equal vote.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>The Nano voting system is weighted based on account balance.  Adding extra nodes in to the network will not gain an attacker extra votes.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="penny-spend-attack">Penny-spend attack<a class="headerlink" href="#penny-spend-attack" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>Moderate</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>Ledger bloat</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>A penny-spend attack is where an attacker spends infinitesimal quantities to a large number of accounts in order to waste the storage resources of nodes.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>Blocks publishing is rate-limited by work so this limits accounts to a certain extent.  Nodes that are not full historical nodes can prune accounts below a statistical metric where the account is probably not a valid account.  Finally, Nano is tuned to use minimal permanent storage space so space required to store one additional account is proportional to the size of one block + indexing ~ 96b + 32b ~ 128b.  This equates to 1GB being able to store 8 million penny-spend account.  If nodes want to be aggressive, they can calculate a distribution based on access frequency and delegate infrequently used accounts to slower storage.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="50-attack">&gt;50% attack<a class="headerlink" href="#50-attack" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>Low</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>Completely destructive</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>The metric of consensus for Nano is a balance weighted voting system.  If an attacker is able to gain over 50% of the voting strength, they can cause the network to oscillate their decisions rendering the system useless.  An attacker must have at least some value tied up in the network as a balance which they're willing to forfeit as an expense to performing this type of attack since this attack ruins the integrity of the system.  An attacker is able to lower the amount of balance they must forfeit by preventing good nodes from voting through a network DDOS.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>There are multiple levels of defense against this type of attack:</br><ul><li><em>Primary defense</em>: voting weight being tied to investment in the system; attempting to flip the ledger would be destructive to the system as a whole which would destroy their investment.</li><li><em>Secondary defense</em>: cost of this attack is proportional to the market cap of all of Nano.  In proof of work systems, technology can be invented that gives disproportionate control compared to monetary investment and if the attack is successful, this technology could be repurposed after the attack is complete.  With Nano the cost of attacking the system scales with the system and if an attack were to be successful the cost of the attack can't be recovered.</li><li><em>Tertiary defense</em>: In order to maintain the maximum quorum of voters, the next line of defense is representative voting.  Account holders who are unable to reliably participate in voting for connectivity reasons can name a representative who can vote with the weight of their balance.</li><li>Forks in Nano are never accidental so nodes can make policy decisions on how to interact with forked blocks.  The only time non-attacker accounts are vulnerable to block forks is if they receive a balance from an attacking account.  Accounts wanting to be secure from block forks can wait a little or a lot longer before receiving from an account who generated forks or opt to never receive at all.  Receivers could also generate separate accounts for receiving from dubious accounts in order to protect the rest of their balance.</li><li>A final line of defense is block cementing.  As blocks are confirmed in V19.0+, the node marks the height of the last block confirmed for every account and will refuse the replacement of an already confirmed block. Attempts to fork after previous confirmation of a block will immediately fail.</li><br />The most sophisticated version of a &gt;50% attack is detailed in the diagram below.  "Offline" is the percentage of representatives who have been named but are not online to vote.  "Stake" is the amount of investment the attacker is voting with and will be lost if they successfully attack the system.  "Active" are representatives that are online and voting according to the protocol.  An attacker can offset the amount of stake they must forfeit by knocking other voters offline via a network denial of service attack.  If this attack can be sustained, the representatives being attacked will become unsynchronized and this is demonstrated by "Unsynced".  Finally, an attacker can gain a short burst in relative voting strength by switching their denial of service attack to a new set of representatives while the old set is resynchronizing their ledger, this is demonstrated by "Attacked".<br /><br /><img alt="Voting attack" src="https://raw.githubusercontent.com/nanocurrency/nano-node/master/images/attack.png" /><br /><br />If an attacker is able to cause Stake &gt; Active by a combination of these circumstances, they would be able to successfully flip votes on the ledger at the expense of their stake.  We can estimate how much this type of attack could cost by examining the market cap of other systems.  If we estimate 33% of representatives are offline or attacked via denial of service, an attacker would need to purchase 33% of the market cap in order to attack the system via voting.<br />Voting attack cost:<br /><ul><li>Euro - M1 in 2014 ~6 trillion, attack amount 2 trillion</li><li>USD - M0 in 2014 ~4 trillion, attack amount 1.2 trillion</li><li>UK pound sterling - M0 in 2007 ~1.5 trillion, attack amount 500 billion</li><li>Bitcoin - Market cap 2014 ~3 billion, attack amount 1 billion</li></td>
-</tr>
-</tbody>
-</table>
-<h2 id="bootstrap-poisoning">Bootstrap poisoning<a class="headerlink" href="#bootstrap-poisoning" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Risk</strong></td>
-<td>Low</td>
-</tr>
-<tr>
-<td><strong>Impacts</strong></td>
-<td>New-user denial of service</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>The longer an attacker is able to hold an old private key with a balance, the higher the probability of balances that existed at that time no longer having representatives that are participating in voting because their balances or representatives have transferred to new people.  This means if a node is bootstrapped to an old representation of the network where the attacker has a quorum of voting stake compare to representatives at that point in time, they would be able to oscillate voting decisions to that node.  If this new user wanted to interact with anyone besides the attacking node all of their transactions would be denied since they have different head blocks.  The net result is nodes can waste the time of new nodes in the network by feeding them bad information.</td>
-</tr>
-<tr>
-<td><strong>Defense</strong></td>
-<td>Nodes can be paired with an initial database of accounts and known-good block heads; this is a replacement for downloading the database all the way back to the genesis block.  The closer the download is to be current, the higher the probability of accurately defending against this attack.  In the end this attack is probably no worse than feeding junk data to nodes while bootstrapping since they wouldn't be able to transact with anyone who has a contemporary database.</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="advanced-monitoring">Advanced Monitoring<a class="headerlink" href="#advanced-monitoring" title="Permanent link">&para;</a></h1>
+<p>For keeping a closer watch on node performance a Prometheus-based exporter monitoring solution is avialable. It provides an easy way to automatically gather and export a multitude of stats and metrics from the node RPC, as well as from the machine running the exporter. For added security, the exporter doesn't require opening any additional inbound ports as the metrics are pushed out to a Prometheus push gateway, which can be hosted externally.</p>
+<p>Prometheus is an open-source systems monitoring and alerting toolkit. For a brief overview of everything it offers, see <a href="https://prometheus.io/docs/introduction/overview/">What is Prometheus?</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Basic monitoring option</p>
+<p>For a simpler monitoring setup that is maintained by the Nano community and provides a public website to view details on, see the <a href="../voting-as-a-representative/#setup-monitoring">monitoring details on the Voting as a Representative page</a>.</p>
+</div>
+<h2 id="recommended-architecture">Recommended architecture<a class="headerlink" href="#recommended-architecture" title="Permanent link">&para;</a></h2>
+<p>The diagram below illustrates a recommended architecture of components:</p>
+<p><img alt="Nano node Prometheus exporter architecture" src="../../images/nano-prometheus-exporter-architecture.png" /></p>
+<p>This configuration was recommended as it splits the concerns across two servers: one hosting the node and exporter, with another hosting the push gateway, Prometheus server and graphing/visualization tools. However, there are a variety of configuration options to allow separation of each component onto different servers, depending on the needs.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>The following provides the basic details for installing and connecting the components outlined above.</p>
+<h3 id="step-1-setup-and-configure-nano-node">Step 1: Setup and configure Nano node<a class="headerlink" href="#step-1-setup-and-configure-nano-node" title="Permanent link">&para;</a></h3>
+<p>These configuration options are set in the <a href="../configuration/#configuration-file-locations"><code>config-node.toml</code> file</a>.</p>
+<ul>
+<li>Get a <a href="../node-setup/">Nano node setup</a> with Docker or binaries</li>
+<li>Update config <code>node.rpc.enable</code> = <code>true</code></li>
+<li>If you want to gather <a href="https://github.com/nanocurrency/nano_prom_exporter#stats-exposed"><code>nano_stats_objects*</code> metrics</a>, update config <code>rpc.enable_control</code> = <code>true</code></li>
+<li>Restart the node for settings to take effect</li>
+</ul>
+<h3 id="step-2-install-prometheus-push-gateway">Step 2: Install Prometheus push gateway<a class="headerlink" href="#step-2-install-prometheus-push-gateway" title="Permanent link">&para;</a></h3>
+<p>For the best security, it is recommended to run this on a separate server. By default this will need to accept incoming connections from the exporter on TCP port <code>9091</code>.</p>
+<ul>
+<li>Requires <a href="https://www.python.org/">python 3.7+</a></li>
+<li>Download and run the <a href="https://github.com/prometheus/pushgateway/blob/master/README.md#run-it">prometheus-pushgateway</a></li>
+<li>Accept incoming TCP port <code>9091</code> connections from the node/exporter server</li>
+</ul>
+<h3 id="step-3-install-and-run-the-nano-node-exporter">Step 3: Install and run the Nano node exporter<a class="headerlink" href="#step-3-install-and-run-the-nano-node-exporter" title="Permanent link">&para;</a></h3>
+<p>Typical configurations will have the exporter running on the same server as the node. If so, <code>--rpchost</code> is local as noted below.</p>
+<p><strong>Install via pip</strong></p>
+<p><code>pip install nano-prom-exporter</code></p>
+<p><strong>Example run command</strong></p>
+<div class="highlight"><pre><span></span><code>nano-prom -h --rpchost ::1 <span class="se">\</span>
+             --rpcport <span class="m">7076</span> <span class="se">\</span>
+             --datapath ~/Nano/Nano <span class="se">\</span>
+             --pushgateway your-exporter-and-node.server.org:9091 <span class="se">\</span>
+             --hostname MyNanoMetrics
+</code></pre></div>
+
+<p>See the <a href="https://github.com/nanocurrency/nano_prom_exporter">README</a> for more details on usage.</p>
+<h3 id="step-4-view-your-metrics">Step 4: View your metrics<a class="headerlink" href="#step-4-view-your-metrics" title="Permanent link">&para;</a></h3>
+<p>To validate data is available from the exporter, the <code>/targets</code> endpoint on port <code>9090</code> at the URL of the push gateway will show job health: <code>http://your-new.monitor.org:9090/targets</code>. The endpoint pushing the data should have <code>State</code> = <code>UP</code> if everything is working well.</p>
+<p>There is also a <code>/graph</code> endpoint to do some manual querying of available data: <code>http://your-new.monitor.org:9090/graph</code></p>
+<h3 id="step-5-install-grafana">Step 5: Install Grafana<a class="headerlink" href="#step-5-install-grafana" title="Permanent link">&para;</a></h3>
+<p>Once you've verified metrics are properly being captured, you can setup visualization amd analysis solutions. One popular option is Grafana, which can be installed from here: <a href="https://grafana.com/grafana/download">https://grafana.com/grafana/download</a>.</p>
+<p>If Grafana is being installed on a different server from the Promethus push gateway TCP port <code>9090</code> will need to be opened as well.</p>
+<p>Once running, a sample file can be used from our repository to kickstart your dashboard setup: <a href="https://github.com/nanocurrency/nano_prom_exporter/blob/master/sample-grafana-dashboard.json">https://github.com/nanocurrency/nano_prom_exporter/blob/master/sample-grafana-dashboard.json</a>.</p>
+<p>Other options can be explored in the <a href="https://prometheus.io/docs/visualization/browser/">Visualization</a> section of the Prometheus site.</p>
+<h2 id="connecting-to-other-push-gateways">Connecting to other push gateways<a class="headerlink" href="#connecting-to-other-push-gateways" title="Permanent link">&para;</a></h2>
+<p>The exporter supports sending metrics to multiple push gateways using a <code>config.ini</code> file and the <code>--config_path</code> option in the command to accept the location.  Within this file the authentication can be managed between different endpoints and support for selecting specific metrics per push gateway will added soon. See the <a href="https://github.com/nanocurrency/nano_prom_exporter">README</a> for more details on usage.</p>
+<p>Although no public push gateways for node monitoring are available at this time, there may be opportunities in the future to share your node metrics with the community or other monitoring setups to provide a better view of network performance. Check back here and keep an eye out for these public gateways to become available.</p>
+<p>And if you know of any public push gateways available to send this useful node data to, <a href="https://nano.org/connect">please let us know</a>.</p>
                 
               
               
@@ -1266,8 +1195,8 @@
         <!-- Link to previous page -->
         
           <a
-            href="../networking/"
-            title="Networking"
+            href="../voting-as-a-representative/"
+            title="Voting as a Representative"
             class="md-footer-nav__link md-footer-nav__link--prev"
             rel="prev"
           >
@@ -1279,7 +1208,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Networking
+                Voting as a Representative
               </div>
             </div>
           </a>
@@ -1288,8 +1217,8 @@
         <!-- Link to next page -->
         
           <a
-            href="../signing-hashing-and-key-derivation/"
-            title="Signing, Hashing and Key Derivation"
+            href="../beta-network/"
+            title="Beta Network"
             class="md-footer-nav__link md-footer-nav__link--next"
             rel="next"
           >
@@ -1298,7 +1227,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Signing, Hashing and Key Derivation
+                Beta Network
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
