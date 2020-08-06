@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.3">
     
     
       
@@ -21,9 +21,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.b5d04df8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.947af8d5.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9ab2c1f8.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7f672a1f.min.css">
       
       
         
@@ -586,8 +586,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#latest-beta-builds" class="md-nav__link">
-    Latest Beta Builds
+  <a href="#binaries" class="md-nav__link">
+    Binaries
   </a>
   
 </li>
@@ -1146,8 +1146,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#latest-beta-builds" class="md-nav__link">
-    Latest Beta Builds
+  <a href="#binaries" class="md-nav__link">
+    Binaries
   </a>
   
 </li>
@@ -1200,13 +1200,13 @@
                 
                 <h1 id="joining-the-beta-network">Joining the beta network<a class="headerlink" href="#joining-the-beta-network" title="Permanent link">&para;</a></h1>
 <div class="admonition tip">
-<p class="admonition-title">Testing is currently ongoing on the beta network for Version 21</p>
-<p>Read through this page if you would like to participate, and find the currently selected test cases at the end.</p>
+<p class="admonition-title">Testing is currently ongoing on the beta network for Version 22</p>
+<p>Read through this page if you would like to participate.</p>
 </div>
 <p>A few common reasons for joining the beta network include:</p>
 <ul>
 <li>Learning node setup and management</li>
-<li>Testing out integrations for services build on Nano before running on the main network</li>
+<li>Testing out integrations for services built on Nano before running on the main network</li>
 <li><a href="#node-release-testing">Assisting in testing new node releases and features</a></li>
 <li>Contributing to a network testing various behaviors and patterns with the protocol</li>
 </ul>
@@ -1218,8 +1218,6 @@
 <p class="admonition-title">Warning</p>
 <ul>
 <li>Release candidate builds are only recommended for use on the beta network</li>
-<li>The fastest and most recommended method of installation is through <a href="#running-a-beta-node">Docker</a></li>
-<li>Binaries and other details can be found at: <a href="https://beta.nano.org/">https://beta.nano.org/</a></li>
 </ul>
 </div>
 <h2 id="running-a-beta-node">Running a beta node<a class="headerlink" href="#running-a-beta-node" title="Permanent link">&para;</a></h2>
@@ -1228,15 +1226,10 @@
 <div class="admonition info">
 <p class="admonition-title">Beta Network Ports Overview</p>
 <ul>
-<li><strong>54000 UDP:</strong> For <a href="/glossary#live-network">live network</a> activity (fallback since V19.0)  </li>
-<li><strong>54000 TCP:</strong> For <a href="/glossary#live-network">live network</a> activity (since V19.0) and <a href="/glossary#bootstrap-network">bootstrap network</a> activity</li>
+<li><strong>54000 TCP:</strong> For <a href="/glossary#live-network">live network</a> activity and <a href="/glossary#bootstrap-network">bootstrap network</a> activity</li>
 <li><strong>55000 TCP:</strong> For communication with RPC server. Anyone with access to this port can control your node's RPC.</li>
 <li><strong>57000 TCP:</strong> For communication with <a href="/integration-guides/websockets">websocket server</a>. Depending on configuration, data throughput can be very high.</li>
 </ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">UDP disabled by default, deprecated</p>
-<p>As of V21 peering and communicating via UDP has been disabled by default and is deprecated. The ability to use UDP will be removed from the node in a future release yet to be determined.</p>
 </div>
 <hr />
 <h3 id="directory-locations">Directory locations<a class="headerlink" href="#directory-locations" title="Permanent link">&para;</a></h3>
@@ -1269,7 +1262,7 @@
 <div class="highlight"><pre><span></span><code>docker pull nanocurrency/nano-beta
 </code></pre></div></p>
 <p>Pulls a specific version of the Nano node:
-<div class="highlight"><pre><span></span><code>docker pull nanocurrency/nano-beta:V21.1RC1
+<div class="highlight"><pre><span></span><code>docker pull nanocurrency/nano-beta:&lt;tag&gt;
 </code></pre></div></p>
 <p>Pulls the latest release which includes any release candidate versions:
 <div class="highlight"><pre><span></span><code>docker pull nanocurrency/nano-beta:latest-including-rc
@@ -1277,7 +1270,6 @@
 <p>A list of beta tags can be found at the official <a href="https://hub.docker.com/r/nanocurrency/nano-beta/tags">Nano Currency Docker Hub</a></p>
 <h3 id="starting-the-docker-container">Starting the Docker container<a class="headerlink" href="#starting-the-docker-container" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>docker run --restart<span class="o">=</span>unless-stopped -d <span class="se">\</span>
-  -p <span class="m">54000</span>:54000/udp <span class="se">\</span>
   -p <span class="m">54000</span>:54000 <span class="se">\</span>
   -p <span class="o">[</span>::1<span class="o">]</span>:55000:55000 <span class="se">\</span>
   -p <span class="o">[</span>::1<span class="o">]</span>:57000:57000 <span class="se">\</span>
@@ -1306,10 +1298,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="https://beta.nano.org/">https://beta.nano.org/</a></td>
-<td>Nano Foundation beta site and faucet</td>
-</tr>
 <tr>
 <td><a href="https://beta.nanocrawler.cc/">https://beta.nanocrawler.cc/</a></td>
 <td>Beta Explorer</td>
@@ -1345,7 +1333,7 @@
 <td>Epoch 2 send/change threshold</td>
 <td><code>fffffff800000000</code></td>
 <td><code>fffff00000000000</code></td>
-<td>2 times higher than epoch 1</td>
+<td>Same as epoch 1 on the beta network</td>
 </tr>
 <tr>
 <td>Epoch 2 receive threshold</td>
@@ -1356,45 +1344,14 @@
 </tbody>
 </table>
 <p><span id="release-candidate-builds"></span>
-<span id="development-builds"></span></p>
+<span id="development-builds"></span>
+<span id="latest-beta-builds"></span></p>
 <h2 id="testing-builds">Testing Builds<a class="headerlink" href="#testing-builds" title="Permanent link">&para;</a></h2>
-<p>In addition to the Docker details above, the latest binary builds of the node for the beta network are shared in the #beta_announcements channel on our <a href="https://chat.nano.org">Discord server</a> and updated below for easy reference. These assets are also available on the <a href="https://github.com/nanocurrency/nano-node/releases">GitHub repository Releases page</a> under <code>RC#</code> and <code>DB#</code> tags, which can also be used to manually build if necessary.</p>
-<p>Additional details for services who wish to test their integrations on the beta network for proper migration between releases can be found in the <a href="/releases/node-releases/#release-notes">Release Notes area</a>.</p>
-<h3 id="latest-beta-builds">Latest Beta Builds<a class="headerlink" href="#latest-beta-builds" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Version</th>
-<th>Download link/command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Linux</td>
-<td>V21.1RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-Linux.tar.bz2">https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-Linux.tar.bz2</a></td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>V21.1RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-Darwin.dmg">https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-Darwin.dmg</a></td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>V21.1RC1</td>
-<td><a href="https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-win64.exe">https://repo.nano.org/beta/binaries/nano-node-V21.1RC1-win64.exe</a></td>
-</tr>
-<tr>
-<td>Docker</td>
-<td>V21.1RC1</td>
-<td><code>docker pull nanocurrency/nano-beta:V21.1RC1</code> or <code>docker pull nanocurrency/nano-beta:latest</code><br />See <a href="./#pulling-the-docker-image">Pulling the Docker Image</a> for more details.</td>
-</tr>
-</tbody>
-</table>
+<p>Most of the resources needed to participate on the beta network can be found within the <code>#beta-xxxxxxx</code> channels on our <a href="https://chat.nano.org">Discord server</a>. As much of the discussion, planning and engagement happens here, all participants are highly encouraged to join there.</p>
+<h3 id="binaries">Binaries<a class="headerlink" href="#binaries" title="Permanent link">&para;</a></h3>
+<p>In addition to the Docker details above, the latest binary builds of the node for the beta network are shared in the <code>#beta-announcements</code> channel on our <a href="https://chat.nano.org">Discord server</a>. These assets are also available on the <a href="https://github.com/nanocurrency/nano-node/releases">GitHub repository Releases page</a> under <code>RC#</code> and <code>DB#</code> tags, which can also be used to manually build if necessary.</p>
 <h3 id="beta-fund-distribution">Beta fund distribution<a class="headerlink" href="#beta-fund-distribution" title="Permanent link">&para;</a></h3>
-<p>The funds used for testing transactions on the beta network are generated from a new genesis block and distributed in bulk to various testers running nodes on the network. Given the large number of transactions done during testing the ledger can grow quite large and will be restarted from scratch between releases and/or as needed. As a result, previously distributed beta Nano are no longer useful and need to be redistributed again.</p>
-<p>For small amounts suitable for most basic integration, you can get beta Nano from the beta faucet here: <a href="https://beta.nano.org/faucet/">https://beta.nano.org/faucet/</a>. If you plan to consistently run a node on beta and want to participate in consensus as a Representative, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
+<p>The funds used for testing transactions on the beta network are generated from a new genesis block and distributed in bulk to various testers running nodes on the network. For small amounts suitable for most basic integration, you can get beta Nano from the <code>#beta-faucet</code> channel on Discord. If you plan to consistently run a node on beta and want to participate in consensus as a Representative, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the <code>#beta-net</code> channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
 <h3 id="beta-ledger-file">Beta ledger file<a class="headerlink" href="#beta-ledger-file" title="Permanent link">&para;</a></h3>
 <p>To help get beta nodes in sync more quickly it is recommended that an updated ledger file is downloaded and placed into the data directory. Often referred to as a "fast sync", more details around this approach can be found in the <a href="../ledger-management/#downloaded-ledger-files">Ledger Management guide</a>. Since the beta network contains no value, validating the blocks, voting weights and confirmation heights isn't necessary.</p>
 <p>The following command will download and unzip a recent ledger snapshot. Any existing ledger files should be backed up elswhere as this will override them. From within the <a href="#directory-locations">data directory</a> run:</p>
@@ -1402,7 +1359,7 @@
 </code></pre></div>
 
 <h3 id="ongoing-test-cases">Ongoing Test Cases<a class="headerlink" href="#ongoing-test-cases" title="Permanent link">&para;</a></h3>
-<p>A spreadsheet of some test cases is maintained separately and available for sharing with community members who are involved on the beta network.  If you are interested in helping with these test cases, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the #beta-net channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
+<p>A spreadsheet of some test cases is maintained separately and available for sharing with community members who are involved on the beta network.  If you are interested in helping with these test cases, please connect with <code>Zach - ATX#0646</code> or <code>Dotcom#9351</code> in the <code>#beta-net</code> channel on our <a href="https://chat.nano.org">Discord server</a>.</p>
                 
               
               
@@ -1586,15 +1543,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"search.result.one": "1 matching document", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.none": "No matching documents", "clipboard.copy": "Copy to clipboard", "search.result.placeholder": "Type to start searching", "search.config.separator": "[\\s\\-]+", "clipboard.copied": "Copied to clipboard", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"search.result.placeholder": "Type to start searching", "search.config.separator": "[\\s\\-]+", "search.result.other": "# matching documents", "search.result.one": "1 matching document", "clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.lang": "en", "search.result.none": "No matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
