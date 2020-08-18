@@ -4797,7 +4797,8 @@ Boolean, false by default. Returns a consecutive list of block hashes in the acc
 <hr />
 <h3 id="telemetry">telemetry<a class="headerlink" href="#telemetry" title="Permanent link">&para;</a></h3>
 <p><em>version 21.0+</em><br />
-Return metrics from nodes. See <a href="/protocol-design/networking#node-telemetry">networking node telemetry</a> for more information.  <br />
+Return metrics from other nodes on the network. By default, returns a summarized view of the whole network. See below for details on obtaining local telemetry data.<br />
+<a href="/protocol-design/networking#node-telemetry">Networking - node telemetry</a> contains more detailed information on the protocol implementation of telemetry.<br />
 <strong>Request:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;telemetry&quot;</span>
@@ -4921,8 +4922,11 @@ Get metrics from a specific peer. It accepts both ipv4 and ipv6 addresses
   <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;246.125.123.456&quot;</span><span class="p">,</span>
   <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;7075&quot;</span>
 <span class="p">}</span>
-</code></pre></div>
-Metrics for the local node can be requested using the peering port and any loopback address <strong>127.0.0.1</strong>, <strong>::1</strong> or <strong>[::1]</strong></p>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Requesting telemetry data from the local node</p>
+<p>Metrics for the local node can be requested using the peering port and any loopback address <strong>127.0.0.1</strong>, <strong>::1</strong> or <strong>[::1]</strong></p>
+</div>
 <hr />
 <h3 id="validate_account_number">validate_account_number<a class="headerlink" href="#validate_account_number" title="Permanent link">&para;</a></h3>
 <p>Check whether <strong>account</strong> is a valid account number using checksum  </p>
@@ -6569,7 +6573,7 @@ Wait for payment of 'amount' to arrive in 'account' or until 'timeout' milliseco
     </div>
     
       <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"search.result.other": "# matching documents", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "clipboard.copied": "Copied to clipboard", "search.result.one": "1 matching document", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+"}</script>
+      <script src="../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"search.result.placeholder": "Type to start searching", "clipboard.copied": "Copied to clipboard", "search.result.none": "No matching documents", "clipboard.copy": "Copy to clipboard", "search.result.one": "1 matching document", "search.config.separator": "[\\s\\-]+", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.other": "# matching documents", "search.config.lang": "en"}</script>
       
       <script>
         app = initialize({
