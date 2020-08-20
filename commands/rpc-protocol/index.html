@@ -5619,13 +5619,18 @@ Send <strong>amount</strong> from <strong>source</strong> in <strong>wallet</str
 <p class="admonition-title">Dangerous RPC calls controlled by <code>enable_control</code></p>
 <p>This RPC command/option requires <code>enable_control</code> to be enabled within the RPC config file. Enabling this means that anyone with access to the RPC port could potentially <a href="/commands/rpc-protocol#send">access wallet funds</a>, <a href="/commands/rpc-protocol#stop">stop</a> the node from running and take other dangerous actions. <strong>Use caution when enabling this option, especially with external RPC access available.</strong> For more details see the <a href="/running-a-node/security">Node Security page</a>.</p>
 </div>
+<div class="admonition success">
+<p class="admonition-title">Use of <code>id</code> option is highly recommended</p>
+<p>Integrations using the node wallet must ensure idempotency for transactions and this can be done externally if preferred. Using the <code>id</code> field provides this option internally and is highly recommended for all node wallet uses.</p>
+</div>
 <p><strong>Request:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;send&quot;</span><span class="p">,</span>
   <span class="nt">&quot;wallet&quot;</span><span class="p">:</span> <span class="s2">&quot;000D1BAEC8EC208142C99059B393051BAC8380F9B5A2E6B2489A277D81789F3F&quot;</span><span class="p">,</span>
   <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;nano_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpi00000000&quot;</span><span class="p">,</span>
   <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;nano_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpi00000000&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;1000000&quot;</span>
+  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;1000000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;your-unique-id&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <strong>Response:</strong>
@@ -6573,7 +6578,7 @@ Wait for payment of 'amount' to arrive in 'account' or until 'timeout' milliseco
     </div>
     
       <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"search.result.placeholder": "Type to start searching", "clipboard.copied": "Copied to clipboard", "search.result.none": "No matching documents", "clipboard.copy": "Copy to clipboard", "search.result.one": "1 matching document", "search.config.separator": "[\\s\\-]+", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.other": "# matching documents", "search.config.lang": "en"}</script>
+      <script src="../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"search.result.other": "# matching documents", "clipboard.copied": "Copied to clipboard", "search.result.one": "1 matching document", "search.config.lang": "en", "clipboard.copy": "Copy to clipboard", "search.config.separator": "[\\s\\-]+", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents"}</script>
       
       <script>
         app = initialize({
